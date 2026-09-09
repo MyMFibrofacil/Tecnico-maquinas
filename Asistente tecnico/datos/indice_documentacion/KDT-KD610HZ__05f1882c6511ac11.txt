@@ -1,0 +1,5 @@
+[Imagen: 10_fotos_maquina_01.jpg]
+Dimensiones: 840 x 1320
+Formato: JPEG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

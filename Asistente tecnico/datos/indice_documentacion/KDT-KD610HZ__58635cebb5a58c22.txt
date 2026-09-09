@@ -1,0 +1,5 @@
+[Imagen: tecnico-08.png]
+Dimensiones: 1240 x 1755
+Formato: PNG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

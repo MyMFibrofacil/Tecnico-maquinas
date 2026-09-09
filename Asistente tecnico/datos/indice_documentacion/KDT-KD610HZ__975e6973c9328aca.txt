@@ -1,0 +1,1754 @@
+[Página 1]
+A�ELTJI 
+Smarter. Greener. Together. 
+Industrial Automation Headquarters 
+Delta Electronics, Inc. 
+Taoyuan Technology Center 
+No.18, Xinglong Rd., Taoyuan District, 
+Taoyuan City 33068, Taiwan 
+TEL: 886-3-362-6301 / FAX: 886-3-371-6301 
+Asia 
+Delta Electronics (Shanghai) Co., Ltd. 
+No.182 Minyu Rd., Pudong Shanghai, P.R.C. 
+Post code : 201209 
+TEL: 86-21-6872-3988 / FAX: 86-21-6872-3996 
+Customer Service: 400-820-9595 
+Delta Electronics (Japan), Inc. 
+Tokyo Office 
+Industrial Automation Sales Department 
+2-1-14 Shibadaimon, Minato-ku 
+Tokyo, Japan 105-0012 
+TEL: 81-3-5733-1155 / FAX: 81-3-5733-1255 
+Delta Electronics (Korea), Inc. 
+Seoul Office 
+1511, 219, Gasan Digital 1-Ro., Geumcheon-gu, 
+Seoul, 08501 South Korea 
+TEL: 82-2-515-5305 I FAX: 82-2-515-5302 
+Delta Energy Systems (Singapore) Pte Ltd. 
+4 Kaki Bu kit Avenue 1, #05-04, Singapore 417939 
+TEL: 65-6747-5155 / FAX: 65-6744-9228 
+Delta Electronics (India) Pvt. Ltd. 
+Plot No.43, Sector 35, HSIIDC Gurgaon, 
+PIN 122001, Haryana, India 
+TEL: 91-124-4874900 I FAX : 91-124-4874945 
+Delta Electronics (Thailand) PCL. 
+909 Soi 9, Moo 4, Bangpoo Industrial Estate (E.P.Z), 
+Pattana 1 Rd., T.Phraksa, A.Muang, 
+Samutprakarn 10280, Thailand 
+TEL: 66-2709-2800 /F AX : 662-709-2827 
+Delta Electronics (Australia) Pty Ltd. 
+Unit 20-21/45 Normanby Rd., Notting Hill Vic 3168, Australia 
+TEL: 61-3-9543-3720 
+Americas 
+Delta Electronics (Americas) Ltd. 
+Raleigh Office 
+P.O. Box 12173, 5101 Davis Drive, 
+Research Triangle Park, NC 27709, U.S.A. 
+TEL: 1-919-767-3813 / FAX: 1-919-767-3969 
+Delta Electronics Brazil 
+Sao Paulo Sales Office 
+Rua ltapeva, 26 - 3°, andar Edificio ltapeva, 
+One - Bela Vista 01332-000 - Sao Paulo - SP - Brazil 
+TEL: 55-12-3932-2300 / FAX: 55-12-3932-237 
+Delta Electronics International Mexico S.A. de C.V. 
+Mexico Office 
+Gustavo Baz No. 309 Edificio E PB 103 
+Colonia La Loma, CP 54060 
+Tlalnepantla, Estado de Mexico 
+TEL: 52-55-3603-9200 
+EMEA 
+Headquarters: Delta Electronics (Netherlands) B.V. 
+Sales: Sales.lA.EMEA@deltaww.com 
+Marketing: Marketing. IA. EMEA@deltaww.com 
+Technical Support: iatechnicalsupport@deltaww.com 
+Customer Support: Customer-Support@deltaww.com 
+Service: Service.lA.emea@deltaww.com 
+TEL: +31(0)40 800 3900 
+BENELUX: Delta Electronics (Netherlands) B.V. 
+De Witbogt 20, 5652 AG Eindhoven, The Netherlands 
+Mail: Sales.lA.Benelux@deltaww.com 
+TEL: +31(0)40 800 3900 
+DACH: Delta Electronics (Netherlands) B.V. 
+Coesterweg 45, D-59494 Soest, Germany 
+Mail: Sales.lA.DACH@deltaww.com 
+TEL: +49(0)2921 987 0 
+France: Delta Electronics (France) S.A. 
+ZI du bois Challand 2, 15 rue des Pyrenees, 
+Lisses, 91090 Evry Cedex, France 
+Mail: Sales.lA.FR@deltaww.com 
+TEL: +33(0)1 69 77 82 60 
+Iberia: Delta Electronics Solutions (Spain) S.L.U 
+Cira. De Villaverde a Vallecas, 265 1° Dcha Ed. 
+Hormigueras - P.I. de Vallecas 28031 Madrid 
+TEL: +34(0)91 223 74 20 
+Carrer Llacuna 166, 08018 Barcelona, Spain 
+Mail: Sales.lA.lberia@deltaww.com 
+Italy: Delta Electronics (Italy) S.r.l. 
+Via Meda 2-22060 Novedrate(CO) 
+Piazza Grazioli 18 00186 Roma Italy 
+Mail: Sales.lA.llaly@deltaww.com 
+TEL: +39 039 8900365 
+Russia: Delta Energy System LLC 
+Vereyskaya Plaza 11, office 112 Vereyskaya str. 
+17 121357 Moscow Russia 
+Mail: Sales.lA.RU@deltaww.com 
+TEL: +7 495 644 3240 
+Turkey: Delta Greentech Elektronik San. Ltd. Sti. (Turkey) 
+�erifali Mah. Hendem Cad. Kule Sok. No:16-A 
+34775 Omraniye - istanbul 
+Mail: Sales.lA.Turkey@deltaww.com 
+TEL:+ 90 216 499 9910 
+GCC: Delta Energy Systems AG (Dubai BR) 
+P.O. Box 185668, Gate 7, 3rd Floor, Hamarain Centre 
+Dubai, United Arab Emirates 
+Mail: Sales.lA.MEA@deltaww.com 
+TEL: +971(0)4 2690148 
+Egypt + North Africa: Delta Electronics 
+Unit 318, 3rd Floor, Trivium Business Complex, North 90 street, 
+New Cairo, Cairo, Egypt 
+Mail: Sales.lA.MEA@deltaww.com 
+*We reserve the right to change the information in this catalogue without prior notice. 
+Delta EtherCAT Remote 1/0 
+Module R2-EC0902 
+User Manual 
+www.deltaww.com 
+DELTA_IA-IPC_R2-EC0902_UM_EN_20210528
+
+[Página 2]
+i 
+Preface  
+Thank you for purchasing this product. This user guide provides information about the R1-EC0902 EtherCAT 
+remote control 32-channel DI / 32-channel DO (relay) expansion module. 
+This user guide includes: 
+ Product inspection and model explanation 
+ Specifications and product interface 
+ Wiring 
+ CiA401 Drive Profile 
+ Object Dictionary 
+ SDO Error Message Abort Code 
+Product features of the EtherCAT remote control expansion module 
+R2-EC0902 distributed DI/DO mixed module supports the EtherCAT (Ethernet Control Automation 
+Technology) protocol, which makes this module a high-performance remote I/O bus system. 
+For digital input, this module provides the status reading interface for NPN and PNP load types. 
+For digital output, this module uses a relay as an isolated output switch, which can meet the 
+needs for applications that require controlling large current load. 
+This integrated type module can read the status and control the remote digital signal of the 
+EtherCAT master, which can instantly acquire the data (within 1 ms) of the load status for multiple 
+sets of slave modules. 
+The EtherCAT series products have a number of modules with different functions and features to 
+meet different remote automation control requirements. This product is the optimal integration 
+platform for reading the multi-point load status. It is easy to assemble with better stability and 
+scalability. This is the one and only choice for industrial upgrading. 
+How to use this user guide 
+Use this user guide as a reference for installing, setting up, using, and maintaining the  
+R2-EC0902 EtherCAT remote control 32-channel DI / 32-channel DO (relay) expansion module. 
+Delta technical services 
+Consult your Delta equipment distributors or Delta Customer Service Center if you encounter any 
+problems. 
+ 
+EtherCAT® is registered trademark and patented technology, licensed by Beckhoff Automation GmbH, 
+Germany.
+
+[Página 3]
+ii 
+(This page is intentionally left blank.)
+
+[Página 4]
+Table of Contents  
+ 
+  Product Inspection and Model Explanation                                                                 
+1.1  Product inspection  ···························································································· 1-2 
+1.2  Model explanation  ···························································································· 1-2 
+1.3  Product instructions  ·························································································· 1-2 
+ 
+   Specifications and Product Interface                                                                
+2.1  Electrical specifications  ····················································································· 2-2 
+2.2  Product diagram and dimensions  ········································································· 2-3 
+2.2.1  Product diagram  ······················································································ 2-3 
+2.2.2  Product dimensions  ·················································································· 2-4 
+2.3  Product interface description  ··············································································· 2-5 
+2.4  Port description  ································································································ 2-6 
+2.4.1  IO Port 0  ································································································ 2-6 
+2.4.2  IO Port 1 ································································································ 2-7 
+2.4.3  IO Port 2  ································································································ 2-8 
+2.4.4  IO Port 3  ································································································ 2-9 
+2.4.5  Power port  ··························································································· 2-10 
+2.4.6  EtherCAT communication port indicator  ······················································ 2-11 
+2.4.7  IO Indicator 1  ························································································ 2-12 
+2.4.8  IO Indicator 2  ························································································ 2-14 
+2.4.9  Module status indicator  ··········································································· 2-16 
+ 
+Wiring                                                                 
+3.1  Input port wiring example  ··················································································· 3-2 
+3.2  Output port wiring example  ················································································· 3-4 
+3.3  Relay  ············································································································· 3-5 
+3.4  Installation example  ·························································································· 3-7 
+3.5  Connector assembly and disassembly steps  ·························································· 3-8 
+ 
+CiA401 Drive Profile                                                    
+4.1  Operation mode  ······························································································· 4-2 
+4.1.1  Related objects  ······················································································· 4-2 
+  
+1 
+2 
+3  
+4
+
+[Página 5]
+Object Dictionary                                                
+5.1  Object list  ······································································································· 5-2 
+5.2  General Objects  ······························································································· 5-3 
+5.2.1  Device Type (1000h)  ················································································ 5-3 
+5.2.2  Error Register (1001h)  ·············································································· 5-3 
+5.2.3  Manufacturer Device Name (1008h)  ···························································· 5-4 
+5.2.4  Manufacturer Software Version (100Ah)  ························································ 5-4 
+5.2.5  Identity Object (1018h)  ············································································· -5-4 
+5.3  PDO mapping objects  ······················································································· 5-5 
+5.3.1  Receive PDO Mapping (1600h to 1601h)  ······················································ 5-5 
+5.3.2  Transmit PDO Mapping (1A00h to 1A01h)  ····················································· 5-5 
+5.4  Sync Manager Communication Objects  ·································································  5-6 
+5.4.1  Sync Manager Communication Type (1C00h)  ················································ 5-6 
+5.4.2  Sync  Manager PDO Assignment (1C12h to 1C13h) ········································· 5-6 
+5.4.3  Sync Manager Synchronization (1C32h to 1C33h)  ·········································· 5-7 
+5.5  Manufacturer Specific Objects  ············································································· 5-8 
+5.5.1  Read DO Actual Value (2000h)  ··································································· 5-8 
+5.5.2  Active DO Enable (2001h)  ········································································· 5-8 
+5.5.3  DI Filter Range (2002h)  ············································································· 5-8 
+5.5.4  Input Event Enable (2010h)  ········································································ 5-9 
+5.5.5  Clear Input Event (2011h)  ·········································································· 5-9 
+5.5.6  Input Event Value (2012h)  ······································································· 5-10 
+5.6  Device Control  ······························································································· 5-11 
+5.6.1  Read Input (8-bit) (6000h) ········································································ 5-11 
+5.6.2  DO Setting Value (6200h)  ········································································ 5-11 
+5.6.3  D O Error Mode Enable (6206h) ································································ 5-11 
+5.6.4  DO Error Mode Setting Value (6207h)  ························································ 5-12 
+5.6.5  DO Filter Mask (6208h)  ··········································································· 5-12 
+ 
+SDO Error Message Abort Code                                                          
+6.1  SDO  Error Message Abort Code ·········································································· 6-2 
+ 
+ 
+5   
+6
+
+[Página 6]
+1-1 
+ 
+Product Inspection and  
+Model Explanation 
+ 
+This chapter includes the product inspection, model explanation, and instructions for 
+the R2-EC0902 extension module. Read this chapter before using the product. 
+000                                                         
+1.1  Product inspection  ············································································· 1-2 
+1.2  Model explanation  ············································································· 1-2 
+1.3  Product instructions  ··········································································· 1-2
+
+[Página 7]
+Product Inspection and Model Explanation                                     R2 -EC0902 User Guide 
+1-2 
+1 
+1.1  Product inspection  
+Check the following items after receiving the product: 
+1. Packaging: make sure the product’s packaging is not damaged. 
+2. Bubble wrap: for protection of the product. Make sure the stickers are firmly attached to the 
+bubble wrap. 
+3. R2-EC0902: check the product for damage. 
+4. Product installation instructions: make sure there is an instruction sheet. 
+1.2  Model explanation  
+(1) (2) (3) (4) (5)
+R  2 – EC 09 02
+ 
+No. Item Description 
+(1) Product type R: remote I/O series 
+(2) Product type 2: board type 
+(3) Bus type EC: EtherCAT 
+(4) Module type 09: distributed DI/DO mixed module (remote module) 
+(5) Module subtype 02: 32-CH input, 24 VDC / 32-CH output, relay type, 2A 
+1.3  Product instructions 
+ Use separate power supplies for the module and common I/O port. 
+ Do not place or use this product in environments containing oil mist, salt mist, and dust. 
+ Do not use relays in environments containing inflammable or explosive gas. The electric arc 
+may ignite the inflammable or explosive gas when switching on and off.
+
+[Página 8]
+2-1
+Specifications and 
+Product Interface 
+This chapter introduces the product specifications of the R2-EC0902 product, 
+including electrical specifications, product diagram, dimensional specifications, 
+and definitions of the ports and indicators. 
+000 
+2.1 Electrical specifications ··································································· 2-2 
+2.2 Product diagram and dimensions  ······················································ 2-3 
+2.2.1 Product diagram  ····································································· 2-3 
+2.2.2 Product dimensions  ································································· 2-4 
+2.3 P roduct interface description ···························································· 2-5 
+2.4 Port description  ············································································· 2-6 
+2.4.1 IO Port 0  ··············································································· 2-6 
+2.4.2 IO Port 1  ··············································································· 2-7 
+2.4.3 IO Port 2  ··············································································· 2-8 
+2.4.4 IO Port 3  ··············································································· 2-9 
+2.4.5 Power port  ··········································································· 2-10 
+2.4.6 EtherCAT communication port indicator  ······································ 2-11 
+2.4.7 IO Indicator 1  ······································································· 2-12 
+2.4.8 IO Indicator 2  ······································································· 2-14 
+2.4.9 Module status indicator  ··························································· 2-16
+
+[Página 9]
+Specifications and Product Interface R2-EC0902 User Guide 
+2-2
+2 
+2.1  Electrical specifications  
+Item R2-EC0902 
+Power 24 VDC, -15% to +20% 
+Input current < 1 A 
+Digital input / output Digital input Digital output 
+Isolation type Optical coupling isolation Relay 
+Signal type Sink / Source A (N.O) (dry contact) 
+I/O points 32-CH 32-CH
+Maximum operating 
+power supply 30 VDC @ 8 mA per CH 30 VDC @ 2 A per CH 
+250 VAC @ 2 A per CH 
+Rated input power 24 VDC @ 5.1 mA - 
+Operating frequency 1 kHz 1 Hz 
+Operation time (OFF > ON) 300 µs 10 ms 
+Release time (ON > OFF) 300 µs 5 ms 
+Relay operation times 
+- Inductive load 
+- 100,000 times, 30 VDC / 250 VAC @ 2A 
+- Resistive load 
+- 150,000 times, 30 VDC / 250 VAC @ 2A 
+Outer dimensions 230 x 121.7 x 41.7 mm (W x H x D) 
+Operating environment Operating temperature: 0°C to 50°C (32°F to 122°F) 
+Storage temperature: -20°C to +70°C (-4°F to +158°F) 
+Mounting type Rail type 
+Vibration resistance / 
+shock resistance Conforms to EN 60068-2-6 / EN 60068-2-27/29 
+Electromagnetic compatibility / 
+noise immunity 
+ESD (IEC 61131-2, IEC 61000-4-2) 
+EFT (IEC 61131-2, IEC 61000-4-4) 
+RS (IEC 61131-2, IEC 61000-4-3) 
+Protection rating IP20 
+Approvals
+
+[Página 10]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-3 
+2 
+2.2  Product diagram and dimensions 
+R2-EC0902 is a mixed input / output module. The input supports DC sink / source output 
+devices. The output uses relays as the output drive circuit, supporting load devices at a 
+maximum of 30V (DC) / 250V (AC). If the output port is using an inductive load, connect a spark 
+quencher to both ends of the load in parallel to prevent the circuit from being damaged by the 
+back electromotive force. 
+2.2.1  Product diagram 
+Front view of R2-EC0902 module panel  
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error
+IN
+OUT
+IN
+OUT
+32DI-DC/ 32DO-R
+PORT 0 24VDC INPUTS 
+TB2
+24V
+GND
+PORT 1 24VDC INPUTS 
+TB3
+INPUT 
+TB1
+ C0
+ C1
+ C2
+PORT 2
+TB4
+RELAY OUTPUTS
+ C3
+ C4
+ C5
+ C6
+PORT 3
+TB5 
+RELAY OUTPUTS
+ C7
+Technology Group
+
+[Página 11]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-4 
+2 
+2.2.2  Product dimensions  
+R2-EC0902 module dimensions: 230 x 121.7 x 41.7 mm (W x H x D) 
+23041.7
+110.3
+121.7
+
+[Página 12]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-5 
+2 
+2.3  Product interface description  
+The definitions and descriptions of the interface and configuration for the R2-EC0902 model are 
+as follows. 
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error
+IN
+OUT
+IN
+OUT
+32DI-DC/ 32DO - R
+24VDC INPUTS
+TB2
+PORT 1 24VDC INPUTS 
+TB3
+INPUT
+TB1
+ C0
+ C1
+ C2
+PORT 2
+TB4 
+RELAY OUTPUTS
+ C3
+ C4
+ C5
+ C6
+PORT 3
+TB5
+RELAY OUTPUTS
+ C7
+Technology Group
+(1) (2) (3)
+(4)(5)(6)(7)
+(10)
+(9)
+(8)
+PORT 0
+(11)
+24V
+GND
+     
+No. Description 
+(1) EtherCAT input port (connection status indicator included) 
+(2) EtherCAT output port (connection status indicator included) 
+(3) GPIO input ports (Port 0 and Port 1) 
+(4) GPIO output ports (Port 2 and Port 3) 
+(5) Status indicators for GPIO Port 1 (input) and Port 3 (output) 
+(6) Status indicators for GPIO Port 0 (input) and Port 2 (output) 
+(7) Model number 
+(8) Error indicator 
+(9) Communication indicator 
+(10) Power indicator 
+(11) External power port
+
+[Página 13]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-6 
+2 
+2.4  Port description  
+2.4.1  IO Port 0  
+The pin definitions and descriptions of Port 0 for the R2-EC0902 model are as follows. 
+X00
+X01
+X02
+X03
+X04
+X05
+X06
+X07
+X08
+X09
+X10
+X11
+X12
+X13
+X14
+X15
+N.C
+ 
+Pin Description Pin Description 
+X00 1st set of input of Port 0 X09 10th set of input of Port 0 
+X01 2nd set of input of Port 0 X10 11th set of input of Port 0 
+X02 3rd set of input of Port 0 X11 12th set of input of Port 0 
+X03 4th set of input of Port 0 X12 13th set of input of Port 0 
+X04 5th set of input of Port 0 X13 14th set of input of Port 0 
+X05 6th set of input of Port 0 X14 15th set of input of Port 0 
+X06 7th set of input of Port 0 X15 16th set of input of Port 0 
+X07 8th set of input of Port 0 N.C Reserved (no connection) 
+X08 9th set of input of Port 0 - -
+
+[Página 14]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-7 
+2 
+2.4.2  IO Port 1  
+The pin definitions and descriptions of Port 1 for the R2-EC0902 model are as follows. 
+X00
+X01
+X02
+X03
+X04
+X05
+X06
+X07
+X08
+X09
+X10
+X11
+X12
+X13
+X14
+X15
+S/S
+ 
+Pin Description Pin Description 
+X00 1st set of input of Port 1 X09 10th set of input of Port 1 
+X01 2nd set of input of Port 1 X10 11th set of input of Port 1 
+X02 3rd set of input of Port 1 X11 12th set of input of Port 1 
+X03 4th set of input of Port 1 X12 13th set of input of Port 1 
+X04 5th set of input of Port 1 X13 14th set of input of Port 1 
+X05 6th set of input of Port 1 X14 15th set of input of Port 1 
+X06 7th set of input of Port 1 X15 16th set of input of Port 1 
+X07 8th set of input of Port 1 S/S* Setting for common input port 
+(NPN, PNP) 
+X08 9th set of input of Port 1 - - 
+Note: S/S: setting for common input port (NPN, PNP). (NPN = Vcc, PNP = GND)
+
+[Página 15]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-8 
+2 
+2.4.3  IO Port 2 
+The pin definitions and descriptions of Port 2 for the R2-EC0902 model are as follows.  
+Y00
+Y01
+Y02
+Y03
+C0
+Y04
+Y05
+Y06
+Y07
+C1
+Y08
+Y09
+Y10
+Y11
+C2
+Y12
+Y13
+Y14
+Y15
+C3
+ 
+Pin Description Pin group 
+Y00 1st set of output of Port 2 
+C0* 
+Y01 2nd set of output of Port 2 
+Y02 3rd set of output of Port 2 
+Y03 4th set of output of Port 2 
+Y04 5th set of output of Port 2 
+C1* 
+Y05 6th set of output of Port 2 
+Y06 7th set of output of Port 2 
+Y07 8th set of output of Port 2 
+Y08 9th set of output of Port 2 
+C2* 
+Y09 10th set of output of Port 2 
+Y10 11th set of output of Port 2 
+Y11 12th set of output of Port 2 
+Y12 13th set of output of Port 2 
+C3* 
+Y13 14th set of output of Port 2 
+Y14 15th set of output of Port 2 
+Y15 16th set of output of Port 2 
+Note: C0: Group 0 of relay common output port; C1: Group 1 of relay common output port; C2: Group 2 of 
+relay common output port; C3: Group 3 of relay common output port.
+
+[Página 16]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-9 
+2 
+2.4.4  IO Port 3 
+The pin definitions and descriptions of Port 3 for the R2-EC0902 model are as follows. 
+Y00
+Y01
+Y02
+Y03
+C4
+Y04
+Y05
+Y06
+Y07
+C5
+Y08
+Y09
+Y10
+Y11
+C6
+Y12
+Y13
+Y14
+Y15
+C7
+ 
+Pin Description Pin group 
+Y00 1st set of output of Port 3 
+C4* 
+Y01 2nd set of output of Port 3 
+Y02 3rd set of output of Port 3 
+Y03 4th set of output of Port 3 
+Y04 5th set of output of Port 3 
+C5* 
+Y05 6th set of output of Port 3 
+Y06 7th set of output of Port 3 
+Y07 8th set of output of Port 3 
+Y08 9th set of output of Port 3 
+C6* 
+Y09 10th set of output of Port 3 
+Y10 11th set of output of Port 3 
+Y11 12th set of output of Port 3 
+Y12 13th set of output of Port 3 
+C7* 
+Y13 14th set of output of Port 3 
+Y14 15th set of output of Port 3 
+Y15 16th set of output of Port 3 
+Note: C4: Group 4 of relay common output port; C5: Group 5 of relay common output port; C6: Group 6 of 
+relay common output port; C7: Group 7 of relay common output port.
+
+[Página 17]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-10 
+2 
+2.4.5  Power port 
+The pin definitions and descriptions of the power port for the R2-EC0902 model are as follows. 
+24V
+GND
+  
+Pin Description Note 
+24V External power supply 24 VDC for the module Error range: -15% to +20% 
+GND External power ground for the module - 
+FG (
+ ) Functional ground -
+
+[Página 18]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-11 
+2 
+2.4.6  EtherCAT communication port indicator 
+The description of the communication port indicators for the R2-EC0902 model are as follows. 
+(1) (2)
+ 
+(1) Ethernet connectors (female); (2) Ethernet connectors (male) 
+The communication port indicator (RJ-45 green light) shows the EtherCAT connection status.  
+Indicator status Description Note 
+Off No connected device. Steady off 
+On The device is connected but not activated. Steady green 
+Blinking The device is connected and activated. Flashing green 
+Note: RJ-45 yellow light: steady off (no function).
+
+[Página 19]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-12 
+2 
+2.4.7  IO Indicator 1 
+The definitions of the IO Port 0 / Port 2 indicators for the R2-EC0902 model are as follows. 
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error
+IN
+OUT
+IN
+OUT
+32DI-DC/ 32DO - R
+Technology Group
+IN
+OUT
+0    1    2    3    4    5     6    7    8    9   10  11  12  13  14  15
+0    1    2    3    4    5     6    7    8    9   10  11  12  13  14  15
+
+[Página 20]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-13 
+2 
+The indicator shows the status of the GPIO controller signal. A steady green light indicates the 
+IO is activated. 
+IN OUT 
+Indicator pin Corresponding IO port Indicator pin Corresponding IO port 
+0 X00 0 Y00 
+1 X01 1 Y01 
+2 X02 2 Y02 
+3 X03 3 Y03 
+4 X04 4 Y04 
+5 X05 5 Y05 
+6 X06 6 Y06 
+7 X07 7 Y07 
+8 X08 8 Y08 
+9 X09 9 Y09 
+10 X10 10 Y10 
+11 X11 11 Y11 
+12 X12 12 Y12 
+13 X13 13 Y13 
+14 X14 14 Y14 
+15 X15 15 Y15 
+Note: when the output indicator is On, it only means that the output is activated by the controller.  
+If the actual signal has no action, check whether the IO port is correctly connected.
+
+[Página 21]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-14 
+2 
+2.4.8  IO Indicator 2 
+The definitions of the IO Port 1 / Port 3 indicators for the R2-EC0902 model are as follows. 
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error
+IN
+OUT
+IN
+OUT
+32DI-DC/ 32DO - R
+Technology Group
+IN
+OUT
+0    1    2    3    4    5     6    7    8    9   10  11  12  13  14  15
+0    1    2    3    4    5     6    7    8    9   10  11  12  13  14  15
+
+[Página 22]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-15 
+2 
+The indicator shows the status of the GPIO controller signal. A steady green light indicates the 
+IO is activated. 
+IN OUT 
+Indicator pin Corresponding IO port Indicator pin Corresponding IO port 
+0 X00 0 Y00 
+1 X01 1 Y01 
+2 X02 2 Y02 
+3 X03 3 Y03 
+4 X04 4 Y04 
+5 X05 5 Y05 
+6 X06 6 Y06 
+7 X07 7 Y07 
+8 X08 8 Y08 
+9 X09 9 Y09 
+10 X10 10 Y10 
+11 X11 11 Y11 
+12 X12 12 Y12 
+13 X13 13 Y13 
+14 X14 14 Y14 
+15 X15 15 Y15 
+Note: when the output indicator is On, it only means that the output is activated by the controller.  
+If the actual signal has no action, check whether the IO port is correctly connected.
+
+[Página 23]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-16 
+2 
+2.4.9  Module status indicator 
+The definitions of the module status indicators for the R2-EC0902 model are as follows. 
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error 32DI-DC/ 32DO - R
+Technology Group
+ 
+The module status indicators include the module power indicator (Power), the module 
+communication indicator (Run), and the module error indicator (Error).  
+Indicator Status Description 
+Power 
+On The external voltage 24 VDC of the module is normal. 
+Off There is no voltage input or the voltage is abnormal. 
+Run 
+Off Initialization status. 
+Continuous flashing* Safe Op mode. 
+Single flashing* Single flashing 
+On Normal operation mode. 
+Error 
+Double flashing* The connection is disconnected or abnormal. 
+Off No error has occurred.
+
+[Página 24]
+R2-EC0902 User Guide                                          Specifications and Product Interface 
+2-17 
+2 
+Note: 
+1. The Run indicator is a flashing green light. 
+a. Continuous flashing: the flashing frequency is as shown in the following figure.  
+200
+ms
+200
+ms
+ON
+OFF
+ 
+b. Single flashing: the flashing frequency is as shown in the following figure. 
+200
+ms
+1000
+ms
+200
+ms
+ON
+OFF
+ 
+2. The Error indicator is a flashing red light. 
+Double flashing: the flashing frequency is as shown in the following figure. 
+200
+ms
+200
+ms
+ON
+OFF
+200
+ms
+1000
+ms
+
+[Página 25]
+Specifications and Product Interface                                          R2-EC0902 User Guide 
+2-18 
+2 
+(This page is intentionally left blank.)
+
+[Página 26]
+3-1
+W
+iring 
+This chapter provides wiring instructions for the R2-EC0902 product, including wiring 
+examples of the input and output ports. 
+3.1  Input port wiring example  ···································································· 3-2 
+3.2  Output port wiring example  ·································································· 3-4 
+3.3  Relay  ······························································································ 3-5 
+3.4  Installation example  ··········································································· 3-7 
+3.5  Connector assembly and disassembly steps ············································ 3-8
+
+[Página 27]
+Wiring                                                                       R2-EC0902 User Guide 
+3-2 
+3 
+3.1  Input port wiring example  
+ R2-EC0902 input port connected to NPN (SINK) type load 
+Isolate the IO power supply IO_24V / IOGND and module power supply 24V / GND circuits. 
+The following example shows a single point (X15) input diagram, and the other 15 sets (X00 - 
+X14) have the same input structure. Port 0 (X00 - X15) / Port 1 (X00 - X15) are the same control 
+types (NPN or PNP). The rated voltage of the IO input port is 24 VDC @ 5.1 mA and the 
+maximum operating power is 30 VDC. Do not input power supply exceeding 30 VDC or AC power 
+to avoid damaging the module circuit. 
+ 
+  
+24V GND
+IOGND
+Internal circuit
+S/S
+X00
+Relay
+IO_24V
+N.O
+Controller
+X15
+LPF: low-pass filter
+SINK
+N.C
+Module power supply
+24 VDC
+24V 0V
+IO power supply
+24 VDC
+0V 24V
+IOGND
+24VPWR
+PWR_GND
+RVP
+RVP: reverse voltage protect
+LPF
+
+[Página 28]
+R2-EC0902 User Guide                                                                      Wiring  
+3-3 
+3 
+ R2-EC0902 input port connected to PNP (SOURCE) type load 
+Isolate the IO power supply IO_24V / IOGND and module power supply 24V / GND circuits. 
+The following example shows a single point (X15) input diagram, and the other 15 sets (X00 - 
+X14) have the same input structure. Port 0 (X00 - X15) / Port 1 (X00 - X15) are the same control 
+types (NPN or PNP). The rated voltage of the IO input port is 24 VDC @ 5.1 mA and the 
+maximum operating power is 30 VDC. Do not input power supply exceeding 30 VDC or AC power 
+to avoid damaging the module circuit. 
+ 
+ 
+  
+24V GND
+IO_24V
+Internal circuit
+S/S
+X00
+Relay
+IOGND
+N.O
+Controller
+X15
+LPF: low-pass filter
+SOURCE
+N.C
+Module power supply
+24 VDC
+24V 0V
+IO power supply
+24 VDC
+24V 0V
+24VPWR
+PWR_GND
+RVP
+RVP: reverse voltage protect
+LPF
+
+[Página 29]
+Wiring                                                                       R2-EC0902 User Guide 
+3-4 
+3 
+3.2  Output port wiring example  
+ R2-EC0902 relay output port connected to the load 
+Isolate the IO power supply IO_24V / IOGND and module power supply 24V / GND circuits. 
+When using a relay, connect a spark quencher (SPQ) in parallel according to the load 
+requirements. This can prolong the life of the contacts and suppress contact sparks and surge 
+voltage. When using an inductive load, the spark quencher can reduce the interference of the 
+back electromotive force. 
+LOAD
+24V GND
+IOGND
+Internal circuit
+CO
+Y00
+Relay
+Drive
+Controller
+Y03
+SINK
+Module power supply
+24 VDC
+0V
+IO power supply
+30 VDC
+0V (L2)24V (L1)
+24VPWR
+PWR_GND
+RVP
+N.O
+250 VAC
+IO_24V
+SPQ
+FBD
+RVP: reverse voltage protect
+FBD: flyback diode
+SPQ: spark quencher (spark killer)
+24V
+ 
+Note: use 24V & 0V wiring for VDC IO power supply; use L1 & L2 wiring for VAC IO power supply.
+
+[Página 30]
+R2-EC0902 User Guide                                                                      Wiring  
+3-5 
+3 
+3.3  Relay  
+ Precautions for using relay output: 
+When the relay output switches to on, bouncing occurs because it is a mechanical action,  
+as shown in the following figure. 
+For the load application, add a debounce circuit to avoid misoperation. For the digital logic 
+application, add a software filter to avoid misinterpretation. 
+ 
+It is suggested to follow these items to avoid misoperation. 
+1. Set the hardware or software filter time to > 100 μs. 
+2. The hardware filter (debounce circuit) can use the external circuit to add an additional 
+capacitor. The capacitance value is approximately 0.1 μF - 0.47 μF (calculated according 
+to the current flowing through the load). 
+3. Use the spark quencher to reduce surge voltage shock and prevent bouncing. 
+CO
+Y00
+Relay
+Y03
+N.O
+C
+ 
+ 
+ 
+  
+Switch bounce of the relay
+
+[Página 31]
+Wiring                                                                       R2-EC0902 User Guide 
+3-6 
+3 
+ Use of relay spark quencher 
+The use of spark quencher prolongs the life of the contacts, suppresses contact sparks and surge 
+voltage, reduces interference, and reduces carbon deposition caused by contact electric arc.  
+The following table shows application examples of the spark quenchers. You can use these as 
+references for modifying the corresponding circuit design. 
+Simplified wiring diagram Description 
+ This circuit is included in the module. 
+(1) When in use, r should be greater than 10 ohm. 
+(2) When applying AC voltage, the load impedance ® should be 
+smaller than the r and C impedances of the spark quencher. 
+r > 10 * ® 
+r = 33 Kohm, 1/2 W 
+ 
+Apply AC or DC power to the output port. 
+(1) When r is in use, it should equal the load impedance ®. 
+(2) When C is in use, its configuration should be 0.1 μF ~ 1 μF. 
+Adjust the configuration value according to the load impedance. 
+ 
+Apply AC or DC power to the output port. 
+(1) When selecting a zener diode, it is suggested that the 
+breakdown voltage is at least 2 times the applied voltage and 
+the forward current value should be greater than the current 
+flowing through the load impedance R. 
+VR (DIODE)_Min > 2* IO_VCC 
+(2) Or use a varistor to prevent high voltage from passing through 
+the relay contact point from the application end. When selecting 
+a varistor, the rating needs to be at least 1.5 times the 
+application voltage. 
+ 
+Apply DC power only to the output port. 
+(1) When selecting a diode, it is suggested that the reverse 
+withstand voltage is at least 10 times the applied voltage and 
+the forward current value should be greater than the current 
+flowing through the load impedance ®. 
+VR (DIODE)_Min > 3* IO_VCC 
+(2) If the applied voltage is 24V, the reverse withstand voltage of 
+the diode should be above 75V. 
+When the spark quencher is installed, it delays the release time of the relay. Check if any 
+abnormal operation has occurred to the connected load application.  
+Rr c
+R
+c
+r
+RZNR / 
+Varistor
+RDiode
+
+[Página 32]
+R2-EC0902 User Guide                                                                      Wiring  
+3-7 
+3 
+3.4  Installation example  
+The controller communicates with the EtherCAT devices (ASD-A2-E) through Ethernet (RJ-45) 
+and the extension module (R2-EC0902), accessing and controlling the status of the slaves. 
+Solenoid valvesFan Electrical switch Sensor
+PC-based motion control
+R2-EC0902
+ASD-A2-E
+ 
+Considering the heat dissipation direction of the module, it is suggested that you mount the 
+module vertically. 
+IN OUT
+ECAT
+J1 J2
+Power
+Run
+Error
+IN
+OUT
+IN
+OUT
+32DI-DC/ 32DO-R
+PORT 0 24VDC INPUTS 
+TB2
+24V
+GND
+PORT 1 24VDC INPUTS 
+TB3
+INPUT 
+TB1
+ C0
+ C1
+ C2
+PORT 2
+TB4
+RELAY OUTPUTS
+ C3
+ C4
+ C5
+ C6
+PORT 3
+TB5 
+RELAY OUTPUTS
+ C7
+Technology Group
+Hot Air
+Cold Air
+
+[Página 33]
+Wiring                                                                       R2-EC0902 User Guide 
+3-8 
+3 
+3.5  Connector assembly and disassembly steps 
+The assembly and disassembly steps for the R2-EC0902 connector are as follows. 
+ Assembly steps 
+Step 1: place the plug with a tilt angle into the socket and align the pins of the plug and the 
+socket. 
+Step 2: press down the plug firmly until it snaps into place. 
+Step 3: make sure the plug is properly aligned with and fixed to the socket. 
+ 
+ Disassembly steps 
+Step 1: find the slot on top of the connector. 
+Step 2: insert the tip of the screwdriver to the slot. 
+Step 3: pry the plug gently away from the socket and the plug will loosen. 
+Step 4: take the plug out of the socket.
+
+[Página 34]
+4-1 
+ 
+CiA401 Drive Profile 
+ 
+This chapter introduces the operation and related objects of the output module 
+according to the CiA401 protocol used by R2-EC0902. 
+                                                            
+4.1  Operation mode  ················································································ 4-2 
+4.1.1  Related objects  ··········································································· 4-2
+
+[Página 35]
+CiA401 Drive Profile                                                          R2 -EC0902 User Guide 
+4-2 
+4 
+4.1  Operation mode  
+You can use the objects DO Setting Value (6200h) and Active DO Enable (2001h) to control the 
+digital output status or use DO Filter Mask (6208h) to designate the output channel. When there 
+is a connection error, you can use the objects DO Error Mode Enable (6206h) and DO Error 
+Mode Setting Value (6207h) to set the output status. Refer to the following control flowchart. 
+1600h
+Receive
+RPDO1
+Entry 
+Into
+6200h
+Default Mapping Parameter
+{20h}
+{RPDO1}
+CAN 
+Reception
+Switch if Device 
+Failure
+Switch
+if 0h6206h
+Error Mode
+{0h, 1h}
+6207h
+Error Value {0, 1}
+{0, 1}
+Active DO
+{0, 1}
+2001h
+Active DO Enable
+{E, D}
+6208h
+Filter Mask
+{E, D}
+{0, 1}
+Single 
+Digital 
+Output
+E = enable 
+ D = disable
+Block Filter
+ 
+4.1.1  Related objects 
+This table provides the names and setting properties of the related objects. 
+Index Sub Name Access PDO 
+Mapping Unit Type 
+2000h 
+- Read DO Actual Value - - - - 
+1 Read Port 2 DO CH0 - 7 Actual 
+Value RO NO - USINT 
+2 Read Port 2 DO CH8 - 15 Actual 
+Value RO NO - USINT 
+3 Read Port 3 DO CH0 - 7 Actual 
+Value RO NO - USINT 
+4 Read Port 3 DO CH8 - 15 Actual 
+Value RO NO - USINT 
+2001h 
+- Active DO Enable - - - - 
+1 Active Port 2 DO CH0 - 7 Enable RW NO - USINT 
+2 Active Port 2 DO CH8 - 15 Enable RW NO - USINT 
+3 Active Port 3 DO CH0 - 7 Enable RW NO - USINT 
+4 Active Port 3 DO CH8 - 15 Enable RW NO - USINT
+
+[Página 36]
+R2-EC0902 User Guide                                                        CiA401 Drive Profile  
+4-3 
+4 
+Index Sub Name Access PDO 
+Mapping Unit Type 
+6200h 
+- DO Setting Value - - - - 
+1 Port 2 DO CH0 - 7 Setting Value RW YES - USINT 
+2 Port 2 DO CH8 - 15 Setting Value RW YES - USINT 
+3 Port 3 DO CH0 - 7 Setting Value RW YES - USINT 
+4 Port 3 DO CH8 - 15 Setting Value RW YES - USINT 
+6206h 
+- DO Error Mode Enable - - - - 
+1 Port 2 DO Ch0 - 7 Error Mode 
+Enable RW NO - USINT 
+2 Port 2 DO Ch8 - 15 Error Mode 
+Enable RW NO - USINT 
+3 Port 3 DO Ch0 - 7 Error Mode 
+Enable RW NO - USINT 
+4 Port 3 DO Ch8 - 15 Error Mode 
+Enable RW NO - USINT 
+6207h 
+- DO Error Mode Setting Value - - - - 
+1 Port 2 DO CH0 - 7 Error Mode 
+Setting Value RW NO - USINT 
+2 Port 2 DO CH8 - 15 Error Mode 
+Setting Value RW NO - USINT 
+3 Port 3 DO CH0 - 7 Error Mode 
+Setting Value RW NO - USINT 
+4 Port 3 DO CH8 - 15 Error Mode 
+Setting Value RW NO - USINT 
+6208h 
+- DO Filter Mask - - - - 
+1 Port 2 DO CH0 - 7 Filter Mask RW NO - USINT 
+2 Port 2 DO CH8 - 15 Filter Mask RW NO - USINT 
+3 Port 3 DO CH0 - 7 Filter Mask RW NO - USINT 
+4 Port 3 DO CH8 - 15 Filter Mask RW NO - USINT
+
+[Página 37]
+CiA401 Drive Profile                                                          R2 -EC0902 User Guide 
+4-4 
+4 
+(This page is intentionally left blank.)
+
+[Página 38]
+5-1 
+ 
+Object Dictionary 
+ 
+This chapter introduces the objects, including the descriptions and applications,  
+for R2-EC0902. 
+                                                            
+5.1  Object list ························································································· 5-2 
+5.2  General objects  ················································································· 5-3 
+5.2.1  Device Type (1000h)  ···································································· 5-3 
+5.2.2  Error Register (1001h)  ·································································· 5-3 
+5.2.3  Manufacturer Device Name (1008h)  ················································ 5-4 
+5.2.4  Manufacturer Software Version ( 100Ah) ··········································· 5-4 
+5.2.5  Identity Object (1018h)  ·································································  5-4 
+5.3  PDO mapping objects  ········································································· 5-5 
+5.3.1  Receive PDO Mapping (1600h to 1601h)  ········································· 5-5 
+5.3.2  Transmit PDO Mapping (1A00h to 1A01h)  ········································ 5-5 
+5.4  Sync Manager Communication Objects  ·················································· 5-6 
+5.4.1  Sync Manager Communication Type (1C00h)  ···································· 5-6 
+5.4.2  Sync Manager PDO Assignment (1C12h to 1C13h)  ···························· 5-6 
+5.4.3  Sync Manager Synchronization (1C32h to 1C33h)  ····························· 5-7 
+5.5  Manufacturer Specific Objects  ······························································ 5-8 
+5.5.1  Read DO Actual Value (2000h) ······················································· 5-8 
+5.5.2  Active DO Enable (2001h)  ····························································· 5-8 
+5.5.3  DI Filter Range (2002h)  ································································ 5-8 
+5.5.4  Input Event Enable (2010h)  ··························································· 5-9 
+5.5.5  Clear Input Event (2011h)  ····························································· 5-9 
+5.5.6  Input Event Value (2012h)  ··························································· 5-10 
+5.6  Device Control  ················································································ 5-11 
+5.6.1  Read Input (8-bit) (6000h) ··························································· 5-11 
+5.6.2  DO Setting Value (6200h)  ··························································· 5-11 
+5.6.3  DO Error Mode Enable (6206h)  ···················································· 5-11 
+5.6.4  DO Error Mode Setting Value (6207h)  ············································ 5-12 
+5.6.5  DO Filter Mask (6208h)  ······························································ 5-12
+
+[Página 39]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-2 
+5 
+5.1  Object list  
+Object dictionary Reference 
+General Objects 
+Device Type (1000h) 5.2.1 
+Error Register (1001h) 5.2.2 
+Manufacturer Device Name (1008h) 5.2.3 
+Manufacturer Software Version (100Ah) 5.2.4 
+Identity Object (1018h) 5.2.5 
+PDO Mapping Objects 
+Receive PDO Mapping (1600h, 1601h) 5.3.1 
+Transmit PDO Mapping (1A00h, 1A01h) 5.3.2 
+Sync Manager 
+Communication Objects 
+Sync Manager Communication Type (1C00h) 5.4.1 
+Sync Manager PDO Assignment (1C12h, 1C13h) 5.4.2 
+Sync Manager Synchronization parameter (1C32h, 1C33h) 5.4.3 
+Manufacturer Specific 
+Objects 
+Read DO Actual Value (2000h) 5.5.1 
+Active DO Enable (2001h) 5.5.2 
+DI Filter Range (2002h) 5.5.3 
+Input Event Enable (2010h) 5.5.4 
+Clear Input Event (2011h) 5.5.5 
+Input Event Value (2012h) 5.5.6 
+Device Control 
+Read Input 8 Bit (6000h) 5.6.1 
+DO Setting Value (6200h) 5.6.2 
+DO Error Mode Enable (6206h) 5.6.3 
+DO Error Mode Setting Value (6207h) 5.6.4 
+DO Filter Mask (6208h) 5.6.5
+
+[Página 40]
+R2-EC0902 User Guide                                                             Object Dictionary 
+5-3 
+5 
+5.2  General objects  
+5.2.1  Device Type (1000h)  
+This object describes the type and function of the device. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+1000h 0 Device Type UDINT RO NO 0x00030191 
+General information (bit 0 - 15): 0191 (DS401) 
+Additional information (bit 16 - 31): 0003 (bit16 Digital input, bit17 Digital output) 
+5.2.2  Error Register (1001h)  
+This object is an error register for the device. The value of this object is stored in the emergency 
+message. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+1001h 0 Error Register USINT RO NO 0x00 
+Bit definition: 
+Bit Meaning 
+0 Generic error 
+1 Current 
+2 Voltage 
+3 Temperature 
+4 Communication error (overrun, error state) 
+5 Device profile specific 
+6 Reserved (always 0) 
+7 Manufacturer specific
+
+[Página 41]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-4 
+5 
+5.2.3  Manufacturer Device Name (1008h)  
+This object acquires the device name of R2-EC0902. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+1008h 0 Manufacturer Device 
+Name STRING RO NO R2-EC0902 
+5.2.4  Manufacturer Software Version (100Ah)  
+This object acquires the information about the software version of R2-EC0902. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+100Ah 0 Manufacturer Software 
+Version STRING RO NO - 
+5.2.5  Identity Object (1018h)  
+This object acquires the general information about the device. 
+Index Sub Name Type Access PDO 
+Mapping  Value 
+1018h 
+0 Number of entries USINT RO NO 4 
+1 Vendor ID UDINT RO NO 0x000001DD 
+2 Product code UDINT RO NO 0x0000090X 
+3 Revision number UDINT RO NO 0x00100000 
+4 Serial number UDINT RO NO 0x00000000
+
+[Página 42]
+R2-EC0902 User Guide                                                             Object Dictionary 
+5-5 
+5 
+5.3  PDO mapping objects  
+In the EtherCAT protocol, PDO Mapping Objects can be set to have the data updated periodically. 
+5.3.1  Receive PDO Mapping (1600h to 1601h) 
+Index Sub Name Type Access PDO 
+Mapping Value 
+1600h 
+0 Number of objects in this 
+PDO USINT RO NO 4 
+1 Mapping entry 1 UDINT RW NO 0x62000108 
+2 Mapping entry 2 UDINT RW NO 0x62000208 
+3 Mapping entry 3 UDINT RW NO 0x62000308 
+4 Mapping entry 4 UDINT RW NO 0x62000408 
+1601h 
+0 Number of objects in this 
+PDO USINT RO NO 2 
+1 Mapping entry 1 UDINT RW NO 0x20110008 
+2 Mapping entry 2 UDINT RW NO 0x00000018 
+5.3.2  Transmit PDO Mapping (1A00h to 1A01h)  
+Index Sub Name Type Access PDO 
+Mapping Value 
+1A00h 
+0 Number of objects in this 
+PDO USINT RO NO 4 
+1 Mapping entry 1 UDINT RW NO 0x60000108 
+2 Mapping entry 2 UDINT RW NO 0x60000208 
+3 Mapping entry 3 UDINT RW NO 0x60000308 
+4 Mapping entry 4 UDINT RW NO 0x60000408 
+1A01h 
+0 Number of objects in this 
+PDO USINT RO NO 2 
+1 Mapping entry 1 UDINT RW NO 0x20120008 
+2 Mapping entry 2 UDINT RW NO 0x00000018
+
+[Página 43]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-6 
+5 
+5.4  Sync Manager Communication Objects 
+5.4.1  Sync Manager Communication Type (1C00h)  
+Index Sub Name Type Access PDO 
+Mapping Value 
+1C00h 
+0 Number of used Sync 
+Manager channels USINT RO NO 4 
+1 Communication type sync 
+manager 0 USINT RO NO 1: mailbox receive 
+(Master to slave) 
+2 Communication type sync 
+manager 1 USINT RO NO 2: mailbox send 
+(Slave to master) 
+3 Communication type sync 
+manager 2 USINT RO NO 
+3: process data 
+output (Master to 
+slave) 
+4 Communication type sync 
+manager 3 USINT RO NO 
+4: process data 
+input (Slave to 
+master) 
+5.4.2  Sync Manager PDO Assignment (1C12h to 1C13h)  
+Index Sub Name Type Access PDO 
+Mapping Value 
+1C12h 
+0 Number of assigned 
+PDOs USINT RW NO 1 
+1 
+PDO Mapping object 
+index of assigned 
+RxPDO 1 
+UINT RW NO 1600h 
+2 
+PDO Mapping object 
+index of assigned 
+RxPDO 2 
+UINT RW NO 0 
+1C13h 
+0 Number of assigned 
+PDOs USINT RW NO 1 
+1 
+PDO Mapping object 
+index of assigned  
+TxPDO 1 
+UINT RW NO 1A00h 
+2 
+PDO Mapping object 
+index of assigned  
+TxPDO 2 
+UINT RW NO 0
+
+[Página 44]
+R2-EC0902 User Guide                                                             Object Dictionary 
+5-7 
+5 
+5.4.3  Sync Manager Synchronization (1C32h to 1C33h)  
+Index Sub Name Type Access PDO 
+Mapping Value 
+1C32h 
+0 Number of SM Output 
+Parameter USINT RO NO 32 
+1 Synchronization Type UINT RW NO 0x0001 
+2 Cycle Time UDINT RW NO 0 
+4 Synchronization Type 
+Supported UINT RO NO 0x0005 
+5 Minimum Cycle Time UDINT RO NO 0x0001E848 
+6 Calc and Copy Time UDINT RO NO 0 
+8 Get Cycle Time UDINT RW NO 0x0001 
+9 Delay Time UDINT RO NO 0 
+10 Sync0 Cycle Time UDINT RW NO 0 
+11 SM-Event Missed UDINT RO NO 0 
+12 Cycle Time Too Small UDINT RO NO 0 
+32 Sync Error BOOL RO NO FALSE 
+1C33h 
+0 Number of SM Input 
+Parameter USINT RO NO 32 
+1 Synchronization Type UINT RW NO 0x0022 
+2 Cycle Time UDINT RW NO 0 
+4 Synchronization Type 
+Supported UINT RO NO 0x0005 
+5 Minimum Cycle Time UDINT RO NO 0x0001E848 
+6 Calc and Copy Time UDINT RO NO 0 
+8 Get Cycle Time UDINT RW NO 0 
+9 Delay Time UDINT RO NO 0 
+10 Sync0 Cycle Time UDINT RW NO 0 
+11 SM-Event Missed UDINT RO NO 0 
+12 Cycle Time Too Small UDINT RO NO 0 
+32 Sync Error BOOL RO NO FALSE
+
+[Página 45]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-8 
+5 
+5.5  Manufacturer Specific Objects 
+5.5.1  Read DO Actual Value (2000h)  
+This object reads the actual output value (8 output channels as a set). 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2000h 
+0 Read DO Actual Value USINT RO NO 4 
+1 Read Port 2 DO CH0 - 7 
+Actual Value USINT RO NO 0 to 255 
+2 Read Port 2 DO CH8 - 15 
+Actual Value USINT RO NO 0 to 255 
+3 Read Port 3 DO CH0 - 7 
+Actual Value USINT RO NO 0 to 255 
+4 Read Port 3 DO CH8 - 15 
+Actual Value USINT RO NO 0 to 255 
+5.5.2  Active DO Enable (2001h)  
+This object sets whether the output channel is allowed to change (8 output channels as a set).  
+0 = status change not allowed; 1 = status change allowed. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2001h 
+0 Active DO Enable USINT RO NO 4 
+1 Active Port 2 DO CH0 - 7 
+Enable USINT RW NO 0 to 255 
+2 Active Port 2 DO CH8 - 
+15 Enable USINT RW NO 0 to 255 
+3 Active Port 3 DO CH0 - 7 
+Enable USINT RW NO 0 to 255 
+4 Active Port 3 DO CH8 - 15 
+Enable USINT RW NO 0 to 255 
+5.5.3  DI Filter Range (2002h)  
+This object sets the time range for digital input filtering. This function is carried out by the software 
+function. The smallest software filtering unit is 100 µs, so when the digital input filtering time is set 
+to 100 µs, the actual filtering range may reach 200 µs (100 µs + 100 µs). When the digital input 
+filtering time is set to 1 ms, the actual filtering range may reach 1100 µs (1 ms + 100 µs).  
+This function is used with the digital input event recording function. When the digital input signal 
+value is detected, the digital input event will be recorded. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2002h 0 DI Filter Range USINT RW NO 0 to 4
+
+[Página 46]
+R2-EC0902 User Guide                                                             Object Dictionary 
+5-9 
+5 
+Bit definition: 
+Value Data description 
+0 The digital input filtering time is 100 µs. (Default) 
+1 The digital input filtering time is 1 ms. 
+2 The digital input filtering time is 2 ms. 
+3 The digital input filtering time is 3 ms. 
+4 The digital input filtering time is 4 ms. 
+5.5.4  Input Event Enable (2010h)  
+This object enables the digital input event recording function. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2010h 0 Input Event Enable USINT RW NO 0 to 1 
+Bit definition: 
+Value Data description 
+0 Disables the digital input event recording function. (Default) 
+1 Enables the digital input event recording function. 
+5.5.5  Clear Input Event (2011h)  
+This object clears the digital input event value. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2011h 0 Clear Input Event USINT RW YES 0 to 255 
+Bit definition: 
+Value Data description 
+- When the value of 2011h changes, the value of 2012h is cleared to 0 immediately.
+
+[Página 47]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-10 
+5 
+5.5.6  Input  Event Value (2012h) 
+This object displays the digital input event value. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+2012h 0 Input Event Value USINT RO YES 0 to 255 
+Bit definition: 
+Bit Meaning 
+0 Records whether the digital input signal of Port 1 Input CH8 has changed. 
+1 Records whether the digital input signal of Port 1 Input CH9 has changed. 
+2 Records whether the digital input signal of Port 1 Input CH10 has changed. 
+3 Records whether the digital input signal of Port 1 Input CH11 has changed. 
+4 Records whether the digital input signal of Port 1 Input CH12 has changed. 
+5 Records whether the digital input signal of Port 1 Input CH13 has changed. 
+6 Records whether the digital input signal of Port 1 Input CH14 has changed. 
+7 Records whether the digital input signal of Port 1 Input CH15 has changed.
+
+[Página 48]
+R2-EC0902 User Guide                                                             Object Dictionary 
+5-11 
+5 
+5.6  Device Control  
+5.6.1  Read Input ( 8-bit) (6000h) 
+This object reads the digital input channel status (8 input channels as a set). 
+Index Sub Name Type Access PDO 
+Mapping Value 
+6000h 
+0 Read Input (8-bit) USINT RO NO 4 
+1 Read Port 0 Input CH0 - 7 
+(8-bit) USINT RO YES 0 to 255 
+2 Read Port 0 Input CH8 - 
+15 (8-bit) USINT RO YES 0 to 255 
+3 Read Port 1 Input CH0 - 7 
+(8-bit) USINT RO YES 0 to 255 
+4 Read Port 1 Input CH8 - 
+15 (8-bit) USINT RO YES 0 to 255 
+5.6.2  DO Setting Value (6200h)  
+This object controls the digital output channel status (8 output channels as a set). 
+Index Sub Name Type Access PDO 
+Mapping Value 
+6200h 
+0 DO Setting Value USINT RO NO 4 
+1 Port 2 DO CH0 - 7  
+Setting Value USINT RW YES 0 to 255 
+Default: 0 
+2 Port 2 DO CH8 - 15 
+Setting Value USINT RW YES 0 to 255 
+Default: 0 
+3 Port 3 DO CH0 - 7  
+Setting Value USINT RW YES 0 to 255 
+Default: 0 
+4 Port 3 DO CH8 - 15 
+Setting Value USINT RW YES 0 to 255 
+Default: 0 
+5.6.3  DO Error Mode Enable (6206h) 
+This object sets the Error Mode parameters (8 output channels as a set). 0 = remain the original 
+output values; 1 = refer to the setting values of DO Error Mode Setting Value (6207h). 
+Index Sub Name Type Access PDO 
+Mapping Value 
+6206h 
+0 DO Error Mode Enable USINT RO NO 4 
+1 Port 2 DO CH0 - 7  
+Error Mode Enable USINT RW NO 0 to 255 
+Default: 255 
+2 Port 2 DO CH8 - 15  
+Error Mode Enable USINT RW NO 0 to 255 
+Default: 255 
+3 Port 3 DO CH0 - 7  
+Error Mode Enable USINT RW NO 0 to 255 
+Default: 255 
+4 Port 3 DO CH8 - 15  
+Error Mode Enable USINT RW NO 0 to 255 
+Default: 255
+
+[Página 49]
+Object Dictionary                                                             R2 -EC0902 User Guide 
+5-12 
+5 
+5.6.4  DO Error Mode Setting Value (6207h)  
+This object sets the Error Mode Output Value parameters (8 output channels as a set). 
+Index Sub Name Type Access PDO 
+Mapping Value 
+6207h 
+0 DO Error Mode Setting 
+Value USINT RO NO 4 
+1 Port 2 DO CH0 - 7  
+Error Mode Setting Value USINT RW NO 0 to 255 
+Default: 0 
+2 Port 2 DO CH8 - 15  
+Error Mode Setting Value USINT RW NO 0 to 255 
+Default: 0 
+3 Port 3 DO CH0 - 7  
+Error Mode Setting Value USINT RW NO 0 to 255 
+Default: 0 
+4 Port 3 DO CH8 - 15  
+Error Mode Setting Value USINT RW NO 0 to 255 
+Default: 0 
+5.6.5  DO Filter Mask (6208h)  
+This object sets the DO Filter Mask parameters (8 output channels as a set). 0 = ignore the 
+received setting values and remain the original output status; 1 = the output status is set as the 
+received setting values. 
+Index Sub Name Type Access PDO 
+Mapping Value 
+6208h 
+0 DO Filter Mask USINT RO NO 4 
+1 Port 2 DO CH0 - 7  
+Filter Mask USINT RW NO 0 to 255 
+Default: 255 
+2 Port 2 DO CH8 - 15  
+Filter Mask USINT RW NO 0 to 255 
+Default: 255 
+3 Port 3 DO CH0 - 7  
+Filter Mask USINT RW NO 0 to 255 
+Default: 255 
+4 Port 3 DO CH8 - 15  
+Filter Mask USINT RW NO 0 to 255 
+Default: 255
+
+[Página 50]
+6-1 
+ 
+SDO Error Message  
+Abort Code 
+ 
+This chapter introduces the SDO Error Message Abort Code of R2-EC0902. 
+000                                                               
+6.1  SDO Error Message Abort Code  ··························································· 6-2
+
+[Página 51]
+SDO Error Message Abort Code                                               R2 -EC0902 User Guide 
+6-2 
+6 
+6.1  SDO Error Message Abort Code  
+The following table lists the abort codes for SDO communication errors: 
+Code Description 
+0x05 03 00 00 Toggle bit was not changed. 
+0x05 04 00 00 SDO protocol timeout. 
+0x05 04 00 01 Invalid or unknown SDO command. 
+0x05 04 00 05 Insufficient memory. 
+0x06 01 00 05 Unsupported access to an object. 
+0x06 01 00 00 Attempt to read an object. 
+0x06 03 00 02 Attempt to write a read-only object. 
+0x06 02 00 00 Object does not exist in the object dictionary. 
+0x06 04 00 41 Object cannot be mapped to the PDO. 
+0x06 04 00 42 The number and length of the objects to be mapped would exceed the 
+PDO length. 
+0x06 04 00 43 General parameter incompatibility. 
+0x06 04 00 47 General internal error in device. 
+0x06 06 00 00 Access failed due to a hardware error. 
+0x06 07 00 10 Data type or length of service parameter does not match. 
+0x06 07 00 12 Data type does not match, length of service parameter too long. 
+0x06 07 00 13 Data type does not match, length of service parameter too short. 
+0x06 09 00 11 Sub-index does not exist. 
+0x06 09 00 30 Parameter value out of range (for write access). 
+0x06 09 00 31 Value range error: parameter value too big. 
+0x06 09 00 32 Value range error: parameter value too small. 
+0x06 09 00 36 Maximum value is less than minimum value. 
+0x08 00 00 00 General error. 
+0x08 00 00 20 Data cannot be transferred or stored to the application. 
+0x08 00 00 21 Due to local control, data cannot be transferred or stored to the 
+application. 
+0x08 00 00 22 Due to current device status, data cannot be transferred or stored to 
+the application. 
+0x08 00 00 23 Dynamic creation error of the object dictionary or the object dictionary 
+does not exist.
+
+[Página 52]
+1 
+Revision History 
+ 
+Release date Version Chapter Revision contents 
+May, 2021 V2.0 
+(Second edition) CH2 The module dimensions are modified as  
+230 x 121.7 x 41.7 mm (W x H x D) 
+July, 2020 V1.0 
+(First edition)
+
+[Página 53]
+Revision History                                                              R2-EC0902 User Guide 
+2 
+(This page is intentionally left blank.)

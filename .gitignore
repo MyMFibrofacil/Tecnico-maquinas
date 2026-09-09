@@ -1,0 +1,12 @@
+# Python bytecode and cache directories generated locally
+__pycache__/
+*.py[cod]
+
+# Local environment and sensitive configuration files
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system metadata
+.DS_Store
+Thumbs.db

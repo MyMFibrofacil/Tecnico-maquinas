@@ -1,0 +1,25 @@
+r i 2 I z I a 5 I 3 I z 2 ae
+Servo encoder soldering table Servo encoder soldering table
+“ for X,A,B,C,U axis for Y,Zaxis 4
+| 4
+B B
+<iinector of
+: servo driver teacher of 3
+serve driver 34240. 5 shielded cable 3420.5 shielded cable
+14 LI
+servo driver | description | servo motor | color servo driver | description | servo eotor | color |
+D 1 =r 1 brown i ES 2@) brown >|
+* ‘sD- 2 white z sD- 36) white
+4 5 sv 3 yellow 5 av 4@) yellow
+2 oo a green 2 oo EC) green
+Z vee-5Y 5 gray ev 6) sy
+‘YB-GND 6 pink ‘YB-GND 7 pink
+PE Tron shell Tron shell rE Tron shell 1
+F |
+si see Le wee Pict of servo driver — center |Ver.) 1.
+Cox catpeontaedisen ce isi 1 Dat Totune| Sica a8, driver BS [gedertmene] CC RED center [Ver] LT
+Check +e Date ee Project G100DZ Total: 48 [Page: at
+1 I 2 3 7 A I e 7 T 5
+= = rc] ms = = = =
+
+“WARY Bashy

@@ -1,0 +1,5 @@
+[Imagen: WhatsApp Image 2026-09-01 at 09.34.18 (3).jpeg]
+Dimensiones: 1280 x 960
+Formato: JPEG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

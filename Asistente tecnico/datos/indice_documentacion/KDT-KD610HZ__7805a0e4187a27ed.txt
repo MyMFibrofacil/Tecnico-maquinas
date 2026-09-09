@@ -1,0 +1,5 @@
+[Imagen: electrico-48.png]
+Dimensiones: 1404 x 992
+Formato: PNG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

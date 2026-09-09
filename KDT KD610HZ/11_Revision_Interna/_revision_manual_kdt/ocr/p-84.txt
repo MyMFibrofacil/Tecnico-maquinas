@@ -1,0 +1,29 @@
+SNIHOVW ONITHUG ON
+
+T I 2 Te a i a = I é I 7 T 3
+4 Welding diagram for upper spindle signal
+Pin layout of 8-pin signal connector 8-pin-signal’ connector’ pin ‘layout
+Pin description
+
+8 § § gg 1 | Sensor 52 (tool eject) output CNP NO normally open)
+
+ad | Sensor St (ool Jock) vipat (AP WO rormaly ope)
+| aa) RF 3
+
+| y' 4 ‘+24V DC power supply to SI, S2 and button Lights
+c 5 [0 0 pve sesly We 1, SP nd ates iat
+| 7 De 0784 WC cooing fon ed vi)
+tT dTalolo]oloalo 3 OC 0-75 B coli Tn Ged iO
+sd ‘Warnings The 24V DC fan wust be normally open. and the power
+ololalolololalo Perineal prernyearte emma covertly
+pate 40/30
+6 Thermistor rot
+L| 20 sae
+F
+aoe ve | ose Pieture) nals ES: ie La enter |Ver.) 1.
+a Sua see taggin ey Date Teture] Signals of upper spindle |aenarteent| CNC RAD center |Ver.| 1.1
+‘Check see Date oe Project 61002 Total: 48 Page: 39
+T T z z 7 A I o 7 oy
+
+JWANVW Sash
+

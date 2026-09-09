@@ -1,0 +1,9 @@
+{
+  "maquinas": {
+    "KDT-KD610HZ": {
+      "nombre": "KDT KD-610HZ",
+      "numero_serie": "6610220700121",
+      "directorio_documentacion": "../KDT KD610HZ"
+    }
+  }
+}

@@ -1,0 +1,1860 @@
+[Página 1]
+SM-26-610(H)Z-EN-01-A1 20220107  
+ 
+ INDEX 
+FOREWORD ................................................................................................................................................. 1 
+CHAPTER 1 GENERAL INFORMATION .......................................................................................................... 2 
+1.1 MACHINE USAGE ................................................................................................................................... 2 
+1.2 TECHNICAL DATA .......................................................................................................................................... 2 
+1.3 SAFE OPERATION RULES ................................................................................................................................. 4 
+CHAPTER 2 HANDLING AND INSTALLATION ................................................................................................. 8 
+2.1 HANDLING .................................................................................................................................................. 8 
+2.2 PREPARE THE SITE ......................................................................................................................................... 8 
+2.3 MACHINE LEVEL ADJUSTMENT ......................................................................................................................... 9 
+2.4 FIXATION OF EXPANSION BOLTS ...................................................................................................................... 10 
+2.5 REMOVAL OF FIXING PLATES ......................................................................................................................... 11 
+2.6 CLAMPS SPACE ADJUSTMENT ........................................................................................................................ 11 
+2.7 INSTALLATION OF COVERS ............................................................................................................................. 14 
+2.8 RIGHT-ANGLE MILLING HEAD TEST .................................................................................................................. 19 
+2.9 AIR SOURCE AND AIR PRESSURE .................................................................................................................... 21 
+2.10 TOOLS INSTALLATION ................................................................................................................................. 24 
+2.11 DUST EXTRACTION EQUIPMENT ................................................................................................................... 30 
+2.12 OPERATION AREA AND SAFETY ATTENTIONS ................................................................................................... 31 
+CHAPTER 3 MAINTENANCE ....................................................................................................................... 32 
+3.1 MACHINE MAINTENANCE ............................................................................................................................ 32 
+3.2 LUBRICATION ............................................................................................................................................. 33 
+3.3 MAINTENANCE OF SPINDLE AND TOOL HANDLE ................................................................................................ 38 
+3.4 OTHER MAINTENANCE ................................................................................................................................ 39 
+3.5 HOW TO CHANGE SERVO BATTERY ................................................................................................................. 39 
+CHAPTER 4 PNEUMATIC CIRCUIT DIAGRAM .............................................................................................. 40 
+CHAPTER 5 ELECTRICAL CIRCUIT DIAGRAM ............................................................................................... 42
+
+[Página 2]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+1 
+FOREWORD 
+Our CNC boring machine is under constant development. The equipment provided to you may not 
+match the description in this manual, which just gives a general description of machine and can’t be the 
+credentials of equipment acceptance. Please note the following items before starting this machine.  
+ It is suggested that all the staff members related to the machine should read this manual book. 
+ The operator of the machine should be trained on the relevant technology or instructed by a special 
+person. 
+ This manual introduces the performance, structural characteristics and operation of the machine. 
+ The manual reminds users of the safety precautions and typical methods of operation. Observance 
+to the methods of operation can avoid the occurrence of accidents, reduce downtime and 
+maintenance costs, so as to improve the utilization rate of machine and production efficiency. 
+ This manual book describes the items related to work injury prevention and environmental 
+protection, etc. Users can supplement according to the specific circumstances of their country. 
+ This manual shall be placed near the machine, allowing easy access for the operator and the 
+relevant maintenance personnel. 
+ In addition to the manual and the rules of accident prevention in the user countries, the operator 
+must comply with the recognized reasonable safety operation standards. 
+Safe signs: 
+ Stay away from this location to avoid crushing and shearing 
+caused by strong force. 
+ Do not open the electric cabinet or touch anything with 
+electricity to prevent electric shock. 
+ Watch your hands when machine is running. 
+ Be careful not to get juried when machine is running.   
+ Stay away from this location to avoid injury caused by 
+strong force.
+
+[Página 3]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+2 
+Chapter 1 General Information 
+1.1 Machine Usage 
+This is an NC machining equipment featured in simple operation, high efficiency and high , with which 
+to perform drilling, widely applied to all kinds of panel furniture .Machine was designed to operate on 
+wood and similar materials. Metals are strictly excluded.  
+1.2 Technical Data 
+ 1.2.1 Plane dimension 
+610Z/610HZ Plane Dimension
+
+[Página 4]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+3 
+1.2.2 Technical parameters 
+  
+Model 610Z/610HZ 
+Panel length 70～2800mm 
+Panel width 
+50～1000 mm 
+35～50mm(L≤1000mm) 
+Panel thickness 9～60mm 
+Max motion speed of clamps 140m/min 
+Max speed of Y axis 90m/min 
+Max speed of Z axis 50m/min 
+Max speed of B axis 75m/min 
+Max speed of C axis 30m/min 
+Number of tools 
+Upper drill: 12(V)+8(H) 
+Bottom drill: 9(V) 
+Drill chuck spec. φ10 
+Spec. for upper-spindle tool 
+handle 
+ISO30-ER32 
+Dust Connections 
+φ200mm*1 
+φ100mm*1 
+Overall size 5270L*2660W*2190H mm 
+Total power 21.9kW 
+Working  pressure 0.6 MPa
+
+[Página 5]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+4 
+1.3 Safe Operation Rules 
+Warning: Please carefully read the corresponding safety rules before operation and operate the 
+machine in strict accordance with the safety regulations. If any doubt, please do not 
+operate the machine without authorization, please contact the nearest dealer or 
+machine manufacturer for help.  
+1.3.1 Safe operation rules: 
+（1）Specify professional operators; 
+（2）Prohibited to put mess on the working table; 
+（3）Before enabling the machine, please ensure there are no extra operators or mess around it; 
+（4）It is very important to wear safe ty helmet and goggles . Gloves are not necessary to operate the 
+machine. 
+（5）Keep machine and worktable surroundings clean and tidy; 
+（6）When abnormal alarm signal occurs, the operator should immediately stop all processing and timely 
+solve the problem, until the problem is solved before operating the machine again. 
+ 
+During machine processing, the door must be closed to avoid improper operation  
+and injury resulting from the collapse of knife or sawtooth flying out! 
+ 
+ 
+1.3.2 Safe operation rules for changing tools: 
+Please confirm the following items before changing tools  
+A Machine stops running; 
+B Press down an EMG stop button to lock machine. 
+C Fix the collet in the tool holder, place the cutter in the tool holder and confirm to secure the tool lock.
+
+[Página 6]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+5 
+ 
+ 
+ 
+The tool installation length L shall not be greater than the distance K from the 
+end face of the tool handle to the bakelite of the plate. L=40mm is recommended 
+ 
+1.3.3 Safety operation rules for tool magazine 
+（1）Tool magazine in upper spindle has five positions. U nder the situation of spindle has a cutter,  at 
+most four cutters can be placed in it, which can be chosen from vertical milling cutter, vertical Lamello 
+milling cutter, horizontal Lamello saw blade, horizontal saw blade, etc. Cutters of other specifications can 
+also be added in the tool magazine, then fill in the relevant size information and keep the size information 
+accurate, otherwise the plate and machine may be damaged. 
+ 
+  
+L
+K
+
+[Página 7]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+6 
+ 
+ 
+The type of cutter s filled in the tool  magazine must be consistent with reality, 
+otherwise plate and machine will be damaged and people get hurt! 
+ 
+ 
+ 
+（2） If changing the tool manually is needed, switch to manual mode, move the spindle mechanism to 
+the right side (pay attention to adjusting the spindle height and avoiding tool magazine). After confirming 
+the spindle is not rotating,  hold the knife holder by hand, and then press th e button next to the tool 
+magazine to relieve the knife.
+
+[Página 8]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+7 
+ 
+  
+Button for tool 
+change 
+manually 
+Pay attention 
+to avoiding
+
+[Página 9]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+8 
+Chapter 2 Handling and Installation  
+2.1 Handling 
+Handling with forklift 
+Machine should be lifted by means of forklift, lifter arm inserts into to machine bottom, put some 
+appropriate packing material on the gravity center, so as to protect machine from damage.  
+First, lift up one side by the forklift, place a wood block under, then lift up the whole machine.  
+slowly and with the utmost care while preventing oscillations as much as possible. 
+。 
+ 
+2.2 Prepare the Site 
+This machine is a CNC equipment with high precision and electromechanical integration, in 
+order to avoid precision error due to abnormal vibration in the process of operation, the 
+installation site should meet the following requirements: 
+ The floor must be concrete with the thickness no less than 20cm and the bearing capacity 
+should be greater than machine weight (about 4000kg). 
+ The machine should be installed at a place free from vibration, collision and shock, and 
+be far away from the vibration source.  
+ The machine should be installed at a place free from rain. Installation in the open air is 
+prohibited. to ensure running in correct environment so as not to damage the internal 
+parts of the machine. 
+ To ensure correct use and maintenance operations in safe conditions, there  must be 
+enough operation space reserved in the factory site, and ensure there must be at least 2 
+meters away between machines or walls around . If necessary, it is recommended to 
+delimitate an area marked by a yellow line on the floor, which must be kept c lean and 
+unobstructed around machine.
+
+[Página 10]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+9 
+2.3 Machine Level adjustment 
+Adjust machine to be leveled:  
+Place the leveler in mid-worktable. Placement point of the leveler is at the vertical and horizontal positions 
+in both ends of mid-worktable (see below figure), and adjust machine to be levelled by the Anchor Bolt  
+After machine is levelled, place the leveler at both ends of the clamp stroke to check if machine is in level; 
+if not, please make slight adjustment.  
+ 
+Adjust machine be levelled by anchor bolts
+
+[Página 11]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+10 
+2.4 Fixation of expansion bolts 
+After the machine is adjusted horizontally, fix the base anchor  on the mounting surface with 
+expansion bolts. You are advised to use M16 * 200 expansion bolts for anchor bolts. Position N shown in 
+the following picture is the place to fix expansion bolts. 
+It is recommended that M10*120 expansion bolts be  used to fix the two supporting baseplates of 
+each safety fence on the installation surface. To ensure the safety  of the rear area when the machine is 
+working, secure the safety fence according to the position shown in the figure. 
+ 
+ 
+M16*200 Expansion bolt
+M24*100 Anchor bolt
+The floor thickness20cm
+Anchor of main frame
+Anchor base of main frame
+ 
+Expansion bolts for main frame
+
+[Página 12]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+11 
+2.5 Removal of Fixing Plates 
+To prevent moving of drill unit, clamps, and side aligner along the clamp stroke when 
+handling and transporting, they were fixed in the factory with plates as below images 
+shown After the installation completed, please dismantle the fastening plates.  
+Open the machine’s safety guards and find the identify fastening plates shown in below 
+pictures. 
+ 
+Fastening plates in 
+Upper Drills  
+ 
+Fastening plates in Clamps 
+ 
+Fastening plates in Side 
+Aligner 
+ 
+ 
+Fastening plates in 
+Bottom Drills  
+ 
+ 
+Fastening plates in 
+Bottom Drills  
+ 
+ 
+2.6 Clamps Space Adjustment 
+According to the thickness of workpiece, the open space of clamps could be adjusted by 
+regulating screw underneath. And the adjust range is 36-66mm. Decrease of the open space 
+can improve drilling efficiency. 
+Please be noted that the open space shall be 6mm greater than thickness of the 
+workpiece, or there would be errors in out-feeding. 
+As shown in the following figure, there are 3 sets of adjusting screws in the clamps (Clamp 
+X and A are the same). The adjusting screw 1 is used to adjust the upper limit of bottom 
+clamp, and the adjusting screw 2 is used to adjust the lower limit of bottom clamp, while 
+the adjusting screw 3 is used to adjust the upper limit of upper clamp, that is, the maximum 
+open space of clamps.
+
+[Página 13]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+12 
+ 
+A. Adjusting screw 1: Used to adjust the upper limit of bottom clamp 
+B. Adjusting screw 3: Used to adjust the upper limit of upper clamp(Max. space of clamps) 
+C. Magnetic switch  
+D Adjusting screw 2: Used to adjust the lower limit of bottom clamp  
+E. Block underneath clamp  
+Specific adjustment steps and matters to be attention are as follows: 
+（1） When clamps close: screw off nut 1to move bottom clamps downwards or upwards 
+to an appropriate position, then screw up nut 1. At this moment, position of the 
+bottom clamp is the upper limit of bottom clamp in close state. In this position, 
+surface of bottom clamp should be about 0.1mm higher than the that of worktable, 
+so as to prevent friction between workpiece and worktable during the movement,  
+（2） When clamps open: screw off nut 2, to move bottom clamps downwards or 
+upwards to an appropriate position, then screw up nut 2. At this moment, position 
+of the bottom clamp is the lower limit of bottom clamp in open state. In this 
+position, surface of bottom clamp should be about 0.5mm higher than the that of 
+worktable, so as to prevent collision with bottom clamp plates when workpiece is 
+conveying transversely  
+（3） The open space of clamp is set to be 36mm in the factory, and the maximum space 
+can adjust to be 66mm which can satisfy machining with 60mm workpiece. In 
+practice application, the maximum spacing could be adjusted according to 
+maximum thickness required in order to reduce the clamping time and further 
+improve the machine’s efficiency.  
+As it is a big adjustment, it is suggested to screw up the nut 3 when clamp cylinder 
+A 
+B 
+C 
+E 
+D
+
+[Página 14]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+13 
+is empty of compressed air., by this moment, nut 3 is against the upper parts, move 
+the upper clamp downwards till it reaches the required open space, then screw up 
+nut 3 to lock.  
+If it is once again to enlarge the open space, screw off nut 3 to an appropriate 
+position and lock again. At the same time, please adjust position of the magnetic 
+switch ensure the magnetic switch can sense position of cylinder rod when the 
+upper clamp lifts up in place.  
+Attention: When adjusting the position of the magnetic switch, pay attention to 
+moderate strength so as to prevent damage to the head of the screw, which would 
+cause screw loose. 
+（4） Use the blunt end screw of M8*55 for adjusting screw, the screw that is longer than 
+55mm is not allowed. Otherwise, it would cause collision between parts and make 
+the machine damaged. After adjustment, these two screws must contact the limit 
+block at the same time, then lock the nut 
+（5） When adjusting the space to be 36mm -46mm, the locking nut should be above the 
+bottom block underneath clamp. When adjusting to be 46mm-66mm, the locking 
+nut should be locked under the bottom block, finally adjust the height of glass.
+
+[Página 15]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+14 
+2.7 Installation of Covers 
+Before the machine is packed and transported, remove the right cover, left cover, front 
+cover, front gripper guiderail cover, front towline cover, hanging board and fence first. 
+ 
+  
+Above figure indicates： 
+1 4 3 
+2 
+ 5 
+7 9 8 
+6
+
+[Página 16]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+15 
+（1）Fence； （2）Front gripper guiderail cover； （3）Front cover； （4）Right cover； （5）
+Front towline cover； （6）Left cover 
+（7）Hanging board 1；（8）Hanging board 2； （9）Hanging board 3 
+2.7.1 Installation Diagram of Right side cover 
+ 
+1. Connect the right cover and column with long angle iron             
+2. Connect the right cover and machine frame with small angle iron  
+3. Connect the right cover and supporting column with long angle iron                     
+ 
+ 
+ 
+ 
+ 
+ 
+1 2 3
+
+[Página 17]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+16 
+2.7.2 Installation Diagram of Left side cover 
+ 
+ 
+1. Connect left-side cover with left column of  front cover by angle iron; 
+2. Connect left-side cover with main electric cabinet. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+1 
+ 2
+
+[Página 18]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+17 
+2.7.3 Installation Diagram of rail cover in front 
+ 
+ 
+ 
+ 
+1 Connect the front towline cover and gripper guiderail with connector    
+2. Connect the front gripper guiderail cover and column 
+3. Connect the front gripper guiderail cover and left cover with connector 
+ 
+ 
+ 
+ 
+1 2 
+ 3
+
+[Página 19]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+18 
+2.7.4 Installation Diagram of rail cover in front:  
+ 
+ 
+As (1 ) & ( 2) marked above are the mounting holes for front cover 
+ 
+  
+2 1
+
+[Página 20]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+19 
+2.8 Right-angle milling head test 
+The right-angle head of the spindle is optional. If it is installed or replaced for the first time, please install 
+and test according to the following way. 
+Install the right-angle milling head on the spindle as picture shows.  
+Note: The positioning pin of the right-angle head should be inserted into the positioning waist hole, 
+where the positioning flange is away from the drill bag. 
+ 
+（2）Gently shake the right-angle head from left to right, which can be realized if there is a gap. To ensure 
+the right-angle head not shake left to right, s lightly loosen the lock nut on both sides and adjust the 
+machine, and enable the right-angle head positioning pin rise to insert the flange slot under the action of 
+internal spring. 
+ 
+ 
+ 
+ 
+Positioning pin 
+Positioning 
+flange 
+Spindle right-
+angle head
+
+[Página 21]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+20 
+ 
+ 
+（3）Install the milling cutter on both sides of the right-angle head, with tool handle partially outside the 
+tool holder. Use a dial gauge to measure the parameter of milling cutter handle on both sides, loosen the 
+locking screws of right-angle head index plate, and fine-adjust the angle of right-angle head to ensure that 
+milling cutters on both sides are parallel to Y axis of the machine. After adjustment, use torque wrench to 
+lock the right-angle head screw, and then check the meter to ensure accuracy. 
+ 
+  
+分度盘锁紧
+螺丝 
+Lock nut  
+ 
+Lock nut in 
+index plate
+
+[Página 22]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+21 
+2.9 Air Source and Air Pressure 
+A drying equipment must be installed to avoid mechanical faults caused by excessive moisture content in 
+air tank. Make sure the air pressure is 6kgf / ㎠ or above (specified pressure value in pressure gauge for 
+air filter). If there are changes in the air pressure, adjust the pressure regulator to maintain the air pressure 
+within a certain range, check in every 7 working days  
+Air pipe diameter is 16mm. The tip diameter must be or more than 1 inch, otherwise the pressure will be 
+insufficient. 
+Notes: 
+1、 Compressed air discharged by the air compressor could not be used directly, because it contains a 
+certain amount of water, oil and dirt. The air temperature after compressed is up to 140 ~ 17 0 ° C, 
+with part of the water and oil transformed into gas, therefore, it must apply the dried and cooled gas 
+as the air source.  
+2、 There is a part of water vapor in the air storage tank, which is not completely dried in the air source 
+and liquefied at the bottom of the air storage tank. It is necessary to open the ball valve every day to drain 
+water from the air storage tank. Ball valve is situated below left beam. 
+ 
+3.  When applying oil to the oil lubricator, screw off oil plug and apply oil up to 80% level. Please check 
+and lubricate periodically and have machine run in sufficient oil.  
+4.  Keep the oil level between the upper and lower limits, and make sure for timely application  
+5.  Do not stop oil applying in a work cycle. Otherwise, the related parts will be worn more quickly and 
+run poorly due to lack of lubrication 
+Ball valve for drainage
+
+[Página 23]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+22 
+6. Air source filter and Valve terminal in drill unit are automatic drainage device. When the liquid 
+level reaches the warning line, they will automatically drain without manpower 
+ 
+ 
+Adjust the pressure regulator to make the indicated value to be proper one. For users’ convenience, there 
+are five pressure regulators in the machine, including pressure regulator in left spindle pressing plate, 
+pressure regulator in right spindle pressing plate, pressure regulator in gripper cylinder, pressure regulator 
+in upper drill head pinch roller and pressure regulator in spindle air block. 
+Under normal circumstances, the pressure regulator for side aligner should be adjusted to 0.2MPa,  
+If too much pressure on panel, it would make panel move uneasily.  
+The regulator for clamps shall be adjusted to a appropriate value according to material of workpiece. Too 
+much pressure would cause damage on panel surface. 
+Under normal circumstances, the pressure regulator for left and right pressure plates on spindle should be 
+adjusted to 0.2MPa to ensure proper pressing force when milling.   
+Under normal circumstances, the pressure regulator for pressure roller on bottom drill should be adjusted 
+to 0.2MPa to ensure proper pressing force when drilling. 
+Under normal circumstances, the p ressure of the spindle air -block regulator should be adjusted to 0.2~ 
+0.3mpa to ensure the formation of air curtain at the bottom of the spindle to prevent dust from entering. 
+Air inletΦ16mm
+
+[Página 24]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+23 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The above figure indicates: 
+1. Pressure regulator in drill head pinch roller 
+2. Air-block regulator in spindle 
+3. Pressure regulator in left and right spindle pressing plate 
+4. Pressure regulator in gripper 
+ 
+ 
+1 
+ 2 
+ 3 
+ 4
+
+[Página 25]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+24 
+2.10 Tools Installation 
+A、Spindle tools installation 
+ It is suggest to use a tool holder with diameter of 1/2 inch on spindle, Tools length range is 
+70mm while tool diameter range is 1-16mm.  
+ The max. diameter of saw blade in upper spindle should be 100mm. 
+ The actual drilling range in Y direction of spindle in lower drill head should be 0~980mm； 
+ The length of tools inserted to collet shall be twice greater than diameter of holder, which would be 
+better for fastening. 
+ The length of tools that stretched out of collet shall be measured and write into the software as 
+tools length setting. 
+ 
+Note: Installation not complied with above requirements may cause damage to 
+machine and injury to workers . 
+B、Installation and use of spindle right-angle milling head 
+ The total lengths of tools on both sides of the right-angle milling head shall not exceed 80mm, 
+otherwise there is a risk of damage gripper guiderail. 
+ After continuous working, the right-angle milling head, as a precision component, must be stopped 
+for a c ertain t ime before processing  again. Otherwi se, it may be  damaged because of high 
+temperature. Rest time for right-angle milling head can refer to the figure below. 
+ 
+C、Installation of air drill 
+ Drill head spec.：The drill head handle must be 10mm in diameter and 70mm in length, with all drill 
+head must in the same length.
+
+[Página 26]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+25 
+ Apply lubrication grease on the drill head handle when mounting drill head, in case of difficult 
+removal because of rust. 
+ The drill head must be fixed with M6*6 flat-end hexagon socket, which must be removed from the 
+tool position where drill head is not installed. 
+ Drill of different sizes must be installed in accordance with the requirements of the following 
+figure to avoid machine damage; 
+Tool magazine is recommended to set as follows:  
+610Z Upper drills layout 
+ 
+ In the figure above, the positions of no. 1-11 are only available to install drill bits with diameter no 
+more than 20mm. 
+ No 1-5 positions in above figure are available for through hole drill while it is not available in no. 
+6-12 positions in order to avoid hit against with the worktable and make damage on table.  
+ In the figure above, the positions of no.13-20 are only available to install drill bits with diameter no 
+more than 16mm. 
+ In the figure above, position of no.12 is available to install drill bits with diameter no more than 
+35mm. The drill bit with diameter of 35mm features in two-edged which is for better drilling 
+quality.  
+ When through hole is required, it is recommended to apply drills no.1-5 working with bottom 
+drills. If the through hole indeed needs to be done by upper drills, install through-hole drills at 
+position of No. 1- 5 positions, then reduce the feed speed of drills and select drill bits with good 
+quality, but to a certain extent, there are also risk in poor drilling  
+ The layout of tools can be adjusted according to the required machining. And no.5-12 drill bits are 
+commonly used for best drilling effect.
+
+[Página 27]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+26 
+610HZ Upper drills layout 
+ 
+ In the figure above, the positions of no. 1-11 are only allowed to install drill bits with 
+diameter no more than 20mm. 
+ No 1-5 positions in above figure are available for through hole drill.a through hole 
+drill is not allowed in no. 6-12 positions to avoid the worktable from rupture 
+ In the figure above, the positions of no.13-20 are only allowed to install drill bits with   
+diameter no more than 16mm. 
+There is no need to install drill bits at No 15 and 16 positions. 
+ In the figure above, the no.12 position allows a drill bit with diameter no more than 
+35mm. The drill bit with diameter of 35mm is two-edged and can result in better 
+processing quality. 
+ When through hole is required, it is recommended to drill through at No 1-5 positions  
+combining top drill unit with bottom one. If the through hole indeed needs to be done 
+by top drill head, install throughhole drills at No 15 positions, then reduce the feed spe
+ed of drill and  
+select drill bits of the best quality. But to some degree, the risk of poor processing is in
+evitable in doing so. 
+ The layout of tools can be adjusted according to the processing technology. And no.5-
+12 drill bits are commonly used for their best processing effect.
+
+[Página 28]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+27 
+610Z/610HZ bottom drills layout 
+ 
+ 
+ As figure shows above, No. 1~4 and No. 6~9 position in lower drill can only install drill head with 
+diameter equal or greater than 20mm; 
+ No. 5 position in lower drill can only install drill head with diameter equal or greater than 35mm; 
+ Drilling distance of drill head in No. 3, No. 6 and No. 9 position in Y direction is equal or greater 
+than 32mm; 
+ 
+Please install according to above suggestion, otherwise, machine damage and 
+personnel injury might be caused. 
+Note: it is recommended to use double -edged bits with diameter of 35mm for a better 
+drilling quality. 
+Double-edged drill bit with diameter of 35mm is 
+shown as below:
+
+[Página 29]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+28 
+D、Installation of saw blade 
+612KH\612KHF Saw blade installation on upper drill unit  
+ 
+The above figures indicate: 
+(1) Side dust extraction cover 
+(2) Screw nuts for mounting saw blade 
+Saw Blade Installation Instruction 
+(1) Nuts dismounted: Prepare an 8mm inner hex spanner and a 31mm open -end wrench or monkey 
+wrench, insert the 8mm inner hex spanner into the hexagonal hole in saw shaft, then lock the nut with the 
+open-end wrench and rotate as the arrow indicates to loosen the nut.  
+ 
+(2) Saw plate thickness: The min lockable thickness of saw plate is 1.5mm and max lockable thickness 
+is 5mm.  
+Pay attention to the direction
+
+[Página 30]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+29 
+ 
+(3) Rotation direction of saw blade: The cutting direction of blade teeth  should be e same as the arrow 
+indicates on the nut of saw shaft (screw up the nuts after confirmation).  
+ 
+Notes:  
+1.Please Confirm the rotation direction before installing saw blade. (Motor must go forwards), because 
+Wrong direction will cause the nut loose and further to cause injury to personnel.  
+2. Diameter of saw blade is 120mm, width limit of blade tooth is 6mm. (Suggest to use blade with 24 
+teeth or more) 
+3. Please adjust the feed depth and feed speed respectively according to different wood material 
+4.When grooving with blade, working size in Y axis should be less than 1000mm (for model 610HZ)  
+5.Grooving depth with blade should be less than 15mm 
+ 
+ 
+Please install according to above suggestion, otherwise, machine damage and 
+personnel injury might be caused.
+
+[Página 31]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+30 
+2.11 Dust Extraction Equipment 
+It is suggested to equip dust extraction in the factory to ensure for a clean working environment and good 
+performance on machine:  
+(1) Prepare some dust suction pipe with proper specification referred to the machine layout, and connect 
+the pipes from dust extraction equipment to installation position of the machine  
+(2) Make sure a well connecting between the pipe orifice, so as to prevent air leakage from the suction 
+inlet   
+(3) It is suggest to keep the wind blowing speed above 30m/s  
+ 
+Note: If the connecting pipe is  too long, it would cause the drop part damaged 
+after machine starts. Therefore，it is necessary to consider if there is supporting 
+bracket needed in the pipe installation and pipe length, so as to maintain a best 
+dust suction effect.
+
+[Página 32]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+31 
+2.12 Operation Area and Safety Attentions 
+ 
+The operating area is the zone in which the personnel assigned to the 
+system are expected to work. 
+In the layout of operating area, the symbol    refers not only to the area where the 
+programmer is located but also the areas where machine adjustments and operations are 
+expected to be conducted, meanwhile, keep personnel off the areas marked in dotted li ne 
+when the machine is running.  
+Before starting up the machine, Operator shall check if machine parts are in good condition, close all 
+safety covers and make sure there is no other staff or debris around machine. 
+When Machine is running, Operator shall not leave the machine without permission, and should pay 
+attention to the running status. If there is any  abnormality or incident occurs, stop the machine 
+immediately  
+Before machine stop running, all personnel around the machine should stand beyond the do tted line 
+area, and take away the workpiece only when machining completes and machine stops running 
+  
+ 
+ 
+Do not permit unauthorized personnel to approach the machine during 
+operation. 
+ 
+Operating areas must be well illuminated.
+
+[Página 33]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+32 
+Chapter 3 Maintenance 
+3.1 Machine Maintenance 
+（1）Do not modify the machine without authorization before completely understanding the performance 
+of machine to avoid fault or damage to the machine; 
+（2）Power off the machine before carrying out any maintenance; 
+（3）Be s ure that the front cover and right door are locked before powering on the machine after 
+maintenance; 
+（4）Periodically check if the EMG stop buttons are intact; 
+（5）Record the repaired or replaced abrasive parts.
+
+[Página 34]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+33 
+3.2 Lubrication 
+（1）ISO VG 46 mechanical lubrication grease should be applied to intermediate electric thin-oil pump, 
+and grease amount should be applied to 3/4 when it’s below 1/4.  
+ 
+（2）Add 0# mechanical grease to manual oil pump, shake the rocker 3 to  5 times every day before 
+working. 
+ 
+（3）Linear slide is a precision moving part which requires good lubrication in order to ensure its service 
+life. Some sliders are connected with oil pipe supplied with oil by the electric oil pump. The other sliders 
+unconnected with tubing should be lubricated with 0 # machinery grease by a manual grease gun once a 
+week.
+
+[Página 35]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+34 
+ 
+(1)(2)(3) Manual grease application in gripper upper slider 
+ 
+ 
+Manual grease application in upper spindle slider    Manual grease application in lower spindle slider  
+ 
+Manual grease application in tool magazine slider 
+Manual grease application in assistant worktable slider 
+1 
+2 
+3
+
+[Página 36]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+35 
+Please equip with large-flow manual oil-application gun 
+ 
+ 
+（4）Drill head maintenance 
+Gear lubrication 
+Periodically apply oil through the nozzle to gear box of the of drill head (indicated as below 
+picture).  
+(1) Safety precaution: shutdown and power off to avoid human injury caused by unexpected 
+operation. 
+(2) Lubrication cycle: suggested to apply grease after every 40-120 working hours. 
+(3) Grease type: requires application with ISOFLEX TOPAS L 32 N  
+(4) Application amount: 0.3-0.5g per shaft. Please do not apply too much grease on drill head, to 
+prevent high temperature caused by load increase. 
+ (5) Application amount to horizontal drill holder: 2g grease every half year is suggested. 
+(6) Application method: rotate the drill spindle manually while applying grease and have the grease 
+spread to every gear.  
+Cylinder maintenance 
+Periodically check if there is water left in the air filter and if there is oil left in the lubricator. 
+Drill spindle maintenance 
+a. Suggested to do cleaning every 5-7 days. 
+b Blow off the dust on the spindle and dust cover with a pneumatic gun. 
+c Stretch out all vertical and horizontal spindles, spray some anti-rust oil on a clean cloth and wipe 
+every spindle (be sure to wipe them clean), then drizzle another clean cloth with rust-proof oil and 
+wipe every spindle. (It is suggested to wear gloves in the clean process. Directly doing with the 
+hand is prohibited.) 
+d Start the built-in heating program to let the spindles stretch out and draw back for about 2 
+minutes.
+
+[Página 37]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+36 
+e.The built-in heating program must be run at least once (3-5 minutes) after machine starts every 
+day. 
+  
+（5）The components in pneumatic circuit requires to be lubricated by oil lubricator. 
+If. there is insufficient oil in the lubricator, please apply 32# anti-wear hydraulic oil.  
+The side aligning unit, slider and screw rod in bottom drilling unit are lubricated by oil lubricator and 
+oil amount can be adjusted by the throttle valve at exist of lubricator (Only six-sided drill model has 
+the mist lubricator for slider of bottom drill), when there is insufficient oil, please apply with ISO VG 
+46 mechanical lubricants. 
+ 
+ 
+Bus atomized 
+lubricator 
+Side aligner atomized 
+lubricator 
+ 
+Injection nozzle in 
+upper drill head 
+ 
+Injection nozzle in 
+upper drill head 
+ 
+Injection nozzle in 
+upper drill head 
+ 
+Mist lubricator  for 
+slider and screw rod 
+of bottom drill or
+
+[Página 38]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+37 
+ 
+Attention: Please apply oil timely to the lubricator when there is 
+insufficient oil. And should be operated according to indications on 
+taps on lubricator. 
+ 
+ 
+(6) Maintenance of gears&racks  
+Gears&Racks, as the important transmission part in the machine, is required to make periodical 
+maintenance and repair.   
+a) Before maintenance, please clean dust off the gears with a pneumatic gun, and then wipe with 
+a clean cloth.  
+b) Each 3 days as a maintenance cycle, use a clean brush to apply an appropriate amount 
+mechanical oil (Model: ISO VG 46) on the gear surface, and have the machine run back and 
+forth several times to lubricate evenly 
+c) Finally, wipe off the excessive oil left on the gears with a dry and clean clo th so as to prevent 
+dust/chips stick on.
+
+[Página 39]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+38 
+3.3 Maintenance of spindle and tool handle 
+(1)Before using electric spindle every day, ensure that the conical surface of both tool handle and 
+electric spindle gripper are completely clean. After working each day, clean these parts with a clean 
+cloth.   
+(2)When there is no tool handle, it is forbidden to feed compressed air into the spindle. 
+ 
+(3) Once every two weeks, use a clean soft cloth dipped in ethanol to carefully clean the conical surface 
+of the handle (including the right-angle milling head). After cleaning, spray anti-rust agent KLUBER 
+LUSIN PROTECT G31 on the conical surface of the handle, and apply it evenly with a dry cloth.
+
+[Página 40]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+39 
+3.4 Other Maintenance 
+ Regularly clean the operation panel to avoid dusts and chips stuck in buttons, which may cause 
+poor contact. 
+ Regularly clean the wood chips and dust on the linear guide, keep clean to ensure smoothly 
+movement of the machine. 
+ In order to maintain the normal working of cooling system, please clean up the cooling fan filter 
+once a week (The electrical box under master table and that behind machine are both equipped 
+with a fan). 
+ Clean the intake filter of high pressure blower once a week, blow and clean with pneumatic gun 
+after disassembly and then mounted back. 
+3.5 How to Change Servo Battery 
+The absolute value servo system is applied to the machine, which is powered by battery and can record 
+the servo pulse position. But the servo battery has a certain service life. When servo driver shows error 
+AL061 which means low battery. Or when checking the battery by setting P0-02 as 38, if it shows 31, 
+which indicates that battery voltage is less than 3.1V , to avoid origin data missing, please change battery 
+immediately. If battery voltage is less than 2.7V , it has caused the data of servo pulse position missing, 
+please replace the battery with a new one and reset origin position. Dry battery power voltage must be 
+3.6V , and factory battery is recommended. 
+Note: Suggest to change battery when servo is power on to avoid absolute value of servo position 
+missing.
+
+[Página 41]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+40 
+Chapter 4 Pneumatic Circuit Diagram 
+610Z Pneumatic Circuit Diagram 
+X H oriz onta l 1
+Ver tica l 12
+Ver tica l 11
+Ver tica l 10
+Ver tica l 9
+Y H oriz onta l 2
+Y H oriz onta l 1
+X H oriz onta l 2 Ver tica l 9
+Ver tica l 6
+Ver tica l 7
+Ver tica l 8
+Pressure  switch
+Air supp ly
+Air sour cr filter Air collector
+Lidt pre ss plate
+Righe pr ess plate
+Relief
+valve Air gun
+Blowing dust
+Center
+press
+whell
+Ceter
+press
+plate
+Right
+press
+whell
+Lift
+press
+whell
+Right
+press
+whell
+Front
+press
+whell
+Gripper A Gripper X
+X Shaft
+blowing
+A Shaft
+blowing
+  Oil
+sprayer
+  Oil
+sprayer
+Relief
+valve
+Relief
+valve
+Relief
+valve
+Relief
+valve
+Ver tica l 1
+Ver tica l 2
+Ver tica l 3
+Ver tica l 4
+Ver tica l 5Ver tica l 1
+Ver tica l 2
+Ver tica l 3
+Ver tica l 4
+Ver tica l 5
+Ver tica l 6
+Ver tica l 7
+Ver tica l 8
+Locating
+cylinder
+Cylinder
+for
+air-floa t
+table in
+middle
+Vacuum
+cleaner
+Cylinder
+for
+dust-ext raction
+hood
+up&down
+Vacuum
+cleaner
+Cylinder
+for
+air-floa t
+table in
+middle
+Vacuum
+cleaner
+Vacuum
+cleaner Spindle Right pr ess
+plate
+Left pre ss
+plate
+Tool
+changer
+cylinder  3
+Tool
+changer
+cylinder  2
+Linear
+slider
+Spindle
+Tool
+changer
+cylinder  1
+Spindle air
+block
+Splindle  tool change
+
+[Página 42]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+41 
+610HZ Pneumatic Circuit Diagram 
+X Hor izontal 1
+Verti cal 12
+Verti cal 11
+Verti cal 10
+Verti cal 9
+Y Hor izontal 2
+Y Hor izontal 1
+X Hor izontal 2Verti cal 9
+Verti cal 6
+Verti cal 7
+Verti cal 8
+Pressure switch
+Air supply
+Air sourcr filterAir collector
+Lidt press plate
+Righe press plate
+Relief
+valve
+Air gun
+Blowing dust
+Center
+press
+whell
+Ceter
+press
+plate
+Right
+press
+whell
+Lift
+press
+whell
+Right
+press
+whell
+Front
+press
+whell
+Gripper AGripper X
+X Shaft
+blowing
+A Shaft
+blowing
+  Oil
+sprayer
+  Oil
+sprayer
+Relief
+valve
+Relief
+valve
+Relief
+valve
+Relief
+valve
+Verti cal 1
+Verti cal 2
+Verti cal 3
+Verti cal 4
+Verti cal 5 Verti cal 1
+Verti cal 2
+Verti cal 3
+Verti cal 4
+Verti cal 5
+Verti cal 6
+Verti cal 7
+Verti cal 8
+Locating
+cylinder
+Cylinder
+for
+air-float
+table in
+middle
+Vacuum
+cleaner
+Cylinder
+for
+dust-extraction
+hood
+up&down
+Vacuum
+cleaner
+Cylinder
+for
+air-float
+table in
+middle
+Vacuum
+cleaner
+Vacuum
+cleanerSpindleRight press
+plate
+Left press
+plate
+Tool
+changer
+cylinder 3
+Tool
+changer
+cylinder 2
+Linear
+slide
+Spindle
+Tool
+changer
+cylinder 1
+Spindle air
+block
+Splindle tool change
+SAW BLADE
+LIFTING
+
+[Página 43]
+NC DRILLING MACHINE                                                             USER MANUAL                                                                                                  
+42 
+Chapter 5 Electrical Circuit Diagram
+
+[Página 44]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+AX
+SERVO 01PCI-L221-F1D0SERVO 02
+YZB
+SERVO 05
+CU
+SERVO 04SERVO 03SERVO 06SERVO 07
+1_1A2_1B3_2A6_2B1_1A2_1B3_2A6_2BEthercat_1BEthercat_1AEthercat_2AEthercat_2B12364578
+12364578shield
+PCPCI card slot
+DCMNET communication cable
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZLayout of station number46CNC R&D center11.1
+RS-485InverterVFD01 VFD02
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 45]
+R01S01T01PE 3/1AR033/1AS033/1AT033/1APE1*6mm²
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+7/1AR027/1AT02
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZPower distribution46CNC R&D center21.1
+I >QF02BKN 3P 50AI >I >SG-2KVA 380V/220V 50HZT01I >QF05BKN 3P 32AI >I >9/1AR059/1AS059/1AT059/1APE
+PERST
+63AQS01
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 46]
+M3~380VAC 2.2kWM01U01V01W01PEUpper drilling motor4*1.5mm²
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZUpper drill package wiring diagram46CNC R&D center31.1
+4/1AR034/1AS034/1AT034/1APE2/8AR032/8AS032/8AT032/8APER03S03T03PE     37/6B1*1.5mm²6.3AKH0131/6D6AKM01
+     21/6B
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 47]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Upper spindle motorGuangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZUpper and lower spindle driver46CNC R&D center41.1
+8/4E24G18/6BX15
+5/1AR035/1AS035/1AT035/1APE3/8AR033/8AS033/8AT033/8APE
+4*2.5mm²
+U03V03W03PE4*1.5mm²
+1*2.5mm²U02V02W02PER03S03T03PE
+18/7BX16
+31/2CY3931/3CY3ACOMS6S5W1V1U1TSRS2S1PWS4GNDS3W2V2U2RO1AS7S8RO1BRO1CRO2ARO2BRO2C485485-485ONVFD01GD18-5R5-4-2
+37/2EKAE01-231/4CY3B
+M3a1overload23PE45M02380VAC 5.5kWM3a1overload23PE45M03380VAC 3.5kW
+38/2B485+38/2B485-8/4E24G21/5BX2D8/4E24G
+lower spindle motor
+5BGND
+5BGND
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 48]
+M3~380VAC 2.2kWM04U04V04W04PER03S03T03PE
+6/1AR036/1AS036/1AT036/1APE
+31/6D6AKM02
+     37/6C
+ Lower drilling motor
+1*1.5mm²4*1.5mm²
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+4/8AR034/8AS034/8AT034/8APE
+6.3AKH02
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZLower drilling46CNC R&D center51.1
+     18/3B
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 49]
+R03S03T03PE
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+5/8AR035/8AS035/8AT035/8APE
+Blower motorM3~380VAC 1.75kWM05U05V05W05PER03S03T03PE6.3AKH0331/7D6AKM03
+     37/6D
+1*1.5mm²
+4*1.5mm²
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)Zblower wiring diagram46CNC R&D center61.1
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 50]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+T02R02T-1R-18/1AT-58/1AR-5
+R-3T-3
+2/8CR022/8CT02R-2T-231/1DR-431/1DT-48/5C6AKM048/7C6AKM05
+R02T02power supply for heat exchangerpower supply for PC,display and cooling fanpower supply fordrill,blower andconveyor belt
+1*1.5mm²inoutNEPN-1P-1Filter 026A 50Hz
+inoutNEPN-1P-1Filter 016A 50Hz
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZCurcuit of 220V46CNC R&D center71.1
+I >QF04BKN 2P 10AI >
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 51]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+1AC220VDC24V+-350W 24VSBL0116/1A+24V116/1A,24/1D24G24G-1
+7/3ER-57/3ET-5 R-5T-5
++24V-16AF016AF0224/1D+24V2
+4DKAS00KM0436/7EKAE01KM05KAS004CRDSBL01
+KAE01-1KS00-1DC powersupply 2
+InputpowerOutputpower
+       7/3C     7/3C     7/3C     5B       7/5D     7/5D     7/5D  
+     4D
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZCircuit of 24V46CNC R&D center81.1
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 52]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678X-axis servo motorBatterycaseShield
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of X-axis46CNC R&D center91.1
+10/1AR0510/1AS0510/1AT0510/1APE1*1.5mm²2/8ER052/8ES052/8ET052/8EPE
+4*0.75mm²U06V06W06PE
+1*1.5mm²R05S05T05PE
+37/2EKAE01-2
+-+PE43212134 56M3~M06380VAC 0.75kW Encoder
+DI1(16)DI2(37)DO2-(13)CN3DI5(34)CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1SERVO 01invt SV-DA260-0R7-4-N0-000H
+8/4E+24V1
+2*2*0.25mm²FROMPCITOSERVO 021000W 60RR01-
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 53]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678A-axis servo motorBatterycaseShield
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of A-axis46CNC R&D center101.1
+11/1AR0511/1AS0511/1AT0511/1APE1*1.5mm²9/8AR059/8AS059/8AT059/8APE
+4*0.75mm²U07V07W07PER05S05T05PE
+37/2EKAE01-2
+-+PE43212134 56M3~M07380VAC 0.75kW Encoder
+DI1(16)DI2(37)DO2-(13)CN3DI5(34)CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1SERVO 02invt SV-DA260-0R7-4-N0-000H
+8/4E+24V1
+2*2*0.25mm²FROMSERVO 01TOSERVO 03
+1*1.5mm²
+1000W 60RR02-
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 54]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Y-axis servo motor
+BatterycaseShield
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of Y-axis46CNC R&D center111.1
+12/1AR0512/1AS0512/1AT0512/1APE1*1.5mm²10/8AR0510/8AS0510/8AT0510/8APER05S05T05PE
+37/2EKAE01-2
+V08W08PE2*2*0.25mm²-+FROMSERVO 02TOSERVO 04
+8/4E+24V1
+154321432 67M3~M08380VAC 1.5kW Encoder4*1.5mm²U08CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1DI1(16)DI2(37)DO2-(13)CN3DI5(34)SERVO 03invt SV-DA260-1R5-4-N0-000H
+1*1.5mm²
+1000W 60RR03-
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 55]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Z-axis servo motor
+BatterycaseShield
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of Z-axis46CNC R&D center121.1
+13/1AR0513/1AS0513/1AT0513/1APE1*1.5mm²11/8AR0511/8AS0511/8AT0511/8APER05S05T05PE
+37/2EKAE01-2
+V09W09PE2*2*0.25mm² 1000W 60RR04-+FROMSERVO 03TOSERVO 05
+8/4E+24V1
+4*1.5mm²U09154321432 6767M3~M09380VAC 1.5kW Encoder40/4EKAZ-18/4E+24V1
+8/4E24G
+8/4E+24V1CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1DI1(16)DI2(37)DO2-(13)CN3DI5(34)SERVO 04invt SV-DA260-1R5-4-N0-000H
+1*1.5mm²
+40/4AKAZ
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 56]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+BatterycaseShield
+B-axis servo motorGuangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of B-axis46CNC R&D center131.1
+14/1AR0514/1AS0514/1AT0514/1APE1*1.5mm²12/8AR0512/8AS0512/8AT0512/8APE
+4*0.75mm²U10V10W10PER05S05T05PE
+37/2EKAE01-2
+-+PE43212134 56M3~M10380VAC 0.75kW Encoder
+OI1(16)OI2(37)DO2-(13)CN3DI5(34)CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1SERVO 05invt SV-DA260-0R7-4-N0-000H
+8/4E+24V1
+2*2*0.25mm²FROMSERVO 04TOSERVO 061000W 60RR05
+1*1.5mm²
+- 8/4E24G
+8/4E+24V140/8AKAB
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 57]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678C-axis servo motorBatterycaseShield
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of C-axis46CNC R&D center141.1
+15/1AR0515/1AS0515/1AT0515/1APE1*1.5mm²13/8AR0513/8AS0513/8AT0513/8APE
+4*0.75mm²U11V11W11PER05S05T05PE
+37/2EKAE01-2
+-+PE43212134 56M3~M11380VAC 0.75kW Encoder
+OI1(16)OI2(37)DO2-(13)CN3DI5(34)CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1SERVO 06invt SV-DA260-0R7-4-N0-000H
+8/4E+24V1
+2*2*0.25mm²FROMSERVO 05TOSERVO 07
+1*1.5mm²
+1000W 60RR06
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 58]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678U-axis servo motorBatterycaseShield
+TO input module 01Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo driver of U-axis46CNC R&D center151.1
+R05S05T05PE1*1.5mm²14/8AR0514/8AS0514/8AT0514/8APE
+4*0.75mm²U12V12W12PER05S05T05PE
+37/2EKAE01-2
+-+PE43212134 56M3~M12380VAC 0.75kW Encoder
+OI1(16)OI2(37)DO2-(13)CN3DI5(34)CN2CN1L1C B2PEGND(12)5V(5)SD-(7)SD(1) COM-(12)DO3-(10)DO3(9)DO2(14)DO1-(4)DO1(3)DI4(39)DI3(18)L2CCOM(2)WVUL3L2L1SERVO 07invt SV-DA260-0R7-4-N0-000H
+8/4E+24V1
+2*2*0.25mm²FROMSERVO 06
+1*1.5mm²
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 59]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0146CNC R&D center161.1
+24VGNDFGX00X01X02X03X04R2-EC0902  INPUTLAN1LAN2
+17/1A+24V117/1A24G8/4E+24V18/4E24G
+PE+24V124G X05X06X07
+X00BG00X01BG01X02BG02X03BG03X04BG04X05BG05X06BG06X07BG07
+inputdescriptioninputdescriptionX00Left pressure plate of upper drilling upX04Front pressure wheel of upper drilling upX01Right pressure plate of upper drilling upX05Front pressure wheel of upper drilling downX02Left pressure wheel of upper drilling upX06Rear pressure wheel of upper drilling upX03Right pressure wheel of upper drilling upX07Tool seat TX1 of upper drilling up
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 60]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0246CNC R&D center171.1
+R2-EC0902  INPUTX08X09X10X11X12X13X14N.C
+16/8A+24V116/8A24G 18/1A+24V118/1A24GX0FBG0FX15X0EBG0E
+X0ABG0AX09BG09X08BG08For 610HZBG0BX0B
+inputdescriptioninputdescriptionX08Tool seat TX2 of upper drilling upX0COverload signal of upper spindle motorX09Tool seat TY1 of upper drilling upX0DSpindle started upX0ATool seat TY2 of upper drilling upX0ESensor for upper spindle upX0BSensor for saw blade upX0FSensor for upper spindle down
+40/3EX0C4/6BX0D
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 61]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0346CNC R&D center181.1
+17/8A+24V117/8A24G 19/1A+24V119/1A24G
+R2-EC0902  INPUTX00X01X02X03X04X05X06X07
+X10BG10
+4/5DX15
+X11
+X14X13FeSPQ13SPQ14
+X17BG17BG11
+inputdescriptioninputdescriptionX10Left pressure plate of upper spindle upX14Sensor for detection boards lengthX11Right pressure plate of upper spindle upX15Overload signal of lower spindle motorX12Lower drilling started upX16X13Proximity switch for lower drillingX17Sensor for lower spindle up
+5/3CKM02X12
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 62]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0446CNC R&D center191.1
+X08X09X10X11X12X13X14X15
+18/8A+24V118/8A24G 20/1A+24V120/1A24G
+X18BG18
+R2-EC0902  INPUTSS+24V1
+X19BG19X1ABG1AX1BBG1BX1CBG1C
+inputdescriptioninputdescriptionX18Sensor for lower spindle downX1CFront floating table long cylinder back forward pushX19Sensor for X gripper upX1DX1ASensor for A gripper upX1EX1BFront floating table long cylinder forward pushX1F
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 63]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0546CNC R&D center201.1
+19/8A+24V119/8A24G 21/1A+24V121/1A24G
+24VGNDFGX00X01X02X03X04R2-EC0902  INPUTLAN1LAN2X05X06X07
+PE+24V124GX20BG20X21BG21
+X25X26X27SF25SB27SB26    28/6C
+inputdescriptioninputdescriptionX20Sensor for upper positioned cylinder shrinkX24X21Sensor for upper positioned cylinder extendX25Foot switchX22X26Start buttonX23X27Reset button
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 64]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0646CNC R&D center211.1
+20/8A+24V120/8A24G 22/1A+24V122/1A24G
+R2-EC0902  INPUTX08X09X10X11X12X13X14N.CX15
+37/4EX28
+37/5EX2B37/6EX2CpSP29X2937/2EX2A
+4/7BX2D
+X2FBG2F
+inputdescriptioninputdescriptionX28Emergency stop signalX2COverload of drillings, blowerX29Alarm of low air pressureX2DAbnormal signal of invertersX2AAlarm of without grease or oilX2EX2BSensor for side door and cover doorX2FVacuum hood of upper spindle up
+3/3CKM01X2E
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 65]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0746CNC R&D center221.1
+21/8A+24V121/8A24G 23/1A+24V123/1A24G
+R2-EC0902  INPUTX00X01X02X03X04X05X06X07
+40/2EX3140/2EX32
+X35BG35X36BG36X37BG37SB30X30
+inputdescriptioninputdescriptionX30Spindle tool release buttonX34X31The upper spindle tool release is completedX35Sensor for tool change clamp cylinder1 shrinkX32The upper spindle clamping tool is completedX36Sensor for tool change clamp cylinder1 extendX33X37Sensor for tool change clamp cylinder2 shrink
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 66]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput wiring diagram 0846CNC R&D center231.1
+22/8A+24V122/8A24G +24V124G
+X08X09X10X11X12X13X14X15R2-EC0902  INPUTSS
+X38BG38
+X3B
+X39BG39X3ABG3A
+X3DBG3DSPQ3B
+inputdescriptioninputdescriptionX38Sensor for tool change clamp cylinder2 extendX3CX39Sensor for tool change clamp cylinder3 shrinkX3DFront floating short cylinder forward pushX3ASensor for tool change clamp cylinder3 extendX3EX3BCheck whether the tool holder has a knife photoelectricX3F
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 67]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZOutput wiring diagram 0146CNC R&D center241.1
+R2-EC0902  OUTPUTLAN1LAN2Y00Y01Y02Y03C0Y04Y05Y06Y07C1YV01Y018/4E+24V28/4E24G 25/1D+24V225/1D24GYV02Y02YV03Y03YV04Y04YV05Y05YV06Y06YV07Y07YV00Y00
+OutputdescriptionOutputdescriptionY00Upper drilling bit 01 liftY04Upper drilling bit 05 liftY01Upper drilling bit 02 liftY05Upper drilling bit 06 liftY02Upper drilling bit 03 liftY06Upper drilling bit 07 liftY03Upper drilling bit 04 liftY07Upper drilling bit 08 lift
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 68]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZOutput wiring diagram 0246CNC R&D center251.1
+YV09Y0924/8D+24V224/8D24G 26/1D+24V226/1D24GYV0AY0AYV0BY0BYV0CY0CYV0DY0DYV0EY0EYV0FY0FR2-EC0902  OUTPUTY08Y09Y10Y11C2Y12Y13Y14Y15C3YV08Y08
+OutputdescriptionOutputdescriptionY08Upper drilling bit 09 liftY0CUpper drilling tool seat TX1 liftY09Upper drilling bit 10 liftY0DUpper drilling tool seat TX2 liftY0AUpper drilling bit 11 liftY0EUpper drilling tool seat TY1 liftY0BUpper drilling bit 12 liftY0FUpper drilling tool seat TY2 lift
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 69]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0146CNC R&D center261.1
+25/8D+24V225/8D24G 27/1D+24V227/1D24GYV12Y12YV13Y13YV11Y11 YV15Y15YV16Y16YV17Y17R2-EC0902  OUTPUTY00Y01Y02Y03C4Y04Y05Y06Y07C5YV10Y10 YV14Y14
+OutputdescriptionOutputdescriptionY10Left pressure plate of uupper drill lift(L)Y14Right pressure wheel of uupper drilling liftY11Left pressure plate of uupper drill lift(H)Y15Front pressure wheel of uupper drilling liftY12Right pressure plate of uupper drilling liftY16Rear pressure wheel of uupper drilling liftY13Left pressure wheel of uupper drilling liftY17Solenoid valve for upper drill dust removal
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 70]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0246CNC R&D center271.1
+R2-EC0902  OUTPUTY08Y09Y10Y11C6Y12Y13Y14Y15C7
+26/8D+24V226/8D24G 28/1D+24V228/1D24GYV1AY1AYV1BY1BYV19Y19 YV1DY1DYV1EY1EYV1FY1FYV1CY1C
+OutputdescriptionOutputdescriptionY18Y1CRight pressure plate of upper spindle liftY19Solenoid valve for upper spindle upY1DLeft pressure plate of upper dust removalY1ASolenoid valve for upper spindle downY1ERight pressure plate of upper dust removalY1BLeft pressure plate of upper spindle liftY1FUpper positioned rod extend
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 71]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0346CNC R&D center281.1
+R2-EC0902  OUTPUTLAN1LAN2Y00Y01Y02Y03C0Y04Y05Y06Y07C1
+27/8D+24V227/8D24G 29/1D+24V229/1D24GYV22Y22YV23Y23YV21Y21 YV27Y27
+Y24YV20Y20 YV26Y26WHHL02Y2520/7BGNSB26
+OutputdescriptionOutputdescriptionY20Front floating long cylinder forward pushY24Fluorescent lampY21Front floating long cylinder back forwardY25Indicator for ready to start upY22Front floating short cylinder forward pushY26Lower drilling bit 01 liftY23Front floating short cylinder back forwardY27Lower drilling bit 02 lift
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 72]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0446CNC R&D center291.1
+R2-EC0902  OUTPUTY08Y09Y10Y11C2Y12Y13Y14Y15C3
+28/8D+24V228/8D24G 30/1D+24V230/1D24GYV2AY2AYV2BY2BYV29Y29 YV2DY2DYV2EY2EYV2FY2FYV2CY2CYV28Y28
+OutputdescriptionOutputdescriptionY28Lower drilling bit 03 liftY2CLower drilling bit 07 liftY29Lower drilling bit 04 liftY2DLower drilling bit 08 liftY2ALower drilling bit 05 liftY2ELower drilling bit 09 liftY2BLower drilling bit 06 liftY2FLower drilling dust removal
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 73]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0546CNC R&D center301.1
+R2-EC0902  OUTPUTY00Y01Y02Y03C4Y04Y05Y06Y07C5
+29/8D+24V229/8D24G 31/1D+24V231/1E24GYV32Y32YV33Y33YV31Y31 YV35Y35YV30Y30 YV34Y34
+Y37M~KOP01
+OutputdescriptionOutputdescriptionY30Solenoid valve for lower spindle dust removalY34Solenoid valve for A-gripper closeY31Solenoid valve for lower spindle liftY35Solenoid valve for A-gripper openY32Solenoid valve for X-gripper closeY36Solenoid valve for lower drilling oil circuitY33Solenoid valve for X-gripper openY37Grease pump started up
+     23/6BY36KA01
+     36/1B     36/4B
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 74]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0646CNC R&D center311.1
+R2-EC0902  OUTPUTY08Y09Y10Y11C6Y12Y13Y14Y15C7
+4/3BY394/4BY3A4/5BY3B30/8D+24V230/8D24G 32/1D+24V232/1D24GOutputdescriptionOutputdescriptionY38Solenoid valve for gripper oil circuitY3CSide block lubricationY39Upper spindle motor started upY3DUpper drilling started upY3ALower spindle motor started upY3ELower left drilling started upY3BReset signal for invertersY3FBlower started up
+Y38KA02
+     36/2B     36/5B
+40/5AY3D40/6AY3E40/7AY3FYV35Y3C
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 75]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0746CNC R&D center321.1
+R2-EC0902  OUTPUTLAN1LAN2Y00Y01Y02Y03C0Y04Y05Y06Y07C1
+31/8D+24V231/8E24G 33/1D+24V233/1D24G
+Y40YV40Y41YV41Y42YV42Y43YV43Y44YV44Y45YV45Y46YV46Y47YV47
+OutputdescriptionOutputdescriptionY40Vacuum hood of upper spindle downY44Tool change holder cylinder 2 pops outY41Loose knife solenoid valveY45Tool change holder cylinder 2 retractsY42Tool change holder cylinder 1 pops outY46Tool change holder cylinder 3 pops outY43Tool change holder cylinder 1 retractsY47Tool change holder cylinder 3 retracts
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 76]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0846CNC R&D center331.1
+R2-EC0902  OUTPUTY08Y09Y10Y11C2Y12Y13Y14Y15C3
+32/8D+24V232/8D24G 34/1D+24V234/1D24G
+Y48YV48Y49YV49Y4AYV4A
+OutputdescriptionOutputdescriptionY48Upper spindle dust removalY4CY49Left pressure plate of upper spindle air pressure switchY4DY4ARight pressure plate of upper spindle air pressure switchY4EY4BY4F
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 77]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 0946CNC R&D center341.1
+R2-EC0902  OUTPUTY00Y01Y02Y03C4Y04Y05Y06Y07C5
+33/8D+24V233/8D24G 35/1D+24V235/1E24GOutputdescriptionOutputdescriptionY50Y54Y51Y55Y52Y56Y53Y57
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 78]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay module 1046CNC R&D center351.1
+34/8D+24V234/8D24G +24V224G
+R2-EC0902  OUTPUTY08Y09Y10Y11C6Y12Y13Y14Y15C7
+OutputdescriptionOutputdescriptionY58Y5CY59Y5DY5AY5EY5BY5F
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 79]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
++24V1SBE01SBE03-2SBE02SBE02-2SBE03SBE01-2KAE018/4E24G24G
+8/4E+24V1
+Panelemergency stop
+Mobile emergencystoprear fuselageemergency stop
+     37/4D    37/4C     37/4B
+     8/7B     37/2BGuangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZRelay wiring diagram46CNC R&D center361.1
+7/6DR-4R-4
+7/6DT-4T-4
+30/6DKA01Y36-1
+M~KOP02
+31/2DKA02Y38-1
+9/4E+24V2+24V2
+9/4E24G24G
+30/6DKA0131/2DKA02Y36-2Y38-2YV36YV38Oil pumpstart upC-axis oilcircuit solenoidvalveGripper oilcircuitsolenoid valve
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 80]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+8/4E24G
+21/2BX2821/4BX2B
+FeSPQ04
+FeSPQ05
+3/2DKH0121/4BX2C
+36/7EKAE014/5B,9~15/4BKAE01-221/3BX2A
+S01
+X28-1X28-2X2B-1X2C-2
+Oil-free andgrease-freesignal
+Mobileemergency stoprear fuselageemergency stoppanelemergency stop
+side doorproximity switch
+cover doorproximity switch
+SBE0136/7BSBE0236/7CSBE0336/7C
+S02 5/3DKH02
+24G
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZInput line46CNC R&D center371.1
+6/3DKH03X2C-1
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 81]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+1569 4/7E485-4/7E485+PE Definition of RS485 pinin DB9 serial port(COM1)RS485pindefinitionwire number1DATA-485-2DATA485345GND6789Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZSerial communication46CNC R&D center381.1
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 82]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZSignals of upper spindle46CNC R&D center391.1
+40/2AX31-140/2AX32-1
+RT0140/3AX0C-1
+8/4E+24V18/4E24G
+8/4E+24V1
+Pin layout of 8-pin signal connector8-pin signal connector pin layoutWelding diagram for upper spindle signal
+Thermistor
+Pindescription1Sensor S2 (tool eject) output (PNP NO normally open)2Sensor S1 (tool lock) output (PNP NO normally open)3424V DC power supply to S1, S2 and button lights50V DC power supply to S1, S2 and button lights6Button switch C pin signal output 24V724VDC 0.75A DC cooling fan (red wire)80VDC 0.75A DC cooling fan (red wire)Note: Thermistor (two thin brown wires) cable connectionWarning: The 24V DC fan must be normally open, and the powersupply and fan polarity must be connected correctly
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 83]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZFour bit relay46CNC R&D center401.1
+----
+139
+51
+1410
+62
+1511
+73
+1612
+84RM0439/2BX31-139/2BX32-18/4E24G8/4E24G22/2BX3122/3BX32 39/5EX0C-117/4BX0C
+----
+139
+51
+1410
+62
+1511
+73
+1612
+84RM0531/5CY3D31/6CY3E9/4E24G
+31/7CY3F
+KM01KM02KM038/6DT-48/6DR-4R-4     5/3C     5/3C     5/3C     6/3C     6/3C     6/4C     3/2C     3/2C     3/3C
+12/6BKAZ12/3DKAZ-1
+13/6BKAB
+YVB8/4E+24V18/4E24GB-axis oilcircuitsolenoid valve
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 84]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+1
+GND
+2012345678
+21222324252627282930319101112131415GNDGNDGNDGND234567891011121314151716181920212223242526272829303133343536373212345678
+1718192021222324
+Y00Y01Y02Y03Y04Y05Y06Y07
+Y09Y0AY0BY0CY0DY0EY0FY10
+20 core cableWelding drawing of upper left drilling bits
+terminalno.color of wireterminalno.color of wire1black20red&blue2orange21gray&brown3yellow22gray&pink4green23white&yellow5purple24white&green6red25pink&brown7gray33blue8white349white&pink3517pink36white&gray18brown&green3719yellow&brown
+925Y08
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZUpper left drilling46CNC R&D center411.1
+171819
+Y12
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 85]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678
+1Y40Y41Y42Y43Y44Y45Y46Y47Y4823451718192021
+1
+GND
+2012345678
+171819
+21222324252627282930319101112131415GNDGNDGNDGND2345678910111213141517161819202122232425262728293031333435363732
+3322111765544209198187black10 core cableDown drilling bag
+brownyellowgreenpurpleredgreywhitepink
+blackbrownyellowgreenpurple
+redgreywhite
+pink
+blueAttention: The smallnumber corresponds tothe software definedknife number, and thelarge numbercorresponds to thevalve code number.
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZLower drilling46CNC R&D center421.1
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 86]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 3456786*0.3 shielded cable
+Servo CN1  soldering tableServo CN1
+Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZCN1 of servo driver B346CNC R&D center431.1
+123456789101112131415 161718192021222324252627282930 3132333435363738394041424344
+Server Driver CN1RemarkPINdescriptionX-axisA-axisY-axisZ-axisB-axisC-axisU-axiscolorCOM2COM for input24V124V124V124V124V124V124V1redEmergency16Port DI1 inputKAE01-2KAE01-2KAE01-2KAE01-2KAE01-2KAE01-2KAE01-2blackbrake3Port DO1 output24V124V1redbrake-4Port DO1- outputKAZKABbrownCOM-12COM- for output24G24Gblue
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 87]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZCN2 of servo driver B346CNC R&D center441.1
+3*2*0.5 shielded cable
+Servo encoder soldering tablefor X,A,B,C,U axisServo encoder soldering tablefor Y,Zaxis3*2*0.5 shielded cableconnector ofservo driverencoder connector ofservo driverconnector ofservo driverencoder connector ofservo driver678910123451112131415123456789 678910123451112131415AFBCEGDservo driverdescriptionservo motorcolor1SD1brown7SD-2white55V3yellow12GND4greenVB-5V5grayVB-GND6pinkPEIron shellIron shell
+servo driverdescriptionservo motorcolor1SD2(B)brown7SD-3(G)white55V4(E)yellow12GND5(C)greenVB-5V6(F)grayVB-GND7(D)pinkPEIron shell1(A)
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 88]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZServo motor46CNC R&D center451.1
+1243
+132 ABDCServo DriverDescribeServo MotorColour5(black1)Motor U phase2(B)black16(black2)Motor V phase3(C)black27(black3)Motor W phase4(D)black3groundMotor ground1(A)yellowgreenW and Z servo drivesimplicationServo motorcolorBrake signal 11(24V1)brownBrake signal 22(24G)blueBrake signal 3
+Servo motorconnector
+Servo motorconnectorW-axis and Z-axisservo brake joints
+Servo drive and motor power weldingdiagram for X, A, B, C, U axisServo drive and motor power weldingdiagram for YȽZ axis
+Servo DriverDescribeServo MotorColor5(blown)Motor U phase4blown6(black)Motor V phase3black7(blue)Motor W phase1blueGroundMotor ground2yellowgreen
+NC DRILLING MACHINE                                                                                                                          USER MANUAL
+
+[Página 89]
+F
+21 345678
+BA
+CDE
+BA
+CDEF21 345678Guangzhou KDT Machinery Co., Ltd.DesignCheckDateDatePicturenameProjectDesigndepartmentTotal:Page:Ver.* * ** * ** * ** * *610(H)ZTool holder connector46CNC R&D center461.1
+MHE-024
+16151413121110987654321
+F16151413121110987654321
+PINExplanationNO.Color1Spindle tool release buttonX30black2Sensor for tool change clampcylinder1 shrinkX35brown3Sensor for tool change clampcylinder1 extendX36orange4Sensor for tool change clampcylinder2 shrinkX37purple5Sensor for tool change clampcylinder2 extendX38grey6Sensor for tool change clampcylinder3 shrinkX39white7Sensor for tool change clampcylinder3 extendX3Apink8Check whether the tool holder has aknife photoelectricX3Blightbule9power supply24V1red10power supply24Gblue11Tool change holder cylinder 1pops outY42black12Tool change holder cylinder 1retractsY43brown13Tool change holder cylinder 2pops outY44orange14Tool change holder cylinder 2retractsY45purple15Tool change holder cylinder 3pops outY46grey16Tool change holder cylinder 3retractsY47white10*0.25 withshielded cable*2
+Tool holder connector
+NC DRILLING MACHINE                                                                                                                          USER MANUAL

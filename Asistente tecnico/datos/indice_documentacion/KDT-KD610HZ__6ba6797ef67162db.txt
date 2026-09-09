@@ -1,0 +1,5 @@
+[Imagen: p-50.png]
+Dimensiones: 1287 x 910
+Formato: PNG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

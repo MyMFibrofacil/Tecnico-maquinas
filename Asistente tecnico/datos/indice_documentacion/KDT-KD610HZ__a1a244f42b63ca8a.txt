@@ -1,0 +1,5 @@
+[Imagen: 2026-09-01_eje_longitudinal_vista_lateral.jpg]
+Dimensiones: 2880 x 3840
+Formato: JPEG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

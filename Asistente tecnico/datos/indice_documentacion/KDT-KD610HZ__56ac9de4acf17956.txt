@@ -1,0 +1,26 @@
+i I 2 I 3 i 4 5 I 6 L 7 I a
+al e7ae 2a SUS 7/14
+a/ae 8 26 7/14
+| 8000 8601 002 603 zi | 8606 8607
+= Io & ics ics & ics &®
+r] |
+@ @ @ @ @ @ @ @ @ @ @
+c
+2av | GND FG xoo | xo1 | xo2z | x03 xot | x05 | x06 x07
+i LANL R2-EC0902 INPUT
+= LAN2
+7
+E input [description input [description
+X00 [Left pressure plate of upper drilling up X04 [Front pressure wheel of upper drilling up
+L| XO1_| Right pressure plate of upper drilling up X05 [Front pressure wheel of upper drilling down
+X02 [Left pressure wheel of upper drilling up X06 [Rear pressure wheel of upper drilling up
+F X03 [Right pressure wheel of upper drilling up XO7 [Toot seat TKI of upper drilling up
+hou KOT Machinery Co,, ura, Peeiee] sss [pote] «= [PiGRre] Input wiring diagram 01 aspartnene| CXC RAD center [Ver] 1.1
+= Gheck| _s = [Date] +++ [Project e002 Total: 48 _—~(iPase: 16
+T I B z 7 3 T a T 3
+= at —_ — _ — —_-
+
+—SNIHOWW ONTTIEG ON
+
+WNNVN wasn
+

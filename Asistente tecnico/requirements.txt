@@ -1,0 +1,8 @@
+# Extractores documentales.
+pypdf
+openpyxl
+Pillow
+pytesseract
+
+# Dependencia opcional para análisis visual asistido y redacción:
+openai

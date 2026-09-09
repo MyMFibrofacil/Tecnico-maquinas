@@ -1,0 +1,29 @@
+SNIHOVW ONITHYG ON
+
+1 I 2 3 I 4 5 Ru: 6 I 7 I s
+‘ Definition of RS485 pin
+ee in DB9 serial port
+L] 23
+yy
+3 3 (CoML) RS485
+B
+pin definition | wire number
+| 1 DATA- 485-
+2 DATA+ 485+
+c 3
+4
+| 5 GxD
+6
+D
+7
+= 8
+9
+E
+F
+Design] *** Date Leer Serial communication |gerssieent| CNC RAD center [Ver] 1.1
+Guangzhou KOT Machinery Co. Ltd.
+Check] *** [Date] ++ [Project 610002. Total: 48 Trase: 38
+T T z 3 7 5 T a 7 T 3
+
+WNNVW Sas
+

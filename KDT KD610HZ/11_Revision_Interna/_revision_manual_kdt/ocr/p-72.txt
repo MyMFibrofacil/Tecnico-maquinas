@@ -1,0 +1,27 @@
+— = = om = E=] = =a
+1 I 2 3 L 4 5 I 6 I Z L 3
+L
+A
+R2-BC0902 OUTPUT
+YO8 Yoo Y10 Yu cé Y12 Y13 Y14 YIS Cc
+L| @ @ @ @ @ @ @ @ @ @
+tf
+c 2 g < 2 2 A yl 5
+5 1 : ; j a
+LH ory | co ox ox of oY s
+D 26/80 > 267 —— 28/10
+roo 28 2 aar0
+] For 610HZ
+E Output | description Output |description
+Y18 |Solenoid valve for saw blade down YIC {Right pressure plate of upper spindle lift
+=) Y19 |Solenoid valve for upper spindle up. YID |Left pressure plate of upper dust removal
+YIA_ |Solenoid valve for upper spindle down YIE |Right pressure plate of upper dust removal
+£ YIB |Left pressure plate of upper spindle lift YIF [Upper positioned rod extend
+os Le wee Picture} tela) lule ‘VesTen center |Ver.| 1.
+CT, Dat a Relay module 02 [departeent] CNC RAD center [Ver] 1.1
+real aertpea ioe cree ented 10002 ee
+T I z F n 5 I 5 Z 7
+
+SNIHOWW ONITIGG ON
+
+WANVW Sash

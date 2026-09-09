@@ -1,0 +1,605 @@
+[Hoja: Sheet1]
+A1=Error code | B1=Error Description
+A2=0 | B2=Success
+A3=3 | B3=The card number is wrong, please confirm the number adjusted by DIP Switch on the card
+A4=5 | B4=Unable to start the DSP digital program
+A5=6 | B5=DSP stored program read / write error
+A6=7 | B6=DSP stored data read / write error
+A7=8 | B7="_DMC_01_pci_initial" API function must work first
+A8=9 | B8=Value of FeedRate overwrite is the same
+A9=11 | B9=Axis data set incorrectly (too large)
+A10=12 | B10=IPO mode is required
+A11=13 | B11=When Mode 1 is running,  Target should arrive.
+A12=14 | B12=Please servo on first
+A13=15 | B13=Can not clear position under handwheel mode
+A14=16 | B14=Give instruction to module in POD mode but can not receive any response
+A15=17 | B15=Error in creating the file for storing debugging information
+A16=18 | B16=Control instruction error
+A17=19 | B17=Use Security Fpga write Error
+A18=20 | B18=Use Security Fpga busy
+A19=21 | B19=Set speed is greater than the maximum speed
+A20=22 | B20=Security page should be less than 16
+A21=23 | B21=Security slave update command is invalid
+A22=24 | B22=channel no error
+A23=25 | B23="_DMC_01_start_ring" API function must work first
+A24=26 | B24=Node ID not existing
+A25=27 | B25=DSP is busy, the instruction can not be given
+A26=28 | B26=SDO data is sent but there is no response
+A27=29 | B27=Operating system can not handle this IRP
+A28=30 | B28=To control the axis with SDO, please Servo On first
+A29=31 | B29=Slave module (GA or RM) no such Slot number
+A30=32 | B30=To use PDO protocol, please first start PDO mode
+A31=33 | B31=Protocol, communication circuit has not been established
+A32=34 | B32=Module matching time Out
+A33=35 | B33=Module matching NG
+A34=36 | B34=Set Group Max value as 6
+A35=37 | B35=Failure occurs (poor communication, Driver Alm)
+A36=38 | B36=Reset Alarm Fail
+A37=40 | B37=Security Master Write command is invalid
+A38=41 | B38=Security Master Read command is invalid
+A39=42 | B39=Please first enter the correct password
+A40=50 | B40=The version of Master Card error. Please contact the dealer to purchase the correct Master Card.
+A41=51 | B41=Ver Type: B Compare Source selection error
+A42=52 | B42=Compare direction is wrong, dir should be 1 or 0 1: ccw, 0: cw
+A43=60 | B43=Dll path error
+A44=61 | B44=Error in retrieving Dll version
+A45=70 | B45=Stop instruction failed to be given to 04PI due to timeout
+A46=71 | B46=Stop instruction failed to be given to Servo due to timeout
+A47=72 | B47=04PI Stop MC_done not to Error
+A48=73 | B48=04PI Homing error
+A49=74 | B49=04PI gives SDO instruction, but error is received.
+A50=112 | B50=Setting axis number error
+A51=114 | B51=Motion commands overlap
+A52=116 | B52=Set Max speed to 0
+A53=117 | B53=Acceleration / deceleration is greater than 1000 seconds
+A54=124 | B54=Operating Helical displacement, value of the parameter "pitch" is 0
+A55=127 | B55=Motion command buffer zone is full
+A56=128 | B56=Motion Command Error
+A57=130 | B57=It does not support speed change
+A58=132 | B58=Feed Hold Stop is started, can not receive new orders
+A59=133 | B59=Execute slow-down and stop command, can not receive new orders
+A60=134 | B60=Unable to perform speed changing function (FeddHold, coaction and deceleration)
+A61=135 | B61=Unable to continue to perform FeedHold function
+A62=136 | B62=Sdo command return error, please check if the network cable wiring is properly connected
+A63=137 | B63=FeedHold function must first start, can not change the speed
+A64=138 | B64=Waiting for coaction command, can not change the speed
+A65=139 | B65=Waiting for deceleration command, can not change the speed
+A66=140 | B66=Single-axis point-to-point mode, acceleration section, speed is 0, non-single-axis point-to-point mode
+A67=141 | B67=Buffer Length should be 0 when the mode is _Path_p_change, _Path_velocity_change_onfly, _Path_Start_Move_2seg
+A68=142 | B68=Direction of distance should be the same
+A69=143 | B69=Center should be consistent through reverse operation
+A70=144 | B70=Center should be consistent through reverse operation
+A71=145 | B71=Angle is wrong after calculation
+A72=146 | B72=Radius is wrong after calculation
+A73=147 | B73=The numerator or denominator of the electronic gear ratio is 0
+A74=148 | B74=Table Setting First Array Point Error table can not be set to a negative value. Table [-1] does not allow such a kind of setting
+A75=149 | B75=Multi-Axis set value must be 2 or more
+A76=150 | B76=Final position will be the center of the spiral circle
+A77=151 | B77=The Slave shaft used at continuous speed can not execute Motion instruction
+A78=152 | B78=The virtual axis must be set in the first half of the axis
+A79=154 | B79=accstep + contstep + dec step should be less than 100
+A80=155 | B80=Both motion done and buffer length must be 0
+A81=201 | B81=Axis card info (NO, QTY) is inconsistent
+A82=202 | B82=Station info (QTY) is inconsistent
+A83=203 | B83=Station info (NO) is inconsistent
+A84=204 | B84=Module info (Class 2) is inconsistent
+A85=205 | B85=Module info (Class 1) is inconsistent
+A86=206 | B86=File path error
+A87=207 | B87=Failed to open the file (Be sure to enter the correct path)
+A88=208 | B88=File not existing
+A89=301 | B89=No such a card number or uninitialized
+A90=302 | B90=Card failed to be initialized
+A91=303 | B91=Failed to read and write memory
+A92=304 | B92=Memory exceeds Range
+A93=305 | B93=Uart Tx Is Busy
+A94=306 | B94=Uart Rx read error
+A95=307 | B95=Uart Rx is not ready
+A96=308 | B96=This function is not supported
+A97=309 | B97=Slave station number setting error
+A98=310 | B98=API parameter error (limit value is exceeded)
+A99=311 | B99=SDO transmission failure
+A100=312 | B100=SDO is busy or two instructions are written simultaneously in SDO
+A101=313 | B101=This module does not support this API
+A102=314 | B102=AD correction failure
+A103=315 | B103=MailBox Buffer is full
+A104=316 | B104=Communication failure
+A105=317 | B105=Two instructions are written simultaneously in MailBox
+A106=318 | B106=MailBox delivery failure
+A107=319 | B107=Unable to reset card
+A108=320 | B108=PDO does not respond
+A109=321 | B109=MailBox is processing instructions
+A110=322 | B110=Only Servo On can this action be carried out
+A111=323 | B111=This action cannot be performed for DriverErr. Please execute Rest Alrm first.
+A112=324 | B112=Initialization reset failure
+A113=325 | B113=This device does not support slot or the slot number is beyongd the range
+A114=326 | B114=When Download Code reads Uart, the response is insistent with the correct value
+A115=327 | B115=Only Servo Off can this action be carried out
+A116=328 | B116=This axis has enabled handwheel, Jog or DDA function, other functions are temporarily unavailable
+A117=329 | B117=Hand wheel or Jog has reached the limit (no more than 3 groups)
+A118=330 | B118=Hand wheel or Jog data transferring failure
+A119=331 | B119=DDA Buffer is full
+A120=332 | B120=Slave Security Write Failure
+A121=333 | B121=Page exceeds the set value
+A122=334 | B122=Can not find DLL path
+A123=335 | B123=Can not find DLL version
+A124=336 | B124=Failed to open the file (Be sure to enter the correct path)
+A125=337 | B125=File not existing
+A126=338 | B126=Axis card info (NO, QTY) is inconsistent
+A127=339 | B127=File path error
+A128=340 | B128=Station info (NO) is inconsistent
+A129=341 | B129=Module info (Class 2) is inconsistent
+A130=342 | B130=Module info (Class 1) is inconsistent
+A131=343 | B131=Station info (QTY) is inconsistent
+A132=344 | B132=Security transferring results are not received
+A133=345 | B133=SDO return time is too long
+A134=346 | B134=Uart communication failure
+A135=399 | B135=System error, please use _DMC_01_get_card_error_code to get error code
+A136=901 | B136=Card No. repeat (All card No. should be unique)
+A137=902 | B137=This card does not support this API
+A138=903 | B138=This API failed to connect to its corresponding DLL (no DLL or this function is not included in DLL library)
+A139=904 | B139=This API error should be gain by using  _DMC_01_get_cardtype_errorcode
+A140=905 | B140=This axis card can not be found when using API.
+A141=910 | B141=The merged version of PCI_DMC.dll is in use.
+A142=911 | B142=Cannot find PCI_DMC_01.dll.
+A143=912 | B143=Cannot find PCI_DMC_F01.dll.
+A144=913 | B144=Cannot find PCI_DMC.dll.
+A145=1001 | B145=File doesn't exist
+A146=1002 | B146=Failed to read the file
+A147=1003 | B147=Failed to write file
+A148=1100 | B148=Value not existing
+A149=1101 | B149=Value empty
+A150=1102 | B150=Value is beyond limit
+A151=1103 | B151=Value is beyond Min limit
+A152=1104 | B152=Value is beyond Max limit
+A153=1200 | B153=Failed to open serial port
+A154=1201 | B154=Failed to read serial port
+A155=1202 | B155=Failed to write serial port
+A156=1203 | B156=Serial port is successfully opened
+A157=1204 | B157=Barcode scanner serial port failed to open, scanning gun can not work normally
+A158=1205 | B158=network connection failed
+A159=1206 | B159=network data error
+A160=1300 | B160=Failed to load configuration
+A161=1301 | B161=Failed to get configuration
+A162=2000 | B162=Machine error
+A163=2001 | B163=Card number not existing
+A164=2002 | B164=Station number not existing
+A165=2003 | B165=Failed to connect Modbus
+A166=2004 | B166=Read Modbus error
+A167=2005 | B167=Write Modbus error
+A168=2006 | B168=Power supply phase sequence failure
+A169=2100 | B169=Gear ratio error
+A170=2101 | B170=Direction error
+A171=2102 | B171=Location error
+A172=2103 | B172=Speed error
+A173=2200 | B173=Beyond axis range
+A174=2201 | B174=Beyond tool range
+A175=2202 | B175=Beyond gripper range
+A176=2203 | B176=Beyond the range of platen
+A177=2204 | B177=Beyond the range of pressure roller
+A178=2205 | B178=Beyond waiting signal range
+A179=2300 | B179=Beyond drill head group
+A180=2301 | B180=Beyond the machining range of drill head group
+A181=2302 | B181=Beyond the face processed by drill head group
+A182=2400 | B182=Drill head/Blower overload
+A183=2401 | B183=Drill head overload
+A184=2402 | B184=Upper drill head overload
+A185=2403 | B185=Bottom drill head overload
+A186=2404 | B186=The upper left drill bag overloaded
+A187=2405 | B187=The upper right drill bag overloaded
+A188=2406 | B188=Lower left drill bag overload
+A189=2407 | B189=Lower right drill bag overload
+A190=2500 | B190=Spindle overload
+A191=2501 | B191=Upper spindle overload
+A192=2502 | B192=Bottom spindle overload
+A193=2600 | B193=Inverter error
+A194=2601 | B194=Spindle inverter error
+A195=2602 | B195=Upper spindle inverter error
+A196=2603 | B196=Bottom spindle inverter error
+A197=2700 | B197=Line-control EMG stop
+A198=2701 | B198=Emergency stop
+A199=2702 | B199=Control panel EMG stop
+A200=2703 | B200=Main frame EMG stop
+A201=2704 | B201=Front EMG Stop
+A202=2705 | B202=Back EMG Stop
+A203=2706 | B203=Conveyor EMG Stop
+A204=2707 | B204=Safety EMG Stop
+A205=2708 | B205=Touch screen emergency stop
+A206=2709 | B206=Fence gate emergency stop
+A207=2800 | B207=Fan overload
+A208=2801 | B208=Lifting table inverter error
+A209=2802 | B209=Outboard conveyor motor overload
+A210=2803 | B210=The frequency converter of the discharging station is abnormal
+A211=2804 | B211=Dust collection conveyor motor overload
+A212=2900 | B212=Low pressure
+A213=2901 | B213=Servo error
+A214=2902 | B214=Side block inverter failure
+A215=2903 | B215=Door open
+A216=2904 | B216=Safety door is not closed
+A217=2905 | B217=Safety guard is not closed
+A218=2906 | B218=The machine did not return to origin, please home it.
+A219=2907 | B219=The fence door is not closed
+A220=3000 | B220=伺服报警
+A221=3001 | B221=Oil pump is lack of oil
+A222=3002 | B222=Side block not back to origin
+A223=3100 | B223=Side block direction is inconsistent with set value
+A224=3101 | B224=Please quit mechanical origin correction mode.
+A225=3200 | B225=Axis positive limt
+A226=3300 | B226=Axis negative limit
+A227=3400 | B227=Side block fwd limit
+A228=3401 | B228=Side block bwd limit
+A229=3500 | B229=No existing panel
+A230=3501 | B230=Board detected to be too long
+A231=3502 | B231=Board detected to be too short
+A232=3503 | B232=Board is too wide
+A233=3504 | B233=Board is too narrow
+A234=3505 | B234=Board is too thick
+A235=3506 | B235=Board is too thin
+A236=3600 | B236=Grip X is in unsafe area and can not unclamp
+A237=3601 | B237=Grip A is in unsafe area and can not unclamp
+A238=3602 | B238=The saw blade is too close to the countertop
+A239=3603 | B239=The robot X pusher cylinder is not pushed back in place
+A240=3604 | B240=Manipulator A pusher cylinder is not pushed back in place
+A241=3605 | B241=This operation is not allowed when the robot X is closed
+A242=3606 | B242=This operation is not allowed when robot A is closed
+A243=3607 | B243=Manual limit
+A244=3700 | B244=Axis move timeout
+A245=3701 | B245=Waiting for input signal timeout
+A246=3702 | B246=Waiting for motor start ready timeout
+A247=3703 | B247=Waiting for the completion of the exercise state timeout
+A248=3704 | B248=Waiting for inverter frequency to time out
+A249=3705 | B249=变频器当前频率与目标频率相差过大
+A250=3706 | B250=超时
+A251=6800 | B251=Thread exit (when software is closed )
+A252=6801 | B252=Procedure error
+A253=6802 | B253=NC is busy in processing thread (currently not in idle state, please cancel processing or wait for the completion of machining)
+A254=6803 | B254=NC processes thread in non-listening state (Files can be added or modified only in the listening state, otherwise the processing must be canceled first)
+A255=6804 | B255=Quantity of processing files is 0
+A256=6805 | B256=Content of the processed file empty
+A257=6806 | B257=Path of the file to be processed empty
+A258=6807 | B258=Failed to match with processing ID
+A259=6808 | B259=Beyond processing type
+A260=6809 | B260=The start and end of the slot do not match
+A261=6810 | B261=Cancel processing
+A262=6811 | B262=Processing functions cannot be used in the demo version
+A263=6812 | B263=File is being generated, please try again later
+A264=6900 | B264=Homing thread is busy (currently conducting other homing actions, please wait for completion)
+A265=6901 | B265=The first file can not be modified in auto mode
+A266=6902 | B266=Manual mode is not allowed in auto mode
+A267=6903 | B267=Configuration file can not be modified in auto mode
+A268=6904 | B268=Gripper is prohibited to move when the positioning block is extended
+A269=6905 | B269=Gripper is prohibited to move when the baffle is raised
+A270=6906 | B270=The safety guard must be closed when a groove exists
+A271=6907 | B271=Failed to obtain pressing area
+A272=6908 | B272=A single gripper is not allowed to move when both grippers are clamping tightly
+A273=7000 | B273=Conversion Error
+A274=7001 | B274=Failed to get barcode
+A275=7100 | B275=Panel data error
+A276=7101 | B276=Panel length not existing
+A277=7102 | B277=Panel length expression error
+A278=7103 | B278=Panel is too short
+A279=7104 | B279=Panel is too long
+A280=7105 | B280=Panel width not existing
+A281=7106 | B281=Panel width expression error
+A282=7107 | B282=Panel is too narrow
+A283=7108 | B283=Panel is too wide
+A284=7109 | B284=Panel thickness not existing
+A285=7110 | B285=Panel thickness expression error
+A286=7111 | B286=Panel is too thin
+A287=7112 | B287=Panel is too thick
+A288=7113 | B288=Back face can not be slotted if panel is in special shape
+A289=7114 | B289=Unable to machine the plate with the shaped part at the Gripper
+A290=7200 | B290=Error in data of hole site
+A291=7201 | B291=Hole site X not existing
+A292=7202 | B292=Hole X expression error
+A293=7203 | B293=Hole site Y not existing
+A294=7204 | B294=Hole Y expression error
+A295=7205 | B295=Hole site Z not existing
+A296=7206 | B296=Hole Z expression error
+A297=7207 | B297=Hole direction not existing
+A298=7208 | B298=Error in hole direction expression
+A299=7209 | B299=Hole diameter not existing
+A300=7210 | B300=Error in hole diameter expression
+A301=7211 | B301=Hole depth not existing
+A302=7212 | B302=Error in hole depth expression
+A303=7213 | B303=Repeat times of hole site not existing
+A304=7214 | B304=Error in repeat times expession of hole site
+A305=7215 | B305=Spacing of hole site X not existing
+A306=7216 | B306=Error in spacing expression of hole site X
+A307=7217 | B307=Spacing of hole site Y not existing
+A308=7218 | B308=Error in spacing expression of hole site Y
+A309=7219 | B309=Spacing of hole site Z not existing
+A310=7220 | B310=Error in spacing expression of hole site Z
+A311=7250 | B311=Hole is beyond panel length
+A312=7251 | B312=Hole is beyond panel width
+A313=7252 | B313=Hole is beyond panel thickness
+A314=7253 | B314=Hole depth exceeds tool length
+A315=7254 | B315=Hole diameter is beyond limit
+A316=7255 | B316=Hole depth is beyond limit
+A317=7300 | B317=Slot data error
+A318=7301 | B318=Slot X exceeds machining limit
+A319=7302 | B319=Slot Y exceeds machining limit
+A320=7303 | B320=Slot Z exceeds machining limit
+A321=7304 | B321=Slot offset info error
+A322=7305 | B322=This model only supports slot sawing in X direction
+A323=7306 | B323=This model only supports sawing slot on front face
+A324=7307 | B324=The slot cannot be kept away from the gripper
+A325=7400 | B325=Line data error
+A326=7401 | B326=Line start X not existing
+A327=7402 | B327=Error in expression of line start X
+A328=7403 | B328=Line start Y not existing
+A329=7404 | B329=Error in expression of line start Y
+A330=7405 | B330=Line start Z not existing
+A331=7406 | B331=Error in expression of line start Z
+A332=7407 | B332=Line end X not existing
+A333=7408 | B333=Error in expression of line end X
+A334=7409 | B334=Line end Y not existing
+A335=7410 | B335=Error in expression of line end Y
+A336=7411 | B336=Line end Z not existing
+A337=7412 | B337=Error in expression of line end Z
+A338=7413 | B338=Line width not existing
+A339=7414 | B339=Error in expression of line width
+A340=7415 | B340=Line depth not existing
+A341=7416 | B341=Error in expression of line depth
+A342=7417 | B342=Line direction not existing
+A343=7418 | B343=Error in expression of line direction
+A344=7419 | B344=Line correction not existing
+A345=7420 | B345=Error in expression of line correction
+A346=7500 | B346=Arc data error
+A347=7501 | B347=Arc start X not existing
+A348=7502 | B348=Error in expression of arc start X
+A349=7503 | B349=Arc start Y not existing
+A350=7504 | B350=Error in expression of arc start Y
+A351=7505 | B351=Arc start Z not existing
+A352=7506 | B352=Error in expression of arc start Z
+A353=7507 | B353=Arc end X not existing
+A354=7508 | B354=Error in expression of arc end X
+A355=7509 | B355=Arc end Y not existing
+A356=7510 | B356=Error in expression of arc end Y
+A357=7511 | B357=Arc end Z not existing
+A358=7512 | B358=Error in expression of arc end Z
+A359=7513 | B359=Arc radius not existing
+A360=7514 | B360=Arc radius expression error
+A361=7515 | B361=Arc smoothing not existing
+A362=7516 | B362=Arc smoothing expression error
+A363=7517 | B363=Slot correction not existing
+A364=7518 | B364=Slot correction expression error
+A365=7519 | B365=Arc width not existing
+A366=7520 | B366=Arc width expression error
+A367=7521 | B367=Arc depth not existing
+A368=7522 | B368=Arc depth expression error
+A369=7600 | B369=Circle data error
+A370=7601 | B370=Center X not existing
+A371=7602 | B371=Center X expression error
+A372=7603 | B372=Circle start Y not existing
+A373=7604 | B373=Circle start Y expression error
+A374=7605 | B374=Circle radius not existing
+A375=7606 | B375=Circle radius expression error
+A376=7607 | B376=Circle width not existing
+A377=7608 | B377=Circle width expression error
+A378=7609 | B378=Circle depth not existing
+A379=7610 | B379=Circle depth expression error
+A380=7611 | B380=Circle direction not existing
+A381=7612 | B381=Circle direction expression error
+A382=7613 | B382=Whether to hollow circle not existing
+A383=7614 | B383=Whether to hollow circle expression error
+A384=7615 | B384=Circle offset not existing
+A385=7616 | B385=Circle offset expression error
+A386=7617 | B386=Whether to enable circle not existing
+A387=7618 | B387=Whether to enable circle expression error
+A388=7619 | B388=Circle radius is too small to process
+A389=7620 | B389=Cirlce X is beyond allowed range
+A390=7621 | B390=Cirlce Y is beyond allowed range
+A391=7622 | B391=Cirlce depth is beyong allowed range
+A392=7700 | B392=Rect data error
+A393=7701 | B393=Rect center X not existing
+A394=7702 | B394=Rect center X expression error
+A395=7703 | B395=Rect center Y not existing
+A396=7704 | B396=Rect center Y expression error
+A397=7705 | B397=Rect length not existing
+A398=7706 | B398=Rect length expression error
+A399=7707 | B399=Rect width not existing
+A400=7708 | B400=Rect width expression error
+A401=7709 | B401=Rect radius not existing
+A402=7710 | B402=Rect radius expression error
+A403=7711 | B403=Rect rotation angle not existing
+A404=7712 | B404=Rect rotation angle expression error
+A405=7713 | B405=Rect depth not existing
+A406=7714 | B406=Rect depth expression error
+A407=7715 | B407=Rect X not existing
+A408=7716 | B408=Rect X expression error
+A409=7717 | B409=Rect Y not existing
+A410=7718 | B410=Rect Y expression error
+A411=7719 | B411=Rectangular processing is not supported yet
+A412=7720 | B412=Rect can not be processed
+A413=7721 | B413=Rect size is samller than that of milling cutter
+A414=7722 | B414=Rect is beyond length limit
+A415=7723 | B415=Rect is beyond width limit
+A416=7724 | B416=Rect is beyond depth limit
+A417=7725 | B417=Rect is beyond radius limit
+A418=7800 | B418=Path data error
+A419=7801 | B419=Path direction not existing
+A420=7802 | B420=Path direction expression error
+A421=7803 | B421=Path correction not existing
+A422=7804 | B422=Path correction expression error
+A423=7805 | B423=Whether to enable path not existing
+A424=7806 | B424=Error in expression of Whether to enable path
+A425=7807 | B425=Path start not existing
+A426=7808 | B426=Path start expression error
+A427=7809 | B427=Path end not existing
+A428=7810 | B428=Path end expression error
+A429=7811 | B429=Path vertex not existing
+A430=7812 | B430=Path vertex X not existing
+A431=7813 | B431=Path vertex X expression error
+A432=7814 | B432=Path vertex Y not existing
+A433=7815 | B433=Path vertex Y expression error
+A434=7816 | B434=Path vertex Z not existing
+A435=7817 | B435=Path vertex Z expression error
+A436=7818 | B436=Path vertex convexity not existing
+A437=7819 | B437=Path vertex convexity expression error
+A438=7820 | B438=Path width not existing
+A439=7821 | B439=Path width expression error
+A440=7822 | B440=Path depth not existing
+A441=7823 | B441=Path depth expression error
+A442=7824 | B442=Whether to close path not existing
+A443=7825 | B443=Error in expression of Whether to close path
+A444=7826 | B444=The start of path already exists (only one start can exist in a path)
+A445=7827 | B445=Number of path vertexes empty
+A446=7850 | B446=Vertex number is too small
+A447=7851 | B447=Failed to get arc angle
+A448=7852 | B448=Failed to get arc vertex
+A449=7853 | B449=Failed to get vector angle
+A450=7854 | B450=Failed to get vertex convexity
+A451=7855 | B451=Failed to get vertex radius
+A452=7856 | B452=Failed to get vertex angle
+A453=7857 | B453=Failed to get vertex center
+A454=7858 | B454=Failed to get cross point of vertex
+A455=7859 | B455=Vertex data failed to convert into arc
+A456=7860 | B456=Vertexs failed to transfer point
+A457=7861 | B457=Failed to get vertex smoothing
+A458=7862 | B458=Failed to get vertex offset
+A459=7900 | B459=Text data error
+A460=7901 | B460=Text X is not existing
+A461=7902 | B461=X formula of  text error
+A462=7903 | B462=Text Y is not existing
+A463=7904 | B463=Text Y expression error
+A464=7905 | B464=Text width is not existing
+A465=7906 | B465=Text width formula error
+A466=7907 | B466=Text height is not existing
+A467=7908 | B467=Text height formula error
+A468=7909 | B468=Text angle formula error
+A469=8000 | B469=Processing limit exceeded
+A470=8001 | B470=Processing data error
+A471=8002 | B471=There is data that cannot be processed
+A472=8003 | B472=Cannot generate avoidance zone
+A473=8004 | B473=There is a cut-off pause step
+A474=8020 | B474=Stacking is allowed only if there are five-side processing data on the panel
+A475=8050 | B475=Panel holes and grooves are empty (processing empty panel!)
+A476=8051 | B476=Entering barcode from the keyboard is banned
+A477=8052 | B477=ERP system is not started and data cannot submit
+A478=8100 | B478=Tool data error
+A479=8101 | B479=Tool mismatch
+A480=8102 | B480=Slot sawing depth exceeds machining limit
+A481=8103 | B481=Drilling depth is beyond valid tool length limit
+A482=8104 | B482=Milling depth is beyond valid tool length limit
+A483=8200 | B483=Database operation failure
+A484=8300 | B484=Failed to load barcode camera parameter
+A485=8301 | B485=Failed to create barcode camera socket
+A486=8302 | B486=Failed to connect barcode camera
+A487=8303 | B487=Failed to connect barcode camera
+A488=8400 | B488=Axis data error
+A489=8401 | B489=Low voltage of servo
+A490=8402 | B490=Duplicate axis number
+A491=8403 | B491=Operation is prohibitted when the  tool in drill head is bounced
+A492=8404 | B492=Operation is prohibitted when the bottom spindle does not retract to the safety position
+A493=8405 | B493=Operation is not allowed when the Z axis of the drill-down package is not at the bottom
+A494=8406 | B494=Can't move the manipulator when the Y-axis of the drill-down package is in a dangerous area
+A495=8407 | B495=The Y axis of the drill bag is not allowed to move when the rear floating platform is not behind and the Z axis of the drill bag is not at the bottom of the safe bottom.
+A496=8408 | B496=When the manipulator is in a dangerous area, it is forbidden to move the Y-axis of the drill bag in the negative direction
+A497=8409 | B497=There is no compressible material on the upper presser
+A498=8410 | B498=Entering the dangerous zone
+A499=8500 | B499=This operation is not allowed when the rear floating platform is not behind.
+A500=8501 | B500=Exceed the Max depth limit of back hole
+A501=8502 | B501=All the tools that the holes can match exceed the limit
+A502=8503 | B502=All the tools that the slots can match exceed the limit
+A503=8504 | B503=Unable to machine a back groove on the panel, the front side of which cannot be pressed
+A504=8505 | B504=The operation is forbidden when the tool is sticking out
+A505=8506 | B505=When the horizontal hole is not at the edge of the plate (in the plate notch), there must be space for the tool to be lowered for machining.
+A506=8507 | B506=This operation is not allowed when the front floating table is not in front
+A507=8508 | B507=Tool ejection will cause collision
+A508=8509 | B508=Exceeding the maximum depth limit of the back milling groove
+A509=8510 | B509=This operation is not allowed when the front pontoon is not completely closed
+A510=8511 | B510=水平槽不在板件边缘（在板件缺口）时必须存在允许刀具下降进行加工的空间
+A511=8600 | B511=When error occurs during processing please press Remove fault button to confirm that the error has been eliminated.
+A512=8601 | B512=Cross the safety line when feeding
+A513=8602 | B513=Current mode is manual
+A514=8603 | B514=Current mode is auto
+A515=8604 | B515=Waiting for the robot to finish feeding timeout
+A516=8605 | B516=The feeding of the robot is completed but there is no signal from the feeding photoelectric (no board exists)
+A517=8606 | B517=Gantry machine exits abnormally
+A518=8607 | B518=If there is an error during processing, please check whether there is a plate in the equipment. After confirming that there is no plate, click the clear plate button on the automatic interface to start processing.
+A519=8700 | B519=This plugin is not installed
+A520=8800 | B520=An error occurred when changing the spindle tool. Please check whether the tool and the tool magzine on the spindle are consistent with the set parameters. After confirming that they are consistent, click Save on the spindle tool configuration interface
+A521=8801 | B521=There are currently tools in the spindle, not allowed to change tools
+A522=8802 | B522=There is a tool in the position in tool magzine where the spindle is to be placed
+A523=8803 | B523=There is no tool in position in tool magzine of the spindle to take the tool
+A524=8804 | B524=The spindle motor is not in a stopped state, and the tool is not allowed to be changed
+A525=8805 | B525=The spindle interferes with the drill-down package, and the tool is not allowed to be changed
+A526=8806 | B526=The width of the processing board is too large to change the spindle tool
+A527=8810 | B527=The communication address of the spindle inverter is wrong
+A528=9000 | B528=Ready
+A529=9001 | B529=Take away prev panel
+A530=9002 | B530=Continue processing
+A531=9003 | B531=Pause processing
+A532=9011 | B532=Homing
+A533=9012 | B533=Homing success
+A534=9013 | B534=Homing failure
+A535=9021 | B535=Processing fault
+A536=9022 | B536=Processing
+A537=9024 | B537=Work end
+A538=9026 | B538=Work finish
+A539=9031 | B539=Idle for too long and shutdown
+A540=9032 | B540=Please leave safety light curtain
+A541=9040 | B541=Side block can push forth
+A542=9042 | B542=Move back against side block
+A543=9044 | B543=Move back in same side
+A544=9045 | B544=Heating is requied
+A545=9046 | B545=Heating
+A546=9047 | B546=Heating failure
+A547=9048 | B547=Heating success
+A548=9051 | B548=There is request to open the door
+A549=9052 | B549=Equipment needs maintenance
+A550=9999 | B550=An error occurred, but the specific error information was not filled in, the error code:
+A551=10001 | B551=The hardware has not been initialized yet
+A552=10027 | B552=There is an unknown module type on the EtherCAT bus
+A553=10256 | B553=EtherCAT slave number error
+A554=10260 | B554=Unable to obtain the specified PDO data
+A555=14096 | B555=No connection or no slave device detected
+A556=14097 | B556=Initialization wait time is too long
+A557=14098 | B557=Cannot switch to OP mode or Init mode
+A558=14352 | B558=The initialization function must be executed before this operation
+A559=14355 | B559=You need to wait until DC calibration is completed and switch to OP mode before performing
+A560=14356 | B560=There are currently alarms, you need to execute the clear alarm API before you can execute it
+A561=14357 | B561=The motor needs to be enabled before execution
+A562=14359 | B562=This API needs to be activated when the specified axis is not in motion
+A563=14361 | B563=Need to stop the simultaneous function first
+A564=14609 | B564=API parameter input error
+A565=14610 | B565=This mod does not support this API
+A566=14612 | B566=This API is not supported in this mode
+A567=14624 | B567=Trigger soft limit
+A568=14627 | B568=Group function number has been used
+A569=14864 | B569=PDO type command transmission failed
+A570=14865 | B570=Too long waiting time for SDO response
+A571=14866 | B571=The slave device returns the SDO error code, you can use _ECAT_Slave_CANopen_Get_ErrorCode to get its error code
+A572=14867 | B572=PDO type command return failed
+A573=14868 | B573=MailBox delivery failure
+A574=14869 | B574=SDO 的指令暂存区已满
+A575=42782 | B575=Axis is moving
+A576=42903 | B576=Motion Buffer motion has started
+A577=42908 | B577=Motion Buffer coordinate system has not been established
+A578=67345 | B578=运动控制轴卡无回应
+A579=67351 | B579=No response from the system during the update process
+A580=67356 | B580=Axis card does not support this function
+A581=1000002 | B581=Dynamic library layer parameter error
+A582=1000004 | B582=The dynamic library layer detects that the axis is in motion
+A583=1000009 | B583=The card number is wrong, please confirm the number adjusted by DIP Switch on the card
+A584=1000012 | B584=Firmware file error
+A585=1000054 | B585=LIST没有初始化
+A586=1000058 | B586=Mapping axis busy
+A587=1000112 | B587=设置位置错误，已超出允许范围
+A588=1000115 | B588=轴处于报警状态，不能运动
+A589=1000117 | B589=轴处于报警状态，不能运动
+A590=1000119 | B590=轴的使能信号关闭，不能启动
+A591=1001002 | B591=This operation is not supported, the axis or coordinate system is in motion, or the axis CHECK_DOWN is not completed
+A592=1001003 | B592=This operation is not supported, the axis or coordinate system is in motion or paused
+A593=1001012 | B593=Bus control card or controller axis is not enabled, first enable the axis and then operate
+A594=1001705 | B594=Failed to get the main axis number of the specified slave axis, there is no master-slave relationship between the two axes
+A595=1001801 | B595=输入输出口超出最大允许值（或者输入输出模块丢失）
+A596=1003008 | B596=The axis has an alarm signal, and it fails to start the movement
+A597=1003009 | B597=Positive software limit trigger, forward movement is not allowed
+A598=1003010 | B598=Negative software limit trigger, movement in the negative direction is not allowed
+A599=1004014 | B599=Interpolation coordinate system is in single-segment interpolation mode, OPEN_LIST operation is invalid
+A600=1006011 | B600=The interpolation system is not open
+A601=1006030 | B601=The interpolation dimension exceeds the limit
+A602=1006036 | B602=Mapping axis busy
+A603=1010000 | B603=Bus error
+A604=1010032 | B604=Bus error cannot move

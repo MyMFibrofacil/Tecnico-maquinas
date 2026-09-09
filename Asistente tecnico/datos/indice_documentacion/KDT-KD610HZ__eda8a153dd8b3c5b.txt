@@ -1,0 +1,5 @@
+[Imagen: pagina-05.png]
+Dimensiones: 1755 x 1240
+Formato: PNG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

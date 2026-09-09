@@ -1,0 +1,5 @@
+[Imagen: 09_fotos_software_06.jpg]
+Dimensiones: 840 x 660
+Formato: JPEG
+Modo: RGB
+OCR: no disponible: tesseract is not installed or it's not in your PATH. See README file for more information.

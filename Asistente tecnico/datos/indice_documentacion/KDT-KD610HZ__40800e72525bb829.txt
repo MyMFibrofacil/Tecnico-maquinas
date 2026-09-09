@@ -1,0 +1,27 @@
+I oo jas) ieee ] pia] mo |
+H I z I 3 7 3 I 6 i 2 T 3
+Servo CN1
+A
+i i]ia]is}iz}u}i}o}s}7}/e}s}a}a}2]a
+s q 0 28 26 | 25 22 | 21 | 20 | 19 | 18 ID
+44 | 43 | 42 | 41 | 40 | 39 | 38 | 37 | 36 | 35 | 34 | 33 | 32 | 31
+L]
+‘ Servo CN1 soldering table
+4 Server Driver Oil
+Renark [PIN] description Maxis | Voxis | Zaxis | Oexis | Carts | Uaris | color
+4 cour | 2 | CON for Input vat [van | vzavn [van | on | vom | red
+taereeoey | 16 | Port DIT input azoi-2 | xagor-2 | xaeor-2 | xaror-2 | rasor-2 | xasoi-2 | black
+braker | 3 | Port DOI* output vai | aay red
+| brake~ | 4 | Port DOI- output ‘KAZ KAB brow
+Co | 12 | COR for output 246 246 Dloe
+E Probe | 37 | Port DI2 Input DIZ ween
+Tinit= [18 | Port DIS input D3 Tite
+F 6*0.3 shielded cable
+wae eee ui of ser ve Uesiae center
+Fae Rae TT Date Teture]CNI of servo driver BS |geparigent| ONC RAD center [Ver] 1.1
+we Check] e+ [Date] e+ [Project 10002 Hfotal: 48 (Pease: 43
+T T 7 3 7 [aca a 7 B
+
+SNIHOWW ONTTHUG ON
+
+TWhNVW aasn

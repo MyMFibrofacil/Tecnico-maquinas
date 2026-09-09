@@ -1,0 +1,3580 @@
+[Página 1]
+SV-DA200 Series 
+AC Servo Drive
+EtherCAT Technical Guide
+
+[Página 2]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Change history 
+ 
+Change history 
+Release date Version Description 
+May 2021 V1.00 First release. 
+June 2022 V1.10 
+1) Added unbiased control function with related 
+parameters P2.91, P2.92; 
+2) Upated section 1.1. DA260-N version V2.66 has a 
+built-in hardware dynamic brake (set via. P4.30); 
+3) Added P2.86–P2.92, P3.42, P4.77 (Detection time for 
+motor phase loss), updated P4.78 (Temperature protection 
+threshold of medium-power motor) and P4.79 (Quick stop 
+method), and deleted P4.45; 
+4) Added the description of P0.15 (set to 23) and updated 
+the function definition of P4.43 in section 2.1; 
+5) Updated the Default PDO mapping in section 2.2.4; 
+6) Added fault Er01-2, Er01-3, Er01-4, Er01-5, Er17-1, 
+Er18-2, Er18-3.
+
+[Página 3]
+
+[Página 4]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Contents 
+i 
+Contents 
+Contents ..................................................................................................................................................... i 
+1 Hardware configuration ........................................................................................................................ 1 
+1.1 Hardware overview ....................................................................................................................... 1 
+1.2 Drive wiring ................................................................................................................................... 2 
+1.3 CN1 terminal definition .................................................................................................................. 2 
+2 Software configuration ......................................................................................................................... 5 
+2.1 Basic settings of EtherCAT application ......................................................................................... 5 
+2.2 EtherCAT communication ........................................................................................................... 10 
+2.2.1 CoE reference model ........................................................................................................ 10 
+2.2.2 EtherCAT slave information ............................................................................................... 11 
+2.2.3 EtherCAT state machine .................................................................................................... 11 
+2.2.4 PDO process data mapping ............................................................................................. 12 
+2.2.5 Network synchronization based on distributed clocks ..................................................... 13 
+2.2.6 Emergency messages ...................................................................................................... 14 
+2.3 Compatible communication specifications .................................................................................. 15 
+3 CiA402 device protocol....................................................................................................................... 16 
+3.1 CoE state machine ...................................................................................................................... 16 
+3.1.1 Detail of CW 0x6040 ......................................................................................................... 17 
+3.1.2 Detail of SW 0x6041 ......................................................................................................... 18 
+3.2 Profile position mode .................................................................................................................. 19 
+3.2.1 Basic description ............................................................................................................... 19 
+3.2.2 Operating method ............................................................................................................. 19 
+3.2.3 Other objects .................................................................................................................... 19 
+3.2.4 Mode-related objects ........................................................................................................ 20 
+3.2.5 CW 0x6040of profile position mode ................................................................................. 21 
+3.2.6 SW 0x6041 of profile position mode ................................................................................. 21 
+3.2.7 Application examples ........................................................................................................ 21 
+3.3 Cyclic synchronous position mode ............................................................................................. 23 
+3.3.1 Basic description ............................................................................................................... 23 
+3.3.2 Operating method ............................................................................................................. 23 
+3.3.3 Mode-related objects ........................................................................................................ 23 
+3.3.4 Application examples ........................................................................................................ 24 
+3.4 Homing Mode .............................................................................................................................. 24 
+3.4.1 Basic description ............................................................................................................... 24 
+3.4.2 Operating method ............................................................................................................. 24 
+3.4.3 Mode-related objects ........................................................................................................ 24 
+3.4.4 Application examples ........................................................................................................ 25 
+3.4.5 Homing mode SW ............................................................................................................. 25 
+3.4.6 Homing mode description ................................................................................................. 25 
+3.5 Profile velocity mode ................................................................................................................... 27 
+3.5.1 Basic description ............................................................................................................... 27 
+3.5.2 Operating method ............................................................................................................. 27 
+3.5.3 Other objects .................................................................................................................... 27 
+3.5.4 Mode-related objects ........................................................................................................ 27 
+3.5.5 Application examples ........................................................................................................ 27 
+3.6 Cyclic synchronous velocity mode .............................................................................................. 28 
+3.6.1 Basic description ............................................................................................................... 28
+
+[Página 5]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Contents 
+ii 
+3.6.2 Operating method ............................................................................................................. 28 
+3.6.3 Other objects .................................................................................................................... 28 
+3.6.4 Mode-related objects ........................................................................................................ 28 
+3.6.5 Application examples ........................................................................................................ 28 
+3.7 Cyclic synchronous torque mode ................................................................................................ 29 
+3.7.1 Basic description ............................................................................................................... 29 
+3.7.2 Operating method ............................................................................................................. 29 
+3.7.3 Other objects .................................................................................................................... 29 
+3.7.4 Mode-related objects ........................................................................................................ 29 
+3.7.5 Application examples ........................................................................................................ 30 
+3.8 Touch probe function ................................................................................................................... 30 
+3.8.1 Basic description ............................................................................................................... 30 
+3.8.2 Mode-related objects ........................................................................................................ 30 
+3.8.3 CW and SW description ................................................................................................... 31 
+3.8.4 Application examples (Z signal single trigger mode) ........................................................ 31 
+4 Object dictionary ................................................................................................................................. 32 
+4.1 Object specifications ................................................................................................................... 32 
+4.1.1 Object type ........................................................................................................................ 32 
+4.1.2 Data type ........................................................................................................................... 32 
+4.2 Overview of object group 1000h ................................................................................................. 32 
+4.3 Overview of object group 6000h ................................................................................................. 32 
+4.4 Overview of object groups 2000h–4000h ................................................................................... 34 
+4.5 Encoder feedback ....................................................................................................................... 50 
+4.6 Digital input ................................................................................................................................. 50 
+4.7 Digital output control ................................................................................................................... 51 
+4.8 Analog output control .................................................................................................................. 52 
+4.9 Drive parameters......................................................................................................................... 52 
+4.10 Torque compensation ................................................................................................................ 53 
+5 Troubleshooting .................................................................................................................................. 54 
+5.1 EtherCAT communication fault code obtaining interface ............................................................ 54 
+5.2 EtherCAT communication faults and solutions ........................................................................... 54 
+5.3 SV-DA200 faults and solutions ................................................................................................... 55 
+6 References ........................................................................................................................................... 66
+
+[Página 6]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Hardware configuration 
+-1- 
+1 Hardware configuration 
+1.1 Hardware overview 
+With a built -in EtherCAT communication card, SV -DA200&DA260 EtherCAT servo drive has similar 
+external appearance with standard SV-DA200, but different from SV-DA200 in CN1 terminal pins, which 
+are described in section 1.3. CN3 is the EtherCAT communication wiring terminal that adopts RJ45 
+interface, of which the upper is for wire inlet and the lower is for wire outlet. The entire machine diagram 
+is as follows. 
+MODE
+CN5:2nd encoder and STO
+2
+CN2:Encoder
+C
+N
+CN1:I/O control
+1
+C
+N
+C
+N
+3 CN3:EtherCAT 
+communication
+4
+CN4:USB port of 
+upper PC
+SET
+C
+N
+Grounding
+L2 C
+Power supply of 
+control circuit
+B3
+V
+W
+Motor
+U
+-
+B2
++
+Regenerative 
+resistor
+Power supply of 
+main circuit
+L1 C
+L3
+L1
+L2
+CHARGE
+LED display
+CHARGE light
+Operation panel
+S1:STO selection
+ 
+Main differences between DA200-N and DA260-N:  
+No. Function DA200-N DA260-N 
+1 CN5 Available Unavailable 
+2 Incremental encoder Available Unavailable 
+3 Digital input 7 channels First 4 channels 
+4 Digital output 4 channels First 3 channels 
+5 Analog input/output Available Unavailable 
+6 Frequency-divided output Available Unavailable 
+7 Main circuit terminals L1C, L2C Required Not required 
+8 Dimension of 2R0-2 servo Volume D Volume B
+
+[Página 7]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Hardware configuration 
+-2- 
+1.2 Drive wiring 
+An EtherCAT network often consists of a master (IPC or CNC) and multiple slaves (servo drives or bus 
+expansion terminals). Each EtherCAT slave has two standard Ethernet interfaces. The following figure 
+shows the wiring. 
+ 
+1.3 CN1 terminal definition 
+The inputs and outputs of SV-DA200 EtherCAT model have differences with those of the standard model. 
+The following table lists the pins of the CN1 terminal (DB44) of the medium power range (7.5kW  and 
+higher), marking the differences from the standard model in red. Except that pin 1 of the CN1 terminal of 
+the small power range (0.1kW–5.5kW) is reserved, all the others are the same as those of the medium 
+power range. 
+Pin Symbol Function Pin Symbol Function 
+1 AD1 Analog input 1 
+(Medium power) 23 - Reserved 
+2 COM+ Common terminal of 
+digital input 24 - Reserved 
+3 DO1+ Digital output 1 + 25 AO2 Analog output 2 
+4 DO1- Digital output 1 - 26 OCZ Z-phase open collector 
+output 
+5 GND Analog signal ground 27 OZ- Z-phase differential 
+output - 
+6 GND Analog signal ground 28 OZ+ Z-phase differential 
+output + 
+7 AD3 Analog input 3 29 - Reserved 
+8 GND Analog signal ground 30 OCB B-phase open collector 
+output 
+9 DO3+ Digital output 3 + 31 - Reserved 
+10 DO3- Digital output 3 - 32 - Reserved 
+11 DO4+ Digital output 4 + 33 - Reserved
+
+[Página 8]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Hardware configuration 
+-3- 
+Pin Symbol Function Pin Symbol Function 
+12 COM- Common ground of 
+digital output 34 DI5 Digital input 5 
+13 DO2- Digital output 2 - 35 GND Analog signal ground 
+14 DO2+ Digital output 2 + 36 OCA A-phase open collector 
+output 
+15 DO4- Digital output 4 - 37 DI2 Digital input 2 
+16 DI1 Digital input 1 38 - Reserved 
+17 DI6 Digital input 6 39 DI4 Digital input 4 
+18 DI3 Digital input 3 40 +24V Internal 24V 
+19 GND Analog signal ground 41 OB+ B-phase differential 
+output + 
+20 AD2 Analog input 2 42 OB- B-phase differential 
+output - 
+21 AO1 Analog output 1 43 OA- A-phase differential 
+output - 
+22 DI7 Digital input 7 44 OA+ A-phase differential 
+output + 
+ 
+CN1 plug pin layout
+CN1 plug signal layout
+44 43 42 41 40 39 38 37 36 35 34 33 32 31
+30 29 28 27 26 25 24 23 22 21 20 19 18 17
+15 14 13 12 11 10 9 8 7 6 5 4 3 2
+16
+1
+OA+ OA- OB- OB+ 24V DI4 - DI2 OCA GND DI5 - - -
+OCB - OZ+ OZ- OCZ AO2 - - DI7 AO1 AD2 GND DI3 DI6
+DO4- DO2+ DO2- COM-DO4+ DO3- DO3+ GND AD3 GND GND DO1- DO1+COM+
+DI1
+AD1
+ 
+ 
+The EtherCAT servo drive model has three analog inputs (AD1 is 16-bit analog input, but it is unavailable 
+to the small power range, and therefore pin1 of CN1 is not used), two analog outputs, seven digital 
+inputs, and four digital differential outputs. This servo drive model and the standard model are similar in 
+the external wiring of analog input, analog output, and digital input. For details, see section 4.5 in  
+SV-DA200 Series AC Servo Drive. 
+The following shows the external wiring of digital differential output, using DO1 as an example. 
+Wiring when using the user-provided power supply:
+
+[Página 9]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Hardware configuration 
+-4- 
+Install this flyback diode 
+when connecting to 
+inductive load
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+DC 
+12~24V
++
+-
+Drive side
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
++
+-
+RY
+DC 
+12~24V
+① connect to relay coil ② connect to optical coupler
+Connect to a current limit 
+resistor when connecting to 
+an optical coupler
+Drive side
+DO1+  3  
+DO1-   4
+DO1+  3  
+DO1-   4
+ 
+Alternative wiring: 
+Install this flyback diode 
+when connecting to 
+inductive load
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+DC 
+12~24V
+Drive side
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+DC 
+12~24V
+① connect to relay coil ② connect to optical coupler
+Connect to a current limit 
+resistor when connecting to 
+an optical coupler
+Drive side
++   - +   -
+RY
+DO1+  3  
+DO1-   4
+DO1+  3  
+DO1-   4
+ 
+Wiring when using the local-provided power supply: 
+Install this flyback diode 
+when connecting to 
+inductive load
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+Drive side
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+RY
+① connect to relay coil ② connect to optical coupler
+Connect to a current limit 
+resistor when connecting to 
+an optical coupler
+Drive side
+24V  40 24V  40
+COM-  12COM-  12
+DO1+  3  
+DO1-   4
+DO1+  3  
+DO1-   4
+ 
+Alternative wiring: 
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+Drive side
+Max load-carrying capacity of 
+each output terminal: 30V, 
+50mA.
+① connect to relay coil ② connect to optical coupler
+DO1+  3  
+DO1-   4
+Drive side
+RY
+Install this flyback diode 
+when connecting to 
+inductive load
+Connect to a current limit 
+resistor when connecting to 
+an optical coupler
+24V  40 24V  40
+COM-  12COM-  12
+DO1+  3  
+DO1-   4
+
+[Página 10]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-5- 
+2 Software configuration 
+2.1 Basic settings of EtherCAT application 
+Set the following parameters through the LED panel or ServoPlorer software before using SV-DA200 for 
+EtherCAT communication. 
+1. Set parameter P0.03 [Control mode] to 8 (EtherCAT). 
+2. In most cases, you do not need to set the node number parameter since you can use the default 
+physical node sequence addressing, such as Twincat. If you need to set the node number (such 
+as for Omron PLC), set P4.00 [EtherCAT communication node] through the LED panel or 
+ServoPlorer software. The default value -1 indicates not setting the parameter. 
+3. Set parameter P4.08 [EtherCAT synchronization type]. (0: Free-Run; 2: DC Sync0) 
+4. Set parameter P4.07 [EtherCAT synchronization cycle].  (0: 250μs; 1: 500μs; 2: 1ms; 3: 2ms; 4: 
+4ms; 5: 8ms) 
+5. Set P4.09 [EtherCAT fault detection time]. (Set the detection time of offline fault or PDO data loss 
+fault as needed.) 
+6. Set parameter P4.25 [EtherCAT control unit type]. (0: Manufacturer unit; 1:CIA402 Unit; 
+2:CIA402 OMRON; 3:CIA402 Standard) 
+7. Set parameter P4.26 [EtherCAT PDO input offset]. (Range: 0–63. Unit: 125μs) 
+8. Set parameter P4.27 [Compensation value of EtherCAT position interpolation mode]. (Range: 
+0–10) 
+9. The digital output is servo controlled by default. If you want to enable the master to c ontrol the 
+digital output through EtherCAT communication, set P4.28 [Enabling EtherCAT based control on 
+digital output] to 1 (Enable); control the digital output through 0x60FE in TPDO. 
+Note: 
+1. You need to re-power on the drive or reset the drive in soft manner for the changes of the first 
+five parameters and P4.28 to take effect. The changes of P4.25–4.27 take effect immediately. 
+2. When the control mode (0x6040) is set to position interpolation mode (8), P4.07 [EtherCAT 
+synchronization cycle] is the same as CNC interpolation cycle. 
+3. The options of P4.25 [EtherCAT control unit type] are as follows: 
+0: Manufacturer unit, supporting the NC function of Beckhoff TwinCAT. 
+ The position unit is pulse, speed unit is rpm, acceleration unit is ms (the time needed for 
+accelerating from zero speed to rated motor speed). 
+ The touch probe of z signal is supported. The captured values of external IO are stored in 
+manufacturer parameters. For details, refer to the following text. 
+1: CIA402 unit, supporting most of motion con trollers, such as CodeSys, BaoYuan and ACS 
+EtherCAT master. 
+ The position unit is pulse, speed unit is pulse/s, and acceleration unit is pulse/s² . 
+ The touch probe of z signal and the IO capture of standard touch probe are supported. 
+2: CIA402 OMRON, supporting OMRON NJ controller. 
+ The content is basically the same as that for option 0, 1.
+
+[Página 11]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-6- 
+ Change 0x6041 status feedback to satisfy OMRON NJ state machine requirement.  
+3: CIA402 standard, supporting minor motion controllers. 
+  The capture of only standard IO is supported.  
+4. The default number of pulses per revolution of  SV-DA200 is 10000, which can be changed 
+through P0.22 [Pulse per revolution of motor]. The change takes effect after reset. The number 
+can also be changed by modifying P0.25 [Numerator of elect ronic gear ratio] and P0.26 
+[Denominator of electronic gear ratio] after setting P0.22 to 0. Note that the setting of P0.22 
+cannot be greater than the actual revolution rate of encoder. 
+5. P4.26 and P4.27 need to be modified only when the master cycle is unst able or packet loss or 
+other problems occurred to communication. 
+6. P4.26 [EtherCAT PDO input offset] is used to adjust the time from receiving DC signal to 
+processing PDO so that PDO input time can be changed in the middle of the master cycle, 
+reducing the d ata loss caused by the unstable master clock. This parameter needs to be set 
+according to the cycle setting of P4.07. If P4.07 is 1ms, the range of P4.26 is 0 –7. The value 0 
+indicates no offset while the value 7 indicates the offset of 7*125μs. The actual setting depends 
+on actual conditions for the purpose of stable data receiving. 
+7. P4.27 [Compensation value of EtherCAT position interpolation mode] is effective only in DC 
+mode and position interpolation mode (8). This is to ensure that position command smoo thing 
+effect can be achieved if one or multiple cycle position commands are lost when P4.26 is set 
+properly. If it is set to a non -zero value, compensation is made based on previous position 
+increment when position command loss occurred, and the compensati on cycle is equal to the 
+value specified by P4.27. 
+8. P4.43 [EtherCAT related control and run cycle selection] is 0x0003 by default. It is controlled by 
+bit. The definition is as follows. 
+Bit Description Other 
+0 Indicates whether to screen out torque 
+limit (60E0h, 60E1h) commands. Default: 1, screening out. 
+1 Indicates whether to screen out the speed 
+limit (607Fh) command. 
+Default: 1, screening out. 607Fh is 
+always valid in torque mode. 
+2–3 Reserved  
+4 
+Indicates whether to use 60B1h as the 
+speed feedforward. 
+Default: 0, using the servo internal speed 
+as the feedforward. 
+When 60B1h is used as the speed 
+feedforward, the unit is puu/s, and 
+P2.10 and P2.11 are still valid. 
+5 
+Indicates whether to use 60B0h as the 
+position offset. 
+Default: 0, not using 60B0h as the position 
+offset. 
+Unit: puu 
+6 Indicates the range of software limit 
+(607Dh). Default: 0. Only valid in position mode. 
+7 Indicates the position command 
+processing mode after limit. 
+Default: 0. The position command is 
+discarded after limit. 
+8 
+Changing EtherCAT run cycle 
+Default: 0, indicating servo controls the 
+cycle. 
+1: reducing the load rate of the main 
+interrupt task. Set the bit to 1 when the 
+servo reports the fault Er11-0.
+
+[Página 12]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-7- 
+Bit Description Other 
+9–11 Reserved  
+12 Indicating the parsing mode of the software limit 
+(607Dh). Default: 0, standard CiA402 protocol. 
+1: the mode used in V2.61 and earlier 
+versions. 
+13–15 Reserved  
+ 
+9. If the PDO parameter list in EtherCAT xml configuration file of  SV-DA200 includes torque limit 
+parameters and P4.43 indicates no torque limit screening, a non -zero value needs to be given; 
+otherwise, the servo torque is limited to 0, which causes no acting or alarm reporting. For 
+example, the units of Positive torque limit and Negtive torque limit are 1‰ of the rated torque. 
+The setting 1000 indicates 100% of the rated torque. Parameters about torque limit are valid in 
+any control mode.  
+10. If the EtherCAT xml configuration file of SV-DA200 includes Max profile velocity (607Fh), which 
+indicates the max. speed limit in the torque loop, the unit is related to P4.25. If P4.25 is the 
+manufacturer unit mode, the unit is rpm; if P4.25 is another value, the unit is puu/s. If the torque 
+loop needs to be run, set this parameter to a non-zero value. 
+11. Sending and receiving PDO can be configured dynamically by the master, however, the max. 
+number of each PDO parameter is 10. If the max. number is exceeded, the slave cannot enter 
+the Op status. 
+12. When P4.08 is set to the DC mode, you can check the clock synchronization calibration status 
+through R0.27. 
+13. You can view the CANopen stat e machine information through R0.28. The following table lists 
+the mapping between states and values. 
+State Init Pre-Op Safe-Op Op 
+R0.28 value 11 12 14 18 
+ 
+14. View the EtherCAT configuration file version number through R0.50. 
+15. View the control word (6040h) from the master through R0.64. 
+16. View the status word (6041h) from the slave through R0.65. 
+17. View the run mode (6060h) from the slave through R0.66. 
+18. When P0.15 is set to 23, The LED pannel displays the EtherCAT communication-related status. 
+Sign Name Definition 
+ 
+EtherCAT communication 
+monitoring mode 
+Indicates the initial entry into 
+EtherCAT communication 
+monitoring mode. "ECAT" is 
+displayed. 
+ 
+EtherCAT communication 
+monitoring status 
+Displays the physical layer link 
+state of upper and lower network 
+ports, EtherCAT state machine, 
+CiA402 control mode, and servo 
+system status respectively. 
+①  
+ 
+Physical layer link state of 
+EtherCAT communication 
+interface Port1 (upstream 
+interface) 
+On: Port1 is connected 
+Off: Port1 is not connected
+
+[Página 13]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-8- 
+Sign Name Definition 
+ 
+Physical layer link state of 
+EtherCAT communication 
+interface Port2 (downstream 
+interface) 
+On: Port2 is connected 
+Off: Port2 is not connected 
+②      
+    
+EtherCAT communication 
+state machine 
+1: Init 
+2: Pre-Op 
+4: Safe-Op 
+8: Op 
+③  
+     
+ 
+     
+CiA402 control mode 
+1: Profile position control mode 
+(pp) 
+3: Profile speed control mode 
+(pv)  
+6: Homing control mode (hm) 
+8: Cycle synchronization position 
+control mode (csp) 
+9: Cycle synchronization speed 
+control mode (csv) 
+A: Cycle synchronization torque 
+control mode (cst) 
+④  
+ 
+Servo initialization 
+Strong electricity is not 
+connected or the bus voltage 
+does not reach the main relay 
+switching-on voltage. 
+ 
+Servo connected with strong 
+electricity 
+The main relay is switched on 
+but not ready. 
+ 
+Servo ready 
+(with alarm) Wait for enabling signal. 
+ 
+ 
+Servo running 
+(with alarm) 
+1) "run" is blinking at non -zero 
+speed.  
+2) "ALM" is displayed when an 
+alarm occurred, but the servo is 
+still running. 
+ 
+Servo fault Servo is faulty. 
+ STO-In STO acts.
+
+[Página 14]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-9- 
+19. You can check the PDO parameters configured on the master through the ServoPlorer software.  
+ 
+ 
+ 
+20. The network cable connection must follow up the top -in and bottom-out rule; otherwise, some 
+nodes may be unable to enter the Op state. 
+21. This manual is applicable to V2.60/XML V1.70 or later. Some functions are not imported into 
+earlier versions.
+
+[Página 15]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-10- 
+ 
+2.2 EtherCAT communication 
+2.2.1 CoE reference model 
+Figure 2-1shows the CANopen over EtherCAT (CoE) network model inside SV-DA200. 
+ 
+Figure 2-1 CoE model reference 
+The CoE network reference model consists of data link layer and app lication layer. Data link layer is in 
+charge of EtherCAT communication protocol while application  layer is embedded with CANopen  drive 
+profile (DS402) communication protocol. The object diction ary in CoE contains pa rameters, application 
+data, and process data object (PDO) mapping configuration information. 
+PDOs are constituted by objects which can conduct PD O mapping in object dictionary.  The content in 
+PDO data is defined by PDO mapping. The R/W of PDO da ta is cyclic, thus removing the need to look 
+up the object dictionary  while service data object (SD O) is acyclic communication , and requires a 
+look-up in object dictionary during R/W. 
+Note: It is necessary to configure FMMU and Sync Manager to ensure SDO and PDO data can be 
+properly analyzed in EtherCAT data link layer, as shown in the following table: 
+Sync Manager Assignment(Fixed) Size Start Address(Fixed) 
+Sync Manager 0 Assigned to Receive Mailbox 40 – 512Byte 0x1000 
+Sync Manager 1 Assigned to Transmit Mailbox 40 – 512Byte 0x1200 
+Sync Manager 2 Assigned to Receive PDO 1 – 128Byte 0x1400 
+Sync Manager 3 Assigned to Transmit PDO 1 – 128Byte 0x1480  
+FMMU settings 
+FMMU Settings 
+FMMU 0 Mapped to Receive PDO 
+FMMU 1 Mapped to Transmit PDO
+
+[Página 16]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-11- 
+FMMU Settings 
+FMMU 2 Mapped to Fill Status of Transmit Mailbox 
+2.2.2 EtherCAT slave information 
+EtherCAT slave information file (in XML format) is used for master reading and building the configuration 
+between the master and slave. The XML file contains information required by EtherCAT communication 
+setup. INVT provides " INVT_DA200_EtherCAT_V###.xml " file for SV-DA200. 
+2.2.3 EtherCAT state machine 
+EtherCAT state machine is used to describe the state and state change of slave application. The request 
+of state change is usually initiated by the master and responded by the slave. The state transition mode 
+is shown as follows: 
+Init
+Operational
+Safe-Op
+Pre-Op
+PI IP
+SP
+SI
+OP
+OI
+OS
+PS
+SO
+Power Up
+ 
+Figure 2-2 Slave state machine diagram 
+Table 2-1 State description 
+State Description 
+Init  Mail communication is unavailable. 
+ PDO communication is unavailable. 
+Init  Pre-Op 
+ The master configures link layer address and SM channel, and 
+initiates mail communication. 
+ The master initializes DC clock synchronization. 
+ The master requests for the change to the Pre-Op state. 
+ The master sets the AL control register. 
+ The slave determines whether the mail is initialized normally. 
+Pre-Operation 
+(Pre-Op) 
+ Mail communication is activated. 
+ PDO communication is unavailable. 
+Pre-Op  Safe-Op 
+ The master serves as the channel for process data configuration 
+sync manager channel and FMMU. 
+ The m aster configures PDO data mapping and Sync Manager 
+PDO parameters through SOD. 
+ The master requests for the Safe-Op state change. 
+ The slave checks whether the configuration of Sync Manager 
+that is in charge of PDO data is correct. If the slave sends the 
+request to initiate synchronization, check whether the distributed
+
+[Página 17]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-12- 
+State Description 
+clocks are set correctly. 
+Safe-Operation 
+(Safe-Op) 
+ The slave application program transmits actual input data, 
+without output operations. 
+ Output is set to "safe state". 
+Safe-Op  Op  The master sends valid output data. 
+ The master requests for the change to the Op state. 
+Operational 
+(Op) 
+ Mail communication is available. 
+ PDO communication is available. 
+ 
+2.2.4 PDO process data mapping 
+Process data of EtherCAT slave is constituted by Sync Manager channel objects, with each object  
+describing the uniform region of EtherCAT process data and containing multiple process data objects. 
+The EtherCAT slave equipped with application control function should support PDO mapping and R/W of 
+SM PDOs Assign objects. 
+PDO mapping 
+PDO mapping designs the mapping relation between the object diction ary to PDOs application object.  
+Index 0x1600 and 0x1A00 in the object dictionary are stored in RxPDO and TxPDO mapping table  
+respectively. The following shows an example of PDO mapping. 
+ 
+Figure 2-3 PDO mapping example 
+PDO allocation 
+In order to realize process data interaction of EtherCAT communication , it is necessary to distribute  
+PDOs to Sync Manager . Sync Manager PDO distributes objects (S ync Manager PDO Assign objects: 
+0x1C12 and 0x1C13) to establish the relationship between PDOs and Sync Manager. 
+The following shows an example of Sync Manager PDO allocation.
+
+[Página 18]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-13- 
+ 
+Figure 2-4 PDO allocation example 
+Note: 
+PDO mapping objects (0x1600–0x1603 and 0x1A00–0x1A03) and SM PDO Assign objects (0x1C12 and 
+0x1C13) can only be effective in write operation under Pre-Op state. 
+PDO mapping procedure 
+1. Stop PDO allocation function (Set sub-index 0 of 0x1C12 and 0x1C13 to 0). 
+2. Stop PDO mapping function (Set sub-index 0 of 0x1600–0x1603 and 0x1A00–0x1A03 to 0). 
+3. Set the mapping entry of PDO mapping objects (0x1600–0x1603 and 0x1A00–0x1A03). 
+4. Set the mapping entry value of PDO mapping objects (0x1600–0x1603 and 0x1A00–0x1A03). 
+5. Set PDO allocation objects (set sub-index 1 of 0x1C12 and 0x1C13). 
+6. Re-open PDO allocation function (set sub-index 0 of 0x1C12 and 0x1C13 to 1). 
+Default PDO mapping 
+RxPDO 
+(0x1600) 
+CW 
+(0x6040) 
+Target 
+Position 
+(0x607A) 
+Target 
+Velocity 
+(0x60FF) 
+Mode of 
+Operation 
+(0x6060) 
+Target 
+torque 
+(0x6071) 
+Touch 
+probe 
+control 
+(0x60B8) 
+Max 
+profile 
+velocity 
+(0x607F) 
+TxPDO 
+(0x1A00) 
+SW 
+(0x6041) 
+Position 
+Actual 
+Value 
+(0x6064) 
+Speed 
+Actual 
+Value 
+(0x606C) 
+Torque 
+Actual 
+Value 
+(0x6077) 
+Operation 
+Mode 
+Display 
+(0x6061) 
+Digital 
+inputs 
+(0x60FD) 
+Touch 
+Probe 
+Value 
+(0x60BA) 
+Note: For detailed PDO mapping information, see the xml file. 
+2.2.5 Network synchronization based on distributed clocks 
+Distributed clock s can make all EtherCAT device s use the same system time, thus controlling the 
+synchronous execution of each device task. Among the slave clocks connected to the master, EtherCAT 
+network takes the first slave clock equipped with distributed clock function as the reference clock for the 
+whole network, and the remaining slaves and mast ers take the ref erence clock as their basis for  
+synchronization.
+
+[Página 19]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-14- 
+SV-DA200 EtherCAT communication card adopts the following sy nchronization modes, which can be 
+switched through synchronization control registers (ESC 0x980 and 0x981). 
+ Free-Run (ESC*register: 0x980 = 0x0000, P4.08 = 0) 
+In this mode, the local application program cycle, communication cycle , and master cycle of the  servo 
+drive are independent of each other. 
+ DC mode (ESC register: 0x980 = 0x0300, P4.08 = 2) 
+In this mode, the local application program is in synchronization with Sync0 time. 
+Note: ESC is the abbreviation of EtherCAT Slave Controller. 
+Index Sub Name Access PDO 
+mapping Type Value 
+0x1C32 
+Sync Manager channel 2 (process data output) Synchronization 
+1 Synchronization 
+type RO No UINT 
+Current status of DC mode 
+0:Free-run 
+2:DC Mode(Synchronous 
+with Sync0) 
+2 Cycle time RO No UDINT 
+Sync0 event cycle[ns](This 
+value is set by master via 
+ESC register) 
+range:12500 * n(n = 
+2,4,8,16)[ns] 
+0x1C33 
+Sync Manager channel 2 (process data input) Synchronization 
+3 Shift time RO No UINT - 
+6 Calc and copy 
+time RO No UINT - 
+The timing diagram of the DC mode is as follows. 
+ 
+Figure 2-5 Timing diagram of the DC mode 
+2.2.6 Emergency messages 
+When the drive generates an alarm, CoE initiates an Emergency message, informing you of the error  
+information of the present drive.
+
+[Página 20]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Software configuration 
+-15- 
+Emergency object: 
+Byte 0 1 2 3 4 5 6 7 
+Content Emergency Error 
+Code 
+Error 
+register Panel Error Code N/A 
+ 
+2.3 Compatible communication specifications 
+EtherCAT 
+Applicable 
+communication 
+standard 
+IEC 61158 Type12, IEC 61800-7 CiA402 Drive Profile 
+Physical layer 100BASE-TX (IEEE802.3) 
+Bus connection CN7 (RJ45): EtherCAT Signal IN 
+CN8 (RJ45): EtherCAT Signal OUT 
+Cable CAT5 
+SyncManager SM0: output mail, SM1: input valid 
+SM2: output process data, SM3: input process data 
+FMMU 
+FMMU0: mapping to process data (RxPDO) output area 
+FMMU1: mapping to process data (RxPDO) output area 
+FMMU2: mapping to mail state 
+PDO data Dynamic PDO mapping 
+Mailbox (CoE) 
+Emergency, SDO request, response, and SDO 
+information 
+Note: TxPDO/RxPDO and remote  TxPDO/TxPDO are 
+not supported. 
+Distributed clock 
+(DC) 
+Free-run, DC mode (activate via parameters) 
+Supported DC cycle: 250 us–2 ms 
+Slave Information 
+IF 256Bytes (read-only) 
+LED indicator 
+EtherCAT Link/Activity indicator(L/A) ×  2 
+EtherCAT Status indicator ×  1 
+EtherCAT Error indicator ×  1 
+CiA402 Drive Profile 
+ Homing mode(6) 
+ Profile position mode(1) 
+ Profile velocity mode(3) 
+ Cyclic synchronous position mode(8) 
+ Cyclic synchronous speed mode(9) 
+ Cyclic synchronous torque mode(10) 
+ Touch probe function
+
+[Página 21]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-16- 
+3 CiA402 device protocol 
+The master controls  SV-DA200 servo drive through the c ontrol word ( CW, 0x6040) , and acquires 
+present drive status by reading the status word (SW, 0x6041). The ser vo drive achieves motor control  
+according to master control commands. 
+3.1 CoE state machine 
+ 
+Figure 3-1 CoE state machine 
+State Description 
+Not Ready to Switch On The drive is being initialized. 
+Switch On Disabled Drive initialization is completed. 
+Ready to Switch On The drive is waiting to enter Switch On state, and the motor is 
+unexcited. 
+Switched On The drive is ready, and the main circuit power is normal. 
+Operation Enable The drive is enabled, and the motor is controlled based on the 
+control mode. 
+Quick Stop Active The drive stops based on the set mode. 
+Fault Reaction Active The drive detects an alarm, stops according to the set mode, and 
+the motor still has an excitation signal. 
+Fault The d rive in the fault state, and the motor has no excitation 
+signal.
+
+[Página 22]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-17- 
+3.1.1 Detail of CW 0x6040 
+CW 6040h contains the following content: 
+ Bits used for status control. 
+ Bits related to the control mode. 
+ Control bits defined by the manufacturer. 
+Each bit of 6040h is described as follows. 
+ 
+Note:  
+MSB: Most significant bit; LSB: Least significant bit; O: Optional; M; Mandatory. 
+Bits 0–3 and 7 (used for status control) 
+ 
+Note:  
+X is irrelevant;  is a rising edge jump. 
+Bits 4, 5, 6, and 8 (bits related to control mode) 
+Bit 
+Operation mode 
+Profile position mode Profile velocity mode Homing mode 
+4 New set-point reserved Homing operation start 
+5 Change set immediately reserved reserved 
+6 abs/rel reserved reserved 
+8 Halt Halt Halt 
+Bits 9 and 10: Reserved. 
+Bits 11–15: Defined by the manufacturer.
+
+[Página 23]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-18- 
+3.1.2 Detail of SW 0x6041 
+SW 6041h contains the following content: 
+ Present status bit of the drive. 
+ Status bits related to the control mode. 
+ Status bits defined by the manufacturer. 
+Each bit of 6041h is described as follows. 
+Bit Description M / O 
+0 Ready to switch on M 
+1 Switched on M 
+2 Operation enabled M 
+3 Fault M 
+4 Voltage enabled M 
+5 Quick stop M 
+6 Switch on disabled M 
+7 Warning O 
+8 Manufacture specific O 
+9 Remote M 
+10 Target reached M 
+11 Internal limit active M 
+12 – 13 Operation mode specific O 
+14 – 15 Manufacturer specific O 
+ 
+Bits 0–3, 5, and 6 
+Value (binary) State 
+xxxx xxxx x0xx 0000 Not ready to switch on 
+xxxx xxxx x1xx 0000 Switch on disabled 
+xxxx xxxx x01x 0001 Ready to switch on 
+xxxx xxxx x01x 0011 Switched on 
+xxxx xxxx x01x 0111 Operation enabled 
+xxxx xxxx x00x 0111 Quick stop active 
+xxxx xxxx x0xx 1111 Fault reaction active 
+xxxx xxxx x0xx 1000 Fault 
+ 
+Note: X indicates irrelevant. 
+Bit 4: Voltage enabled, when this bit is 1, it indicates the main circuit power is normal. 
+Bit 7: Warning, when this bit is 1, it indicates the drive generates an alarm.
+
+[Página 24]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-19- 
+Bit 8: DC calibration status. When this bit is 1, it indicates the drive clock is synchronized with DC Sync0. 
+Bit 9: Remote, when this bit is 1, it indicates the slave is in OP state, and the master can control the drive 
+via PDO remotely. 
+BIT 10: Target reached, this bit differs in meaning in different control modes.  When this bit is 1:  in 
+position mode, it indicates target position is reached; in speed mode, it indicates the reference speed is 
+reached; in torque mode, it indicates the torque reaches the reference torque; in homing mode, it 
+indicates homing is completed; when Halt is started, it indicates the motor is in zero-speed state. 
+BIT 11: Internal limit active. When this bit is 1: in position mode, it indicates the position limit is reached; 
+in speed mode, it indicates the speed limit is reached; in torque mode, it indicates the t orque limit is 
+reached. 
+Bits 12 and 13: The values vary depending on the control mode. 
+Bit 
+Operation mode 
+pp pv hm 
+12 Set-point Acknowledge Speed zero state Homing attained 
+13 Following error Max slippage error Homing error 
+ 
+BIT 14: motor zero-speed status. 
+BIT 15: STO status 
+3.2 Profile position mode 
+3.2.1 Basic description 
+The servo driver (slave node) receives a position command from the upper computer (master node). 
+After electronic gear ratio conversion, the command is used as the target position for internal position 
+control. In this way, position control is implemented. 
+Position command encoder unit  = Position command user unit x Numerator of actual gear ratio /  
+Denominator of actual gear ratio 
+For detailed gear ratio setting, see section 2.1. 
+3.2.2 Operating method 
+1. Set [6060h: Mode of operations] to 1 (Profile position mode). 
+2. Set [6081h: Profile velocity] to the scheduled speed (the unit is relative to P4.25). The corresponding 
+parameter of the drive is P5.21 (in user unit). 
+3. Set [6083h: Profile acceleration] to the scheduled ACC/DEC time (the unit is relative to P4.25). Note: 
+In this mode, both 6083h and 6084h correspond to P5.37 in the drive (in user unit). 
+4. Set [607Ah: Target position] to the target position (unit: user unit) . It corresponds to PtP0.01 in the 
+drive. 
+5. Set [6040h: Control word] to enable the servo drive and trigger the target position to be effective (set 
+to 0x0F for enabling. See section 4.5 for details). 
+6. Query [6064h: Position actual value] to acquire the actual motor position feedback. 
+7. Query [ 6041h: Status word ] to acquire servo drive status feedback  (following error , set-point 
+acknowledge, target reached and internal limt active). 
+3.2.3 Other objects 
+1. Query [6064h: Position actual value] to acquire the actual position feedback of the motor (unit: user
+
+[Página 25]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-20- 
+unit). 
+2. Query [6063h: Position actual value*] to acquire the actual position feedback increment of the motor 
+(unit: user unit). 
+3. Set [6065h: Following error window] to modify position out-of-tolerance range (unit: user unit). 
+4. Query [60F4h: Following error actual value] to acquire the actual motor position deviation (unit: user 
+unit). 
+ 
+ 
+3.2.4 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+6063h Position actual value* INTEGER32 RO 
+6064h Position actual value INTEGER32 RO 
+6065h Following error window UNSIGNED32 RW 
+6067h Position window UNSIGNED32 RW 
+607Ah Target position INTEGER32 RW 
+6081h Profile velocity UNSIGNED32 RW 
+6083h Profile acceleration UNSIGNED32 RW 
+6093h Position factor UNSIGNED32 RW 
+60F4h Following error actual value INTEGER32 RO 
+Note: For detailed description of each object, see CiADS402 standards.
+
+[Página 26]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-21- 
+3.2.5 CW 0x6040of profile position mode 
+ 
+ 
+3.2.6 SW 0x6041 of profile position mode 
+ 
+ 
+3.2.7 Application examples 
+1. Set 6060h to 1 to select Profile Position Mode. 
+2. Set 6040h to enable the drive and trigger the position command to be effective. 
+ Single set-point 
+ 
+Figure 3-2 Single set-point diagram
+
+[Página 27]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-22- 
+Perform the following steps if the target position transmitted is in the increment mode: 
+(1) Set 6040h to 0x4F (in which bit 6 is to set increment mode, bits 3–0 are to enable the drive). 
+(2) Set 607Ah as the target position command. 
+(3) Set 6040h to 0x5F, and trigger the position command to be effective (the 0->1 jump edge of 
+bit 4 is to trigger target position command to be effective). 
+(4) The drive sets 6041h.bit12 to 1 after receiving 6040h.bit4 = 1, and the master clears bit 4 of 
+6040h to be ready for sending a next target position command. 
+Perform the following steps if the target position transmitted is in the absolute mode: 
+(1) Set 6040h to 0x0F. 
+(2) Set 607Ah as the target position command. 
+(3) Set 6040h to 0x1F to trigger the position command to be effective. 
+(4) The drive sets 6041h.bit12 to 1 after receiving 6040h.bit4 = 1, and the master clears bit 4 of 
+6040h to be ready for sending a next target position command. 
+ "Change set immediately" mode 
+ 
+Figure 3-3 "Change set immediately" mode 
+Perform the following steps it the target position transmitted is in the increment mode: 
+(1) Set 6040h to 0x6F (in which bit  6 is for setting the increment mode, bit 5 is for setting the 
+immediate effective mode, and bits 3–0 are for enabling the drive). 
+(2) Set 607Ah as the target position command. 
+(3) Set 6040h to 0x7F, and trigger the position command to be effective (in which 0 ->1 jump 
+edge of bit 4 is for triggering the target position command to be effective). 
+(4) The drive sets 6041h.bit12 to 1 after receiving 6040h.bit4 = 1, and the master clears bit 4 of 
+6040h to be ready for sending a next target position command. 
+Perform the following steps if the target position transmitted is in the absolute mode: 
+(1) Set 6040h to 0x2F (in which bit 5 is for setting the immediate effective mode, and bits 3–0 
+are for enabling the drive). 
+(2) Set 607Ah as the target position command. 
+(3) Set 6040h to 0x3F to trigger the position command to be effective. 
+(4) The drive sets 6041h.bit12 to 1 after receiving 6040h.bit4 = 1, and the master clears bit 4 of 
+6040h to be ready for sending a next target position command. 
+Repeat step (2) if multiple targets need to be transmitted. 
+Note: SV-DA200 supports 8-level target position buffering. 
+ PTP stop 
+ There are two stop modes during PTP run.
+
+[Página 28]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-23- 
+a. Stop through quickstop bit of CW, that is, the CW sends 0XB, then the servo is switched from 
+emergency stop to zero speed clamp. 
+b. Stop through halt bit of CW, which is related to 402 parameter 0x605D. 
+When 0x605D stop mode is -1, enabling is kept and direct stop is performed. That is, when 0x605D 
+stop mode is -1 and CW sends 0x10F, the servo stops at the current position and keeps enabling. 
+ When 0x605D stop mode is 0, CW sends 0x10F, and the servo coasts to stop. 
+ If the servo needs to continue to run, PTP needs to be triggered again. 
+3.3 Cyclic synchronous position mode 
+3.3.1 Basic description 
+The theory of cyclic synchronous position mode is similar to that of position interpolat ion mode.  
+Interpolation of the position command is achieved by the master while the master also offers additional  
+speed feedforward commands and torque feedforward commands. 
+Interpolation cycle defines the update interval of the target position. Under this  mode, the interpolation 
+cycle is the same with EtherCAT synchronization cycle. 
+3.3.2 Operating method 
+1. Set [6060h: Mode of operations] to 8 (Cyclic synchronous position mode). 
+2. Set [ P4.07: EtherCAT sync cycle] to the same position interpolation cycle with that of  the 
+master and re-power on. 
+3. Set P0.37 [Position command mode] to 0 (Incremental) or 1 (Absolute). 
+4. Set [6040h: Control word] to enable the servo drive (set to 0x0F for enabling. Refer to section 
+3.1 for other bits). 
+5. Set [607Ah: Target position] to the target position (unit: user unit); the corresponding parameter 
+of the drive is P4.12. 
+6. Query [6064h: Position actual value] to acquire the actual motor position feedback. 
+7. Query [ 6041h: Status word ] to acquire servo drive status feedback  (following error, target  
+reached, and internal limit active). 
+3.3.3 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+6064h Position actual value INTEGER32 RO 
+6065h Following error window UNSIGNED32 RW 
+6067h Position window UNSIGNED32 RW 
+6093h Position factor UNSIGNED32 RW 
+60F4h Following error actual value INTEGER32 RO 
+Note: For detailed description of each object, see CiADS402 standards.
+
+[Página 29]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-24- 
+3.3.4 Application examples 
+1. Set 6060 h to 8 to select Cyclic Synchronous Position Mode. 
+2. Set 6040 h to enable the drive, and send 0x0F. 
+3. Set 607A h to the target position and then absolute position to conduct the position control. 
+3.4 Homing Mode 
+3.4.1 Basic description 
+In homing mode, the drive finds the origin position by itself. You can set the running speed of  homing 
+mode. 
+Note: 
+In this mode, it is required to connect the limit switch and origin switch signal to digital input terminal CN1 
+of the drive. If the  limit switch signal is connected to the upper PC or PLC, it is necessary to  apply the 
+homing process conducted by the upper PC. 
+3.4.2 Operating method 
+1. Set [6060h: Mode of operations] to 6 (Homing mode). 
+2. Set [ 6098h: Homing method ], which can  range from 1 to 35 ( refer to DS402 standard for 
+details). 
+3. Set [607Ch: Homing offset] to set the origin offset, corresponding to P5.14 of the drive. 
+4. Set [6099h Sub-1: Homing speeds] to modify the speed in finding limit switch during homing (the 
+unit is related to P4.25), corresponding to P5.12 of the drive. 
+5. Set [6099h Sub-2: Homing speeds] to modify the speed in finding zero position during homing  
+(the unit is related to P4.25), corresponding to P5.13 of the drive. 
+6. Set [609Ah: Homing acceleration] to set the ACC/DEC time of homing, corresponding to P5.09 
+of the drive (the unit is related to P4.25). 
+7. Set [6040h: Control word] to enable the servo drive. The homing operation starts (bit 4) from the 
+change of 0->1 and interrupts homing process from the change of 1->0. 
+8. Monitor the limit switch and home switch to complete homing. 
+9. Query [ 6041h: Status word ] to acquire servo drive status feedback ( Homing error, Homing  
+attained, and Target reached). 
+3.4.3 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+607Ch Homing offset INTEGER32 RW 
+6098h Homing method UNSIGNED32 RW 
+6099h Homing speeds ARRAY RW 
+609Ah Homing acceleration UNSIGNED32 RW 
+Note: For detailed description of each object, see CiADS402 standards.
+
+[Página 30]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-25- 
+3.4.4 Application examples 
+Perform the following steps when the homing mode is applied: 
+1. Set 6060h to 6 to select the homing mode. 
+2. Set 6098h to select the homing mode to be used. 
+3. Set 6040h to enable the drive and trigger homing action: send 0x0F first, and then send 0x1F to 
+trigger homing. 
+4. Homing will be interrupted if 0x0F is sent, and the drive will be disabled if 0x0 is sent. 
+5. Check whether homing is  completed according to bit 12 of 6041 h, and check whether a fault 
+occurs during homing according to bit 13. 
+3.4.5 Homing mode SW 
+ 
+ 
+3.4.6 Homing mode description 
+There are four types of signals related to homing mode, they are: positive limit switch (POT), negative  
+limit switch (NOT), reference point switch (Index) and encoder Z signal (C-phase). 
+Definition of homing mode: 
+Homing 
+method 
+(DS402) 
+Start 
+direction 
+Target 
+position 
+Reference 
+point 
+position 
+Homing 
+method 
+(P5.10) 
+Description 
+1 Negative NOT Z pulse 1 
+Using Z pulse and negative limit 
+switch: The drive moves towards 
+negative limit switch at high speed, 
+then returns at low speed and 
+searches for target zero position 
+(the first encoder Z pulse position 
+after leaving NOT) after reaching 
+NOT.
+
+[Página 31]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-26- 
+Homing 
+method 
+(DS402) 
+Start 
+direction 
+Target 
+position 
+Reference 
+point 
+position 
+Homing 
+method 
+(P5.10) 
+Description 
+2 Positive POT Z pulse 0 
+Using Z pulse and positive limit 
+switch: The drive moves towards 
+positive limit switch at high speed, 
+then returns at low speed and 
+searches for target zero position 
+(the first encoder Z pulse position 
+after leaving NOT) after reaching 
+POT. 
+ 
+3 Positive Index Z pulse 2 The initial direction movement of the 
+drive depends on the switch state of 
+the reference point. The target zero 
+position is the first Z pulse position 
+on the left or right side of the Index. 
+ 
+4 Positive Index Z pulse 12 
+17 Negative NOT NOT 21 These four types of homing 
+methods are similar to 1–4 phases 
+except that the target zero position 
+is related to the change of limit 
+switch or Index switch rather than 
+using Z pulse. The following figure 
+is diagram for 19 and 20, which are 
+similar to method 3 and 4. 
+ 
+18 Positive POT POT 20 
+19 Negative Index Index 23 
+20 Positive Index Index 22 
+35 - 
+Present 
+position 
+value 
+Present 
+position 
+value 
+8 The present position is the system 
+zero point.
+
+[Página 32]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-27- 
+3.5 Profile velocity mode 
+3.5.1 Basic description 
+In the profile velocity mode, the drive receives the speed command sent by the master , and conducts 
+speed planning according to the acceleration planning parameters. 
+3.5.2 Operating method 
+1. Set [6060h: Mode of operations] to 3 (Profile velocity mode). 
+2. Set [6083h: Profile acceleration] to modify acceleration curve (the unit is related to P4.25) . It 
+corresponds to P0.54 of the drive. 
+3. Set [6084h: Profile deceleration] to modify deceleration curve (the unit is related to P4.25) . It 
+corresponds to P0.55 of the drive. 
+4. Set [6040h: Control word] to enable the servo drive and start the motor. 
+5. Set [60FFh: Target velocity] to set the target speed (the unit is related to P4.25). It corresponds to 
+P4.13 of the drive. 
+6. Query [6041h: Status word] to acquire servo drive status feedback (Speed zero, Max slippage  
+error, Target reached, and Internal limit active). 
+3.5.3 Other objects 
+Query [606Ch: Velocity actual value] to acquire actual speed feedback (the unit is related to P4.25). 
+3.5.4 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+606Ch Velocity actual value INTEGER32 RO 
+6083h Profile acceleration UNSIGNED32 RW 
+6084h Profile deceleration UNSIGNED32 RW 
+60FFh Target velocity INTEGER32 RW 
+ 
+Note: For detailed description of each object, see CiADS402 standards. 
+3.5.5 Application examples 
+Perform the following steps when profile velocity is used: 
+1. Set 6060h to 3 to select Profile Speed Mode. 
+2. Set 6040h to enable the drive. Send 0x0F to enable or 0x0 to disable. 
+3. Set 60FFh to modify the target speed command. 
+4. Set 6083h and 6084h to modify ACC/DEC time.
+
+[Página 33]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-28- 
+3.6 Cyclic synchronous velocity mode 
+3.6.1 Basic description 
+The cyclic synchronous speed mode is basically the s ame as the profile velocity mode except that the 
+speed command interpolation of the former is completed by the master, and the master can provide 
+additional torque feedforward command. 
+Interpolation cycle defines update interval of target speed. In this mo de, the interpolation cycle is the  
+same as EtherCAT synchronization cycle. 
+3.6.2 Operating method 
+1. Set [6060h: Mode of operations] to 9 (Cyclic synchronous speed mode). 
+2. Set [ 6083h: Profile acceleration ] to modify ACC curve (the unit is related to P4.25),  
+corresponding to P0.54 of the drive. 
+3. Set [ 6084h: Profile deceleration ] to modify DEC curve (the unit is related to P4.25),  
+corresponding to P0.55 of the drive. 
+4. Set [6040h: Control word] to enable the servo drive and start the motor. 
+5. Set [60FFh: Target velocity] to set the target speed (the unit is related to P4.25), corresponding to 
+P4.13 of the drive. 
+6. Query [6041h: Status word] to acquire servo drive status feedback (Speed zero, Max  slippage 
+error, Target reached, and Internal limit active). 
+3.6.3 Other objects 
+Query [606Ch: Velocity actual value] to acquire actual speed feedback (the unit is related to P4.25). 
+3.6.4 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+606Ch Velocity actual value INTEGER32 RO 
+6083h Profile acceleration UNSIGNED32 RW 
+6084h Profile deceleration UNSIGNED32 RW 
+60FFh Target velocity INTEGER32 RW 
+Note: For detailed description of each object, see CiADS402 standards. 
+3.6.5 Application examples 
+Perform the following steps when profile velocity mode is used: 
+1. Set 6060h to 9 to select Cyclic synchronous velocity mode. 
+2. Set 6040h to enable drive. Send 0x0F to enable or 0x0 to disable. 
+3. Set 60FFh to modify the target speed command. 
+4. Set 6083h and 6084h to modify ACC/DEC time.
+
+[Página 34]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-29- 
+3.7 Cyclic synchronous torque mode 
+3.7.1 Basic description 
+Cyclic synchronous torque mode is basically the same as profile torque mode ex cept that the torque  
+command interpolation is completed by the master. The interpolation cycle defines the update interval of 
+target torque. In this mode, the interpolation cycle is the same as EtherCAT sync cycle. 
+3.7.2 Operating method 
+1. Set [6060h: Mode of operations] to 10 (Cyclic synchronous torque mode). 
+2. Set [6040h: Control word] to enable servo drive to start the motor. 
+3. Set [6071h: Target torque] to set the target torque (unit: 0.1% of rated torque), corresponding to 
+P4.14 of the drive. 
+4. Set [607Fh: Max Profile Velocity] to set the max. speed (the unit is related to P4.25). 
+5. Set [60E0h: Positive torque limit] to set the positive torque limit (unit: 0.1% of the rated torque). 
+6. Set [60E1h: Negative torque limit] to set the reverse torque limit (unit: 0.1% of the rated torque). 
+7. Set [6072h: Max torque] to set the max torque limit (unit: 0.1% of the rated torque). 
+8. Query [6041h: Status word] to acquire servo drive status feedback (target reached). 
+3.7.3 Other objects 
+1. Set [6072h: Max torque] to modify the max. torque limit (unit: 0.1% of the rated torque). 
+2. Query [6074h: Torque demand value] to acquire actual internal torque command (unit: 0.1%  of 
+the rated torque). 
+3. Query [6076h: Motor rated torque] to acquire rated motor torque (unit: mNm). 
+4. Query [6077h: Torque actual value] to acquire actual torque feedback (unit : 0.1% of the rated 
+torque). 
+5. Query [6078h: Current actual value] to acquire actual output current (unit: mA). 
+3.7.4 Mode-related objects 
+Index Name Type Attr. 
+6040h Control word UNSIGNED16 RW 
+6041h Status word UNSIGNED16 RO 
+6060h Modes of operation INTEGER8 RW 
+6061h Modes of operation display INTEGER8 RO 
+6071h Target torque INTEGER16 RO 
+6072h Max torque UNSIGNED16 RW 
+6073h Max current UNSIGNED16 RO 
+6075h Motor rated current UNSIGNED32 RO 
+6076h Motor rated torque UNSIGNED32 RO 
+6077h Torque actual value INTEGER16 RO 
+6078h Current actual value INTEGER16 RO 
+6079h DC link circuit voltage UNSIGNED32 RO 
+607Fh Max Profile Velocity UNSIGNED32 RW 
+Note: For detailed description of each object, see CiADS402 standards.
+
+[Página 35]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-30- 
+3.7.5 Application examples 
+Perform the following steps when Cyclic synchronous Torque is used: 
+1. Set 6060h to 10 to select Cyclic synchronous Torque Mode. 
+2. Set 6040h to enable the drive. Send 0x0F to enable or 0x0 to disable. 
+3. Set 6071h to modify the target torque command. 
+4. Set 6087h to modify the torque slope time. 
+3.8 Touch probe function 
+3.8.1 Basic description 
+The touch probe function is used to latch the position feedback when a trigger signal or an event occurs. 
+For SV-DA200, only the encoder Z signal (C-phase), and touch probe1 and touch probe2 signals can be 
+used as trigger signals. 
+When the encoder Z signal is used as a trigger signal, only the rising edge of Z signal can be captured, 
+and the captured results are stored in 60BAh and 60BCh. 
+Both r ising edge capture and falling edge capture ar e supported when touch probe1 is used . The 
+capture results for the rising edge are  stored in 60BAh or 60BCh, while the capture result for the falling 
+edge are stored in 60BBh or 60BDh. 
+By default, digital input 1 of CN1 is used as a trigger input port of touch probe1, and digital input 2 of CN1 
+is used as a trigger input port of touch probe2. 
+Taking digital input 1 as an example, if you want to use touch probe1, you need to make the digital input 
+function invalid or set P3.00 to 0 through the ServoPlorer software. Then rest art the system for the 
+change to take effect. 
+ 
+ 
+3.8.2 Mode-related objects 
+Index Name Type Attr. 
+60B8h Touch Probe Control word UNSIGNED16 RW 
+60B9h Touch Probe Status word UNSIGNED16 RO 
+60BAh Probe 1 positive edge value(Encoder zero signal) INTEGER32 RO 
+60BBh Probe 1 negative edge value INTEGER32 RO 
+60BCh Probe 2 positive edge value(Encoder zero signal) INTEGER32 RO 
+60BDh Probe 2 negative edge value INTEGER32 RO
+
+[Página 36]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide CiA402 device protocol 
+-31- 
+3.8.3 CW and SW description 
+Bit 60B8h 60B9h 
+0 Probe 1 enable (0:Disable;1:Enable) Probe 1 enabled 
+1 Probe 1 continuous mode 
+(0:Single; 1: continuous) 
+Probe 1 positive edge (or encode zero signal) 
+value stored 
+2 Probe 1 zero pulse (0:I/O1;1:Z) Probe 1 negative edge value stored 
+3 - - 
+4 Probe 1 enable latch on positive edge 
+(used also for encode zero signal) - 
+5 Probe 1 enable latch on negative edge - 
+6 - 
+Probe 1 positive edge value stored 
+(continuous mode only, bit toggles if latch 
+status changed) 
+7 - 
+Probe 1 negative edge value stored 
+(continuous mode only, bit toggles if latch 
+status changed) 
+8 Probe 2 enable (0:Disable;1:Enable) Probe 2 enabled 
+9 Probe 2 continuous mode 
+(0:Single; 1: continuous) 
+Probe 2 positive edge (or encode zero signal) 
+value stored 
+10 Probe 2 zero pulse (0:I/O1;1:Z) Probe 2 negative edge value stored 
+11 - - 
+12 Probe 2 enable latch on positive edge 
+(used also for encode zero signal) - 
+13 Probe 2 enable latch on negative edge - 
+14 - 
+Probe 2 positive edge value stored 
+(continuous mode only, bit toggles if latch 
+status changed) 
+15 - 
+Probe 2 negative edge value stored 
+(continuous mode only, bit toggles if latch 
+status changed) 
+ 
+3.8.4 Application examples (Z signal single trigger mode)
+
+[Página 37]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-32- 
+4 Object dictionary 
+4.1 Object specifications 
+4.1.1 Object type 
+Object name Definition 
+VAR Individual variable value such as UNSIGNED8, Boolean, Float, 
+INTEGER16, and so on 
+ARRAY 
+Array of multiple data that consists of basic variables of the same type. 
+Sub-index 0 is UNSIGNED8 type which indicates the number of data in the 
+array. Sub-index is not taken as part of the ARRAY data. 
+RECORD 
+Structure that consists of basic variables of the same or differing types. 
+Sub-index 0 is UNSIGNED8 type which indicates the number of data in the 
+array, and is not taken as part of the RECORD data. 
+ 
+4.1.2 Data type 
+See CANopen Standard 301. 
+4.2 Overview of object group 1000h 
+Index Object type Name Data type Access Mappable 
+CANopen DS301 
+1000h VAR Device type UNSIGNED32 RO N 
+1001h VAR Error register UNSIGNED8 RO Y 
+1008h VAR Manufacturer device name STRING RO N 
+1009h VAR Manufacturer hardware 
+version STRING RO N 
+100Ah VAR Manufacturer software 
+version STRING RO N 
+1018h RECORD Identity Object IDENTITY RO N 
+1600h–03h RECORD Receive PDO mapping PDOMAPPING RW N 
+1A00h–03h RECORD Transmit PDO mapping PDOMAPPING RW N 
+1C00h RECORD Sync manager type UNSIGNED8 RW N 
+1C12h ARRAY Receive PDO assign UNSIGNED16 RW N 
+1C13h ARRAY Transmit PDO assign UNSIGNED16 RW N 
+1C32h RECORD Sync manager output para. SMPAR RW N 
+1C33h RECORD Sync manager input para. SMPAR RW N 
+ 
+4.3 Overview of object group 6000h 
+Index Object type Name Data type Access Mappable 
+CANopen DS402 
+603Fh VAR Error code UNSIGNED16 RO Y
+
+[Página 38]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-33- 
+Index Object type Name Data type Access Mappable 
+6040h VAR Control word UNSIGNED16 RW Y 
+6041h VAR Status word UNSIGNED16 RO Y 
+605Dh VAR Halt option code INTEGER16 RW N 
+6060h VAR Mode of operation INTEGER8 RW Y 
+6061h VAR Mode of operation display INTEGER8 RO Y 
+6063h VAR Position actual value* INTEGER32 RO N 
+6064h VAR Position actual value INTEGER32 RO Y 
+6065h VAR Following error window UNSIGNED32 RW N 
+6066h VAR Following error time out UNSIGNED16 RW N 
+606Ch VAR Velocity actual value INTEGER32 RO Y 
+6071h VAR Target torque INTEGER16 RW Y 
+6072h VAR Max torque UNSIGNED16 RW Y 
+6073h VAR Max current UNSIGNED16 RO N 
+6075h VAR Motor rated current UNSIGNED32 RO N 
+6076h VAR Motor rated torque UNSIGNED32 RO N 
+6077h VAR Torque actual value INTEGER16 RO Y 
+6079h VAR DC link circuit voltage UNSIGNED32 RO N 
+607Ah VAR Target position INTEGER32 RW Y 
+607Bh ARRAY Position range limit INTEGER32 RW N 
+607Ch VAR Home offset INTEGER32 RW N 
+607Fh VAR Max profile velocity UNSIGNED32 RW Y 
+6081h VAR Profile velocity UNSIGNED32 RW Y 
+6083h VAR Profile acceleration UNSIGNED32 RW Y 
+6084h VAR Profile deceleration UNSIGNED32 RW Y 
+6091h ARRAY Gear ratio UNSIGNED32 RW N 
+6093h ARRAY Position factor UNSIGNED32 RW N 
+6098h VAR Homing method INTEGER8 RW N 
+6099h ARRAY Homing speeds UNSIGNED32 RW N 
+609Ah VAR Homing acceleration UNSIGNED32 RW N 
+60B0h VAR Position offset INTEGER32 RW Y 
+60B1h VAR Velocity offset INTEGER32 RW Y 
+60B2h VAR Torque offset INTEGER16 RW Y 
+60B8h VAR Touch probe control value UNSIGNED16 RW Y 
+60B9h VAR Touch probe status value UNSIGNED16 RO Y 
+60BAh VAR Touch probe 1 positive value INTEGER32 RO Y
+
+[Página 39]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-34- 
+Index Object type Name Data type Access Mappable 
+60BBh VAR Touch probe 1negative value INTEGER32 RO Y 
+60BCh VAR Touch probe 2 positive value INTEGER32 RO Y 
+60BDh VAR Touch probe 2negative value INTEGER32 RO Y 
+60E0h VAR Positive Torge Limit UNSIGNED16 RW Y 
+60E1h VAR Negative Torge Limit UNSIGNED16 RW Y 
+60F4h VAR Following error actual value INTEGER32 RO Y 
+60FDh ARRAY Digital inputs UNSIGNED32 RO Y 
+60FEh ARRAY Digital outputs UNSIGNED32 RW Y 
+60FFh VAR Target velocity INTEGER32 RW Y 
+6502h VAR Support drive mode UNSIGNED32 RO N 
+ 
+4.4 Overview of object groups 2000h–4000h 
+0x2000–0x3000 manufacturer parameter list (applicable to SV-DA200 V2.60/XML V1.70 or later): 
+Index Data type Name Access Mappable 
+SV-DA200 manufacture parameters 
+0x2000 int32 P0.00 Motor model (1) RW N 
+0x2001 int16 P0.01 Encoder type (1) RW N 
+0x2002 int16 P0.02 Forward rotation of motor (1) RW N 
+0x2003 int16 P0.03 Control mode (1) RW N 
+0x2004 int16 P0.04 Internal servo enabling (1) RW N 
+0x2005 int16 P0.05 JOG speed (1) RW N 
+0x2006 int32 P0.06 Numerator of frequency division output 
+coefficient (1) RW N 
+0x2007 int32 P0.07 Denominator of frequency division 
+output coefficient (1) RW N 
+0x2008 int16 P0.08 Reversal of frequency division output 
+(1) RW N 
+0x2009 int16 P0.09 Torque limit mode setting (1) RW N 
+0x200A int16 P0.10 Max. torque limit 1 (0.1) RW N 
+0x200B int16 P0.11 Max. torque limit 2 (0.1) RW N 
+0x200D int16 P0.13 Power of the external braking resistor 
+(1) RW N 
+0x200E int16 P0.14 Resistance of the external braking 
+resistor (1) RW N 
+0x200F int16 P0.15 Default monitoring parameters (1) RW N 
+0x2010 int16 P0.16 Parameter modification operation 
+locked (1) RW N
+
+[Página 40]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-35- 
+Index Data type Name Access Mappable 
+0x2011 int16 P0.17 EEPROM write mode (1) RW N 
+0x2012 uint16 P0.18 Factory password (1) RW N 
+0x2014 int16 P0.20 Position command selection (1) RW N 
+0x2016 int32 P0.22 Pulse per revolution of motor (1) RW N 
+0x2017 int16 P0.23 Pulse input form (1) RW N 
+0x2018 int16 P0.24 Reversal of pulse input direction (1) RW N 
+0x2019 int32 P0.25 Numerator of 1st electronic gear ratio (1) RW N 
+0x201A int32 P0.26 Denominator of electronic gear ratio (1) RW N 
+0x201B int32 P0.27 Numerator of 2nd electronic gear ratio 
+(1) RW N 
+0x201C int32 P0.28 Numerator of 3rd electronic gear ratio(1) RW N 
+0x201D int32 P0.29 Numerator of 4th electronic gear ratio(1) RW N 
+0x2021 int16 P0.33 Smooth filtering of position command 
+(0.1) RW N 
+0x2022 int16 P0.34 FIR filtering of position command (0.1) RW N 
+0x2023 int32 P0.35 Software limit of forward position control 
+(1) RW N 
+0x2024 int32 P0.36 Software limit of reverse position control RW N 
+0x2025 int16 P0.37 Position command mode (1) RW N 
+0x2026 int16 P0.38 Fully-closed loop enable (1) RW N 
+0x2028 int16 P0.40 Speed command selection (1) RW N 
+0x2029 int16 P0.41 Setting of speed command direction (1) RW N 
+0x202A int32 P0.42 Gain of analog input 1 (1) RW N 
+0x202B int16 P0.43 Reversal of analog input 1 (1) RW N 
+0x202D int16 P0.45 Dead zone of analog input 1 (0.001) RW N 
+0x202E int16 P0.46 Internal speed 1/Speed limit 1 (1) RW N 
+0x202F int16 P0.47 Internal speed 2/Speed limit 2 (1) RW N 
+0x2030 int16 P0.48 Internal speed 3/Speed limit 3 (1) RW N 
+0x2031 int16 P0.49 Internal speed 4/Speed limit 4 (1) RW N 
+0x2032 int16 P0.50 Internal speed 5 (1) RW N 
+0x2033 int16 P0.51 Internal speed 6 (1) RW N 
+0x2034 int16 P0.52 Internal speed 7 (1) RW N 
+0x2035 int16 P0.53 Internal speed 8 (1) RW N 
+0x2036 int32 P0.54 ACC time (1) RW N 
+0x2037 int32 P0.55 DEC time (1) RW N 
+0x2038 int16 P0.56 ACC time of S curve (1) RW N
+
+[Página 41]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-36- 
+Index Data type Name Access Mappable 
+0x2039 int16 P0.57 DEC time of S curve (1) RW N 
+0x203A int16 P0.58 Zero speed clamp mode (1) RW N 
+0x203B int16 P0.59 Speed threshold of zero speed clamp 
+(1) RW N 
+0x203C int16 P0.60 Torque command selection (1) RW N 
+0x203D int16 P0.61 Torque command direction setting (1) RW N 
+0x203E int32 P0.62 Gain of analog input 2 (1) RW N 
+0x203F int16 P0.63 Reversal of analog input 2 (1) RW N 
+0x2041 int16 P0.65 Dead zone of analog input 2 (0.001) RW N 
+0x2042 int16 P0.66 Internal torque command (0.1) RW N 
+0x2043 int16 P0.67 Speed limit mode setting (1) RW N 
+0x2044 int16 P0.68 RAMP time of torque command (1) RW N 
+0x2045 int16 P0.69 DEC time of fast stop (1) RW N 
+0x2046 int16 P0.70 Absolute encoder mode setting (1) RW N 
+0x2047 int16 P0.71 Absolute encoder multi-turn zeroing (1) RW N 
+0x205A int16 P0.90 Max. speed limit of control mode 
+switching (1) RW N 
+0x205B int32 P0.91 Positioning reference of control 
+mode switching (1) RW N 
+0x205C int16 P0.92 Exit mode of position mode switching 
+(1) RW N 
+0x205D int16 P0.93 Exit mode of switching speed to position 
+(1) RW N 
+0x2063 int16 P0.99 Speed detection FIR filter level (1) RW N 
+0x2100 int16 P1.00 Inertia online automatic estimation (1) RW N 
+0x2101 int16 P1.01 1st inertia ratio (1) RW N 
+0x2102 int16 P1.02 2nd inertia ratio (1) RW N 
+0x2103 int16 P1.03 1st Machine rigidity setting (1) RW N 
+0x2104 int32 P1.04 Inertia offline automatic estimation (1) RW N 
+0x2105 int16 P1.05 Operation mode of inertia identification 
+(1) RW N 
+0x2106 int16 P1.06 Movable range of inertia 
+Identification (0.1) RW N 
+0x2107 int16 P1.07 ACC time constant of inertia 
+Identification (1) RW N 
+0x2108 int16 P1.08 Speed level of inertia identification (1) RW N 
+0x2113 int16 P1.19 Valid resonance detection bit (0.1) RW N
+
+[Página 42]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-37- 
+Index Data type Name Access Mappable 
+0x2114 int16 P1.20 Resonance detection mode (1) RW N 
+0x2115 int16 P1.21 1st mechanical resonance frequency (1) RW N 
+0x2116 int16 P1.22 2nd mechanical resonance frequency (1) RW N 
+0x2117 int16 P1.23 1st notch filter frequency (1) RW N 
+0x2118 int16 P1.24 1st notch filter Q value (0.01) RW N 
+0x2119 int16 P1.25 1st notch filter depth selection (1) RW N 
+0x211A int16 P1.26 2nd notch filter frequency (1) RW N 
+0x211B int16 P1.27 2nd notch filter Q value (0.01) RW N 
+0x211C int16 P1.28 2nd notch filter depth selection (1) RW N 
+0x211D int16 P1.29 3rd notch filter frequency (1) RW N 
+0x211E int16 P1.30 3rd notch filter Q value (0.01) RW N 
+0x211F int16 P1.31 3rd notch filter depth selection (1) RW N 
+0x2120 int16 P1.32 4th notch filter frequency (1) RW N 
+0x2121 int16 P1.33 4th notch filter Q value (0.01) RW N 
+0x2122 int16 P1.34 4th notch filter depth selection (1) RW N 
+0x2123 int16 P1.35 Vibration control mode of position 
+command (1) RW N 
+0x2124 int16 P1.36 1st vibration control frequency (0.1) RW N 
+0x2125 int16 P1.37 1st vibration control filter factor (0.01) RW N 
+0x2126 int16 P1.38 2nd vibration control frequency (0.1) RW N 
+0x2127 int16 P1.39 2nd vibration control filter factor (0.01) RW N 
+0x2200 int16 P2.00 1st speed gain (0.1) RW N 
+0x2201 int16 P2.01 1st speed integration time constant (0.1) RW N 
+0x2202 int16 P2.02 1st position gain (0.1) RW N 
+0x2203 int16 P2.03 1st speed detection filter (1) RW N 
+0x2204 int16 P2.04 1st torque filter (0.01) RW N 
+0x2205 int16 P2.05 2nd speed gain (0.1) RW N 
+0x2206 int16 P2.06 2nd speed integration time constant (0.1) RW N 
+0x2207 int16 P2.07 2nd position gain (0.1) RW N 
+0x2208 int16 P2.08 2nd speed detection filter (1) RW N 
+0x2209 int16 P2.09 2nd torque filter (0.01) RW N 
+0x220A int16 P2.10 Speed feed-forward gain (0.1) RW N 
+0x220B int16 P2.11 Speed feed-forward filter time (0.01) RW N 
+0x220C int16 P2.12 Torque feed-forward gain (0.1) RW N 
+0x220D int16 P2.13 Torque feed-forward filter time (0.01) RW N
+
+[Página 43]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-38- 
+Index Data type Name Access Mappable 
+0x220E int16 P2.14 1st IPPI coefficient (1) RW N 
+0x220F int16 P2.15 2nd IPPI coefficient (1) RW N 
+0x2214 int16 P2.20 2nd gain setting (1) RW N 
+0x2216 int16 P2.22 Position control switching mode (1) RW N 
+0x2217 int16 P2.23 Delay time of position control switching 
+(1) RW N 
+0x2218 int16 P2.24 Switching level of position control (1) RW N 
+0x2219 int16 P2.25 Switching delay of position control (1) RW N 
+0x221A int16 P2.26 Switching time of position gain (1) RW N 
+0x221B int16 P2.27 Switching mode of speed control (1) RW N 
+0x221C int16 P2.28 Delay time of speed control switching (1) RW N 
+0x221D int16 P2.29 Switching level of speed control (1) RW N 
+0x221E int16 P2.30 Switching delay of speed control (1) RW N 
+0x221F int16 P2.31 Switching mode of torque control (1) RW N 
+0x2220 int16 P2.32 Delay time of torque control switching 
+(1) RW N 
+0x2221 int16 P2.33 Switching level of torque control (1) RW N 
+0x2222 int16 P2.34 Switching delay of torque control (1) RW N 
+0x2229 int16 P2.41 Disturbance observer valid (1) RW N 
+0x222A int16 P2.42 Compensation gain of disturbance 
+observer (1) RW N 
+0x222B int16 P2.43 Cut-off frequency of disturbance 
+observer (1) RW N 
+0x222C int16 P2.44 Torque command offset (0.1) RW N 
+0x2232 int16 P2.50 Fully-closed loop vibration suppressor 
+valid (1) RW N 
+0x2233 int16 P2.51 Fully-closed loop vibration suppressor 
+cut-off frequency (0.1) RW N 
+0x2234 int16 P2.52 Fully-closed loop vibration suppressor 
+compensation gain (1) RW N 
+0x2235 uint16 P2.53 Medium-frequency vibration control 
+switch (1) RW N 
+0x2236 uint16 P2.54 Medium-frequency vibration control 
+frequency (1) RW N 
+0x2237 uint16 P2.55 Fine tuning of medium-frequency 
+vibration control inertia (1) RW N 
+0x2238 uint16 P2.56 Medium-frequency vibration control 
+attenuation gain (1) RW N
+
+[Página 44]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-39- 
+Index Data type Name Access Mappable 
+0x2239 int16 P2.57 Fine tuning of medium-frequency 
+vibration control filter time parameter 1 (1) RW N 
+0x223A int16 P2.58 Fine tuning of medium-frequency 
+vibration control filter time parameter 2 (0.01) RW N 
+0x223C int16 P2.60 Speed observer valid (1) RW N 
+0x223D int16 P2.61 Speed observer gain (1) RW N 
+0x2246 int16 P2.70 Friction compensation max-speed (1) RW N 
+0x2247 int16 P2.71 Positive torque coefficient of friction 
+compensation (0.1) RW N 
+0x2248 int16 P2.72 Negative torque coefficient of friction 
+compensation (0.1) RW N 
+0x2249 int16 P2.73 Friction compensation valid (1) RW N 
+0x224A int16 P2.74 Automatic mode switch (1) RW N 
+0x224B int16 P2.75 Automatic mode gain (0.1) RW N 
+0x224C int16 P2.76 Fine tuning of automatic mode inertia (1) RW N 
+0x224D int16 P2.77 Filter in disturbance observer of 
+automatic mode 1 (0.1) RW N 
+0x224E int16 P2.78 Filter in disturbance observer of 
+automatic mode 2 (0.1) RW N 
+0x224F int16 P2.79 Phase compensation of automatic mode 
+speed command (1) RW N 
+0x2250 int16 P2.80 Speed observer gain of automatic mode 
+(1) RW N 
+0x2251 int32 P2.81 Speed command filtering of automatic 
+mode (0.1) RW N 
+0x2252 int32 P2.82 Phase advance correction of automatic 
+mode speed command (0.1) RW N 
+0x2253 int32 P2.83 Disturbance compensation torque 
+filtering time of automatic mode (0.01) RW N 
+0x2254 int32 P2.84 Speed feedback input filtering time of 
+automatic mode speed observer (0.01) RW N 
+0x2255 int16 P2.85 Torque feedforward selection (1) RW N 
+0x2256 int32 P2.86 Flux-weakening control switch RW N 
+0x2257 int32 P2.87 Voltage utilization in flux-weakening 
+control RW N 
+0x2258 int32 P2.88 Open-loop flux-weakening bandwidth RW N 
+0x2259 int32 P2.89 Closed-loop flux-weakening bandwidth RW N 
+0x225A int32 P2.90 Max. flux-weakening current of 
+closed-loop flux-weakening RW N
+
+[Página 45]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-40- 
+Index Data type Name Access Mappable 
+0x225B int16 P2.91 Unbiased control gain RW N 
+0x225C int16 P2.92 Unbiased control decay coefficient RW N 
+0x2300 uint16 P3.00 Input configuration of digital 1 (1) RW N 
+0x2301 uint16 P3.01 Input configuration of digital 2 (1) RW N 
+0x2302 uint16 P3.02 Input configuration of digital 3 (1) RW N 
+0x2303 uint16 P3.03 Input configuration of digital 4 (1) RW N 
+0x2304 uint16 P3.04 Input configuration of digital 5 (1) RW N 
+0x2305 uint16 P3.05 Input configuration of digital 6 (1) RW N 
+0x2306 uint16 P3.06 Input configuration of digital 7 (1) RW N 
+0x2307 uint16 P3.07 Input configuration of digital 8 (1) RW N 
+0x2308 uint16 P3.08 Input configuration of digital 9 (1) RW N 
+0x2309 uint16 P3.09 Input configuration of digital 10 (1) RW N 
+0x230A uint16 P3.10 Output configuration of digital 1 (1) RW N 
+0x230B uint16 P3.11 Output configuration of digital 2 (1) RW N 
+0x230C uint16 P3.12 Output configuration of digital 3 (1) RW N 
+0x230D uint16 P3.13 Output configuration of digital 4 (1) RW N 
+0x230E uint16 P3.14 Output configuration of digital 5 (1) RW N 
+0x230F uint16 P3.15 Output configuration of digital 6 (1) RW N 
+0x2310 uint16 P3.16 Function configuration of DI capture 
+encoder (1) RW N 
+0x2314 int32 P3.20 Offset of analog input 1 (0.001) RW N 
+0x2315 int16 P3.21 Filter of analog input 1 (0.1) RW N 
+0x2316 int32 P3.22 Voltage protection of analog input 1 
+(0.001) RW N 
+0x2317 int32 P3.23 Offset of analog input 2 (0.001) RW N 
+0x2318 int16 P3.24 Filter of analog input 2 (0.1) RW N 
+0x2319 int32 P3.25 Voltage protection of analog input 2 
+(0.001) RW N 
+0x231A int16 P3.26 Function selection of analog input 1 (1) RW N 
+0x231B int16 P3.27 Function selection of analog input 2 (1) RW N 
+0x231C int16 P3.28 Analog speed compensation gain (0.1) RW N 
+0x231D int16 P3.29 Analog torque compensation gain (0.1) RW N 
+0x231E int16 P3.30 Analog output 1 selection (1) RW N 
+0x231F int32 P3.31 Voltage gain of analog output 1 (1) RW N 
+0x2320 int16 P3.32 Analog output 2 selection (1) RW N 
+0x2321 int32 P3.33 Voltage gain of analog output 2 (1) RW N
+
+[Página 46]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-41- 
+Index Data type Name Access Mappable 
+0x2322 int32 P3.34 Offset voltage of analog output 1 (0.001) RW N 
+0x2323 int32 P3.35 Offset voltage of analog output 2 (0.001) RW N 
+0x2324 int16 P3.36 Analog output monitor setting (1) RW N 
+0x2328 int16 P3.40 Travel limit switch setting(1) RW N 
+0x2329 int16 P3.41 Emergency stop switch shield (1) RW N 
+0x232A int16 P3.42 Safe speed limit RW N 
+0x232B int16 P3.43 Digital input filter (1) RW N 
+0x232C int16 P3.44 Command pulse input invalid setting 
+disabled (1) RW N 
+0x232D int16 P3.45 Clearing mode of retention pulse (1) RW N 
+0x2332 int32 P3.50 Range of position arrival (1) RW N 
+0x2333 int16 P3.51 Output mode of position arrival (1) RW N 
+0x2334 int16 P3.52 Hold time of position arrival output 
+terminal (1) RW N 
+0x2335 int16 P3.53 Speed matching range (1) RW N 
+0x2336 int16 P3.54 Speed reaching range (1) RW N 
+0x2337 int16 P3.55 Zero speed range (1) RW N 
+0x2338 int16 P3.56 Locked time of servo after braking (1) RW N 
+0x2339 int16 P3.57 Braking delay of electromagnetic brake 
+(1) RW N 
+0x233A int16 P3.58 Motor speed of brake release (1) RW N 
+0x233B int16 P3.59 Torque reaching range (0.1) RW N 
+0x2346 int16 P3.70 Analog input 3 function selection (1) RW N 
+0x2347 int32 P3.71 Zero offset of analog input 3 (0.001) RW N 
+0x2348 int16 P3.72 Dead zone of analog input 3 (0.001) RW N 
+0x2349 int32 P3.73 Gain of analog input 3 (1) RW N 
+0x234A int16 P3.74 Reversal of analog input 3 (1) RW N 
+0x234B int32 P3.75 Voltage protection of analog input 3 
+(0.001) RW N 
+0x234C int16 P3.76 Analog input 3 filter (0.1) RW N 
+0x234D int16 P3.77 Deadzone mode of analog input (1) RW N 
+0x235A int16 P3.90 Pulse input filter (1) RW N 
+0x235B int16 P3.91 1st encoder filter (1) RW N 
+0x235C int16 P3.92 2nd encoder filter (1) RW N 
+0x2400 int16 P4.00 EtherCAT communication address (1) RW N 
+0x2401 int16 P4.01 RS485 local communication address (1) RW N
+
+[Página 47]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-42- 
+Index Data type Name Access Mappable 
+0x2402 int16 P4.02 CAN communication baud rate (1) RW N 
+0x2403 int16 P4.03 RS485 communication baud rate (1) RW N 
+0x2404 int16 P4.04 RS485 communication parity mode (1) RW N 
+0x2405 int16 P4.05 CAN communication node (1) RW N 
+0x2406 int16 P4.06 RS485 communication fault clearing 
+mode (1) RW N 
+0x2407 int16 P4.07 EtherCAT synchronous cycle RW N 
+0x2408 int16 P4.08 EtherCAT synchronous type (1) RW N 
+0x2409 int16 P4.09 EtherCAT fault detection time (1) RW N 
+0x240A int16 P4.10 Upper PC type (1) RW N 
+0x240B int16 P4.11 Bus servo enabling (1) RW N 
+0x240C int32 P4.12 Bus position command (1) RW N 
+0x240D int32 P4.13 Bus speed command (0.1) RW N 
+0x240E int16 P4.14 Bus torque command (0.1) RW N 
+0x240F int16 P4.15 Switching command of control mode (1) RW N 
+0x2410 int16 P4.16 Gain switching command (1) RW N 
+0x2411 int16 P4.17 Switching command of electronic gear 
+ratio (1) RW N 
+0x2412 int16 P4.18 Inertia ratio switching command (1) RW N 
+0x2413 int16 P4.19 Zero speed clamp command (1) RW N 
+0x2414 int16 P4.20 Retention pulse clearing (1) RW N 
+0x2415 int16 P4.21 Torque limit switching command (1) RW N 
+0x2416 int16 P4.22 External fault command (1) RW N 
+0x2417 int16 P4.23 Emergency stop command (1) RW N 
+0x2418 int16 P4.24 Input command of vibration control 
+switching (1) RW N 
+0x2419 int16 P4.25 EtherCAT control unit type (1) RW N 
+0x241A int16 P4.26 EtherCAT PDO input offset (1) RW N 
+0x241B int16 P4.27 Compensation value of EtherCAT 
+position interpolation mode (1) RW N 
+0x241C int16 P4.28 Digital output control enabling of 
+EtherCAT (1) RW N 
+0x241D int16 P4.29 Main cycle period of EtherCAT (1) RW N 
+0x241E int16 P4.30 Stop mode (1) RW N 
+0x241F int16 P4.31 Max speed limit (1) RW N 
+0x2420 int16 P4.32 Overspeed level (1) RW N 
+0x2421 int32 P4.33 Pulse range of position deviation (1) RW N
+
+[Página 48]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-43- 
+Index Data type Name Access Mappable 
+0x2422 int16 P4.34 Brake overload detection selection (1) RW N 
+0x2424 int16 P4.36 Undervoltage protection of main power 
+supply (1) RW N 
+0x2425 int16 P4.37 Undervoltage detection time of main 
+power supply (1) RW N 
+0x2427 int16 P4.39 Speed deviation setting (1) RW N 
+0x2428 int16 P4.40 Forward speed limit (1) RW N 
+0x2429 int16 P4.41 Reverse speed limit (1) RW N 
+0x242A int32 P4.42 Internal speed of high resolution (0.1) RW N 
+0x242B uint16 P4.43 Torque limit screening and run cycle 
+selection RW N 
+0x242C int16 P4.44 Runaway speed threshold RW N 
+0x2432 int32 P4.50 Offset of encoder Z phase (1) RW N 
+0x2433 int16 P4.51 Switching time 1 of torque limit (1) RW N 
+0x2434 int16 P4.52 Switching time 2 of torque limit (1) RW N 
+0x2435 int16 P4.53 Current loop response adjustment (0.1) RW N 
+0x2436 int32 P4.54 Initialization time after power on (1) RW N 
+0x2437 int16 P4.55 Communication baud rate of the 
+encoder (1) RW N 
+0x243A int16 P4.58 Z pulse width of frequency-division 
+output (1) RW N 
+0x243B int32 P4.59 Z pulse offset of frequency-division 
+output (1) RW N 
+0x243C int32 P4.60 Frequency division molecular of 
+external linear encoder (1) RW N 
+0x243D int32 P4.61 Frequency division denominator of 
+external linear encoder (1) RW N 
+0x243E int16 P4.62 Direction reversal of external linear 
+encoder (1) RW N 
+0x243F int16 P4.63 External linear encoder Z phase break 
+detection disabling (1) RW N 
+0x2440 int32 P4.64 Large mixed deviation setting (1) RW N 
+0x2441 int16 P4.65 Mixed deviation clearing (1) RW N 
+0x2442 int16 P4.66 Z phase of external linear encoder (1) RW N 
+0x2443 int16 P4.67 External linear encoder pulse output 
+mode of AB phase (1) RW N 
+0x2444 int32 P4.68 External linear encoder (2nd encoder) 
+resolution (1) RW N
+
+[Página 49]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-44- 
+Index Data type Name Access Mappable 
+0x2445 int16 P4.69 Frequency division output source (1) RW N 
+0x2446 int16 P4.70 External linear encoder (2nd encoder) Z 
+signal type (1) RW N 
+0x244D int16 P4.77 Detection time for motor phase loss RW N 
+0x244E int16 P4.78 Temperature protection threshold of 
+medium-power motor (1) RW N 
+0x244F int16 P4.79 Quick stop method(1) RW N 
+0x2450 uint16 P4.80 Configuration of PZD setting parameter 
+1 (1) RW N 
+0x2451 uint16 P4.81 Configuration of PZD setting parameter 
+2 (1) RW N 
+0x2452 uint16 P4.82 Configuration of PZD setting parameter 
+3 (1) RW N 
+0x2453 uint16 P4.83 Configuration of PZD feedback 
+parameter 1 (1) RW N 
+0x2454 uint16 P4.84 Configuration of PZD feedback 
+parameter 2 (1) RW N 
+0x2455 uint16 P4.85 Configuration of PZD feedback 
+parameter 3 (1) RW N 
+0x2456 uint16 P4.86 PPO type of DP communication (1) RW N 
+0x2457 int32 P4.87 CANopen communication cycle (1) RW N 
+0x2458 int16 P4.88 CANopen heartbeat cycle (1) RW N 
+0x2459 int16 P4.89 Automatic stop at CANopen 
+disconnection (1) RW N 
+0x245A int16 P4.90 Fault restore (1) RW N 
+0x245B int16 P4.91 Parameters saving (1) RW N 
+0x245C int16 P4.92 Restore to the factory value (1) RW N 
+0x245D int16 P4.93 Reading enable of fault record (1) RW N 
+0x245E int16 P4.94 Clearing enable of fault record (1) RW N 
+0x245F int16 P4.95 Group number of fault record (1) RW N 
+0x2460 int16 P4.96 Initial angle test of the encoder (1) RW N 
+0x2461 int16 P4.97 EEPROM operation of absolute encoder 
+(1) RW N 
+0x2462 int16 P4.98 EEPROM block of absolute encoder (1) RW N 
+0x2463 int32 P4.99 Reserved (1) RW N 
+0x2500 int16 P5.00 Program JOG mode selection (1) RW N 
+0x2501 int32 P5.01 JOG movement (1) RW N 
+0x2502 int16 P5.02 JOG speed setting (1) RW N
+
+[Página 50]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-45- 
+Index Data type Name Access Mappable 
+0x2503 int16 P5.03 JOG ACC/DEC time (1) RW N 
+0x2504 int16 P5.04 JOG waiting time (1) RW N 
+0x2505 int16 P5.05 JOG cycle times (1) RW N 
+0x2509 int32 P5.09 Homing ACC/DEC time (1) RW N 
+0x250A int16 P5.10 Homing mode (1) RW N 
+0x250B int16 P5.11 Automatic homing after power on (1) RW N 
+0x250C int16 P5.12 1st speed setting of high speed homing 
+(1) RW N 
+0x250D int16 P5.13 2nd speed setting of high speed homing 
+(1) RW N 
+0x250E int32 P5.14 Home setting (1) RW N 
+0x250F int16 P5.15 Homing trigger command (1) RW N 
+0x2510 int16 P5.16 Correlated action of homing (1) RW N 
+0x2511 int16 P5.17 Speed to designated target after homing 
+(1) RW N 
+0x2512 int16 P5.18 ACC/DEC time to designated target 
+after homing (1) RW N 
+0x2513 int32 P5.19 Position to designated target after 
+homing (1) RW N 
+0x2514 int16 P5.20 PTP trigger command (1) RW N 
+0x2515 int16 P5.21 00 Target speed (1) RW N 
+0x2516 int16 P5.23 02 target speed (1) RW N 
+0x2517 int16 P5.24 03 target speed (1) RW N 
+0x2518 int16 P5.25 04 target speed (1) RW N 
+0x2519 int16 P5.26 05 target speed (1) RW N 
+0x251A int16 P5.27 06 target speed (1) RW N 
+0x251B int16 P5.28 07 target speed (1) RW N 
+0x251C int16 P5.29 08 target speed (1) RW N 
+0x251D int16 P5.30 09 target speed (1) RW N 
+0x251E int16 P5.31 10 target speed (1) RW N 
+0x251F int16 P5.32 11 target speed (1) RW N 
+0x2520 int16 P5.33 12 target speed (1) RW N 
+0x2521 int16 P5.34 13 target speed (1) RW N 
+0x2522 int16 P5.35 14 target speed (1) RW N 
+0x2523 int16 P5.36 15 target speed (1) RW N 
+0x2524 int16 P5.37 00 ACC/DEC time (1) RW N 
+0x2525 int16 P5.23 02 target speed (1) RW N
+
+[Página 51]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-46- 
+Index Data type Name Access Mappable 
+0x2526 int16 P5.38 01 ACC/DEC time (1) RW N 
+0x2527 int16 P5.39 02 ACC/DEC time (1) RW N 
+0x2528 int16 P5.40 03 ACC/DEC time (1) RW N 
+0x2529 int16 P5.41 04 ACC/DEC time (1) RW N 
+0x252A int16 P5.42 05 ACC/DEC time (1) RW N 
+0x252B int16 P5.43 06 ACC/DEC time (1) RW N 
+0x252C int16 P5.44 07 ACC/DEC time (1) RW N 
+0x252D int16 P5.45 08 ACC/DEC time (1) RW N 
+0x252E int16 P5.46 09 ACC/DEC time (1) RW N 
+0x252F int16 P5.37 10 ACC/DEC time (1) RW N 
+0x2530 int16 P5.48 11 ACC/DEC time (1) RW N 
+0x2531 int16 P5.49 12 ACC/DEC time (1) RW N 
+0x2532 int16 P5.50 13 ACC/DEC time (1) RW N 
+0x2533 int16 P5.51 14 ACC/DEC time (1) RW N 
+0x2534 int16 P5.52 15 ACC/DEC time (1) RW N 
+0x2535 uint16 P5.53 00 delay time (1) RW N 
+0x2536 uint16 P5.54 01 delay time (1) RW N 
+0x2537 uint16 P5.55 02 delay time (1) RW N 
+0x2538 uint16 P5.56 03 delay time (1) RW N 
+0x2539 uint16 P5.57 04 delay time (1) RW N 
+0x253A uint16 P5.58 05 delay time (1) RW N 
+0x253B uint16 P5.59 06 delay time (1) RW N 
+0x253C uint16 P5.60 07 delay time (1) RW N 
+0x253D uint16 P5.61 08 delay time (1) RW N 
+0x253E uint16 P5.62 09 delay time (1) RW N 
+0x253F uint16 P5.63 10 delay time (1) RW N 
+0x2540 uint16 P5.64 11 delay time (1) RW N 
+0x2541 uint16 P5.65 12 delay time (1) RW N 
+0x2542 uint16 P5.66 13 delay time (1) RW N 
+0x2543 uint16 P5.67 14 delay time (1) RW N 
+0x2544 uint16 P5.68 15 delay time (1) RW N 
+0x2545 uint16 P5.69 PTP trigger buffer switch (1) RW N 
+0x2546 int32 P5.70 Single-turn resolution of disk (1) RW N 
+0x2547 uint16 P5.71 Zero-returning switch of disk (1) RW N 
+0x2548 uint16 P5.72 Multi-turn mode (1) RW N
+
+[Página 52]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-47- 
+Index Data type Name Access Mappable 
+0x2549 uint16 P5.73 Digital trigger mode of PTP (1) RW N 
+0x254A uint16 P5.74 Digital output mode of PTP (1) RW N 
+0x254B uint16 P5.75 Enable interruption pause of the PTP (1) RW N 
+0x2600 int16 P6.00 Forward low JOG speed (1) RW N 
+0x2601 int16 P6.01 Reverse low JOG speed (1) RW N 
+0x2602 int16 P6.02 Position latch function switch (1) RW N 
+0x2603 int16 P6.03 Position latch save mode (1) RW N 
+0x2604 int16 P6.04 Forward high JOG speed (1) RW N 
+0x2605 int16 P6.05 Reverse high JOG speed (1) RW N 
+0x2606 int16 P6.06 Terminal JOG valid (1) RW N 
+0x3000 int32 R0.00 Motor speed (0.1) RO N 
+0x3001 int32 R0.01 Speed command (0.1) RO N 
+0x3002 int64 R0.02 Feedback pulse accumulation (1) RO N 
+0x3003 int64 R0.03 Command pulse accumulation (1) RO N 
+0x3004 int32 R0.04 Retention pulse (1) RO N 
+0x3005 int32 R0.05 Hybrid control deviation (1) RO N 
+0x3006 int32 R0.06 Current torque (0.1) RO N 
+0x3007 int32 R0.07 DC voltage of main circuit (0.1) RO N 
+0x3008 int32 R0.08 Voltage of control power (0.1) RO N 
+0x3009 int32 R0.09 Output voltage (0.1) RO N 
+0x300A int32 R0.10 Output current (0.01) RO N 
+0x300B int32 R0.11 Drive temperature (0.1) RO N 
+0x300C int32 R0.12 Torque limit (0.1) RO N 
+0x300D int32 R0.13 Feedback value of the encoder (1) RO Y 
+0x300E int32 R0.14 Rotor position relative to Z pulse (1) RO N 
+0x300F int16 R0.15 Inertia ratio of load (1) RO N 
+0x3010 int32 R0.16 Output power (0.1) RO N 
+0x3011 int32 R0.17 Motor load ratio (0.1) RO N 
+0x3012 int32 R0.18 Molecule of actual electric gear ratio (1) RO N 
+0x3013 int32 R0.19 Denominator of actual electric gear ratio 
+(1) RO N 
+0x3014 int32 R0.20 Position command speed (0.1) RO N 
+0x3015 int32 R0.21 Motor speed (filtering) (0.1) RO N 
+0x3016 int16 R0.22 PTP state (1) RO N 
+0x3017 int32 R0.23 Absolute position feedback of encoder 
+(1) RO N
+
+[Página 53]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-48- 
+Index Data type Name Access Mappable 
+0x3018 int16 R0.24 EEPROM data state of the encoder (1) RO N 
+0x3019 int16 R0.25 Turns of multi-circle encoder (1) RO Y 
+0x301A int16 R0.26 Available encoder type (1) RO N 
+0x301B int16 R0.27 Synchronous correction state of 
+EtherCAT clock (1) RO N 
+0x301C int16 R0.28 State of CANopen state machine (1) RO N 
+0x301D int16 R0.29 Node no. of PROFIBUS-DP slave 
+station (1) RO N 
+0x301E int16 R0.30 System state (1) RO N 
+0x301F uint16 R0.31 IGBT state (1) RO N 
+0x3020 int16 R0.32 Current mode (1) RO N 
+0x3021 uint32 R0.33 Power-on time (1) RO N 
+0x3022 uint32 R0.34 Operation time (1) RO N 
+0x3023 int16 R0.35 DSP software version (0.01) RO N 
+0x3024 int16 R0.36 FPGA software version (0.01) RO N 
+0x3025 int16 R0.37 Communication card software version 
+(0.01) RO N 
+0x3026 int32 R0.38 Drive serial No.1 (1) RO N 
+0x3027 int32 R0.39 Drive serial No.2 (1) RO N 
+0x3028 int32 R0.40 Drive serial No.3 (1) RO N 
+0x3029 int32 R0.41 Drive serial No.4 (1) RO N 
+0x302A int32 R0.42 Drive serial No.5 (1) RO N 
+0x302B int32 R0.43 Drive serial No.6 (1) RO N 
+0x302C int32 R0.44 Linear encoder position relative to Z (2nd 
+encoder) (1) RO N 
+0x302D int32 R0.45 Speed feedback of 2nd encoder (0.1) RO N 
+0x302E int32 R0.46 Observing speed of speed observer 
+(0.1) RO N 
+0x302F int32 R0.47 Feedback speed of speed observer 
+(0.1) RO N 
+0x3030 int32 R0.48 Observing disturbance torque via 
+disturbance observer (0.1) RO N 
+0x3031 int32 R0.49 Compensation value of fully-closed 
+vibration suppressor (0.1) RO N 
+0x3032 int16 P0.50 EtherCAT configuration file version no. 
+(0.01) RO N 
+0x3033 int16 R0.51 Observe load inertia ratio in real time (1) RO N
+
+[Página 54]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-49- 
+Index Data type Name Access Mappable 
+0x3034 int32 R0.52 Position feedback accumulation of 
+linear encoder (1) RO N 
+0x3035 int32 R0.53 Gantry synchronization position 
+deviation (1) RO N 
+0x3036 int32 R0.54 Linear encoder (2nd encoder) position 
+feedback value (1) RO N 
+0x3037 int32 R0.55 Encoder turn number offset after 
+clearing multi-turn position (1) RO N 
+0x3038 int32 R0.56 Encoder feedback value offset after 
+clearing multi-turn position (1) RO N 
+0x3039 int64 R0.57 Position feedback accumulation of 2nd 
+encoder (1) RO N 
+0x303A int32 R0.58 Position inside the single-turn of the 
+disk (1) RO N 
+0x303C int32 R0.60 Temperature of medium-power motor 
+(1) RO N 
+0x3063 int16 R0.99 Fault code (1) RO N 
+0x3100 uint16 R1.00 Current state of digital input (1) RO N 
+0x3101 uint16 R1.01 Current state of digital output (1) RO N 
+0x3102 int32 R1.02 Original voltage of analog input 1 
+(0.001) RO N 
+0x3103 int32 R1.03 Original voltage of analog input 2 
+(0.001) RO N 
+0x3104 int32 R1.04 Original voltage of analog input 3 
+(0.001) RO N 
+0x3105 int32 R1.05 Voltage of analog input 1 (0.001) RO N 
+0x3106 int32 R1.06 Voltage of analog input 2 (0.001) RO N 
+0x3107 int32 R1.07 Voltage of analog input 3 (0.001) RO N 
+0x3108 int32 R1.08 Voltage of analog output 1 (0.001) RO N 
+0x3109 int32 R1.09 Voltage of analog output 2 (0.001) RO N 
+0x310A int32 R1.10 Voltage of analog output 3 (0.001) RO N 
+0x310B int32 R1.11 Cumulative value of pulse input (1) RO N 
+0x310C int32 R1.12 Pulse position command (1) RO N 
+0x310D int32 R1.13 Pulse speed command (0.1) RO N 
+0x310E int32 R1.14 Analog compensation speed (0.1) RO N 
+0x310F int32 R1.15 Analog compensation torque (0.1) RO N 
+0x3110 int32 R1.16 One-loop value of DI capture encoder RO N 
+0x3111 int32 R1.17 Cumulative value of DI capture encoder RO N
+
+[Página 55]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-50- 
+Index Data type Name Access Mappable 
+0x3112 int32 R1.18 One-loop value of DI capture encoder of 
+2nd encoder RO N 
+0x3113 int32 R1.19 Cumulative value of DI capture encoder 
+of 2nd encoder RO N 
+0x3114 uint32 R1.20 Display of drive state bit RO N 
+ 
+0x4000 manufacture parameter list: 
+Index Object 
+Type Name Data Type Access Mappable 
+SV-DA200 manufacture parameters 
+4000h VAR Error code UNSIGNED16 RO Y 
+4001h VAR Driver temperature INTEGER16 RO N 
+4002h VAR Parameter save INTEGER16 RW N 
+4003h VAR Parameter restore INTEGER16 RW N 
+4020h VAR Encoder Feedback Cap 1 INTEGER32 RW N 
+4021h VAR multi number of turns Cap 1 INTEGER16 RW N 
+4022h VAR multi number of turns Cap 2 INTEGER16 RW N 
+4100h VAR Analog outoput 1 value INTEGER32 RW Y 
+4101h VAR Analog outoput 2 value INTEGER32 RW Y 
+4300h ARRAY driver paramets UNSIGNED32 RW N 
+ 
+4.5 Encoder feedback 
+300D h Encoder feedback, corresponding to R0.31. 
+3019 h Number of turns of multi-turn encoder, corresponding to R0.25. 
+The preceding two parameters can be read from both SDO and PDO (applicable only to SV-DA200 
+V2.60/XML V1.70 and later). 
+The following three parameters store capture values only when touch probe1/2 is configured for 
+capture: 
+4020 h Encoder Feedback Cap , used to store encoder positions during touch probe1  for touch 
+probe1 capturing. 
+4021 h multi number of tu rns Cap1: used to store the multi -turn value of encoder during touch 
+probe1 capturing. 
+4022 h multi number of turns Cap2: used to store the multi -turn value of encoder during touch 
+probe2 capturing. 
+4.6 Digital input 
+The EtherCAT servo has only seven digital inputs. For details, see the CN1 terminal definition table. 
+In the default xml file, the digital input parameter 0x60FD is stored in the PDO reading parameter list. 
+The bit12 of P4.43 is 0 (Standard CiA402 protocol) by default. Each bit is described in the following 
+table.
+
+[Página 56]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-51- 
+Bit P4.25=2 (CIA402 OMRON) Bit P4.25≠2 
+0 Disabling reverse driving is valid. 0 Disabling reverse driving is valid. 
+1 Disabling forward driving is valid. 1 Disabling forward driving is valid. 
+2 The home switch is valid. 2 The home switch is valid. 
+3–15 Reserved 3–15 Reserved 
+16 Z signal 16–22 DI1–DI7 
+17–23 DI1–DI7 23–31 Reserved 
+24 Reserved   
+25 Stop in emergency manner.   
+26–31 Reserved   
+Note:  
+The low-order 16 bits are the function bits, without fixed digital inputs. If you want to make "Disabling 
+forward/reverse driving" valid, set P3.40 to 0. 
+Set the Bit12 of P4.43 to 1. Each bit is described in the following table: 
+Bit Mapping 
+0–6 DI1–DI7 
+7–31 Reserved 
+To ensure quick response to data transfer, the PDO read/write list can contain a maximum of 10 
+parameters; otherwise, communication exceptions may occur. This function is applicable only to  
+SV-DA200 V2.60/XML V1.70 and later. 
+4.7 Digital output control 
+The EtherCAT servo has only four differential outputs. For details, see the CN1 terminal definition table. 
+The digital output is servo controlled by default. If you want to enable the master to control the digital 
+output through EtherCAT communication, set P4.28 [Enabling EtherCAT based control on digital output] 
+to 1 (Enable); the digital output is controlled by writing 0x60FE through SDO or PDO. 
+The default xml digital output control parameters are stored in the PDO writing parameter list. The 
+parameters have been deleted from XML V2.62 and later. If you need to use PDO control, configure 
+0x60FE in the PDO writing list on the master. 
+Each bit is described in the following table. 
+Sub-index 1 (Output) Sub-index 2 (Bit mask) 
+Bit Description Bit Description 
+0 
+Brake status.  
+0: Closed. 1: Opened.  
+It can be read only through the SDO. 
+It is controlled by bit 0 of bit mask. 
+0 
+Brake status switch.  
+0: Closed.  
+1: Opened. 
+1–15 Reserved 1–31 Reserved 
+16–19 DO1–DO4   
+20–31 Reserved
+
+[Página 57]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-52- 
+To ensure quick  response to data transfer, the PDO read/write list can contain a maximum of 10 
+parameters; otherwise, communication exceptions may occur. This function is applicable only to  
+SV-DA200 V2.60/XML V1.70 and later. 
+4.8 Analog output control 
+EtherCAT servo is configured with two analog outputs, corresponding to EtherCAT parameters 0x4100 
+and 0x4101. 
+The analog output is  servo controlled by default . If it is controlled by the master through EtherCAT 
+communication, set P3.30 [Analog output 1 selection] to 0 ( disabled), P3.32 [Analog output 2 
+selection] to 0 (enabled), or write 0x4100 and 0x4101 through SDO or PDO. 
+The xml analog output control parameters (factory default) are not put in the PDO parameter list. If you 
+need to use the PDO control, 0x4100 and 0x4101 need to be configured to the PDO writting list in the 
+master. 
+ 
+ 
+The units of 0x4100 and 0x4101 are related to P3.31 and P3.33. 
+The EtherCAT reference value divided by the corresponding voltage gain is going to be the actual output 
+voltage. 
+For example, 0x4100 is set to 1, voltage gain is set to 10, and the output analog voltage is 0.1V. 
+To ensure quick response to data transfer, the PDO read/write list can contain a maximum of 10 
+parameters; otherwise, communication exceptions may occur. Thi s function is applicable only to  
+SV-DA200 V2.60/XML V1.70 and later. 
+4.9 Drive parameters 
+Drive parame ter 0x4300 carries three indices . T his object can be used to set and read factory  
+parameters. 
+ Subindex 1 is the parameter address, 32-bit unsigned data. 
+ Subindex 2 is the parameter value, 32-bit unsigned data. 
+ Subindex 3 is the operation result, 32-bit unsigned data. 
+Reading: 
+ a. Write subindex 1 to the data address to be read. 
+ b. Read subindex 2 to obtain the parameter value. 
+ c. Read subindex3 to obtain the reading result, which should be 0. 
+Setting: 
+ a. Write subindex 1 to the parameter address to be set. 
+ b. Write the value to subindex 2. 
+ c. Read subindex 3 to obtain the set result, which should be 4.
+
+[Página 58]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Object dictionary 
+-53- 
+For the parameter address, see SV-DA200 CANOpen address. Taking P0.05 (Jog speed) as example, 
+the index of CANOpen is 0x2005, the subindex is 0, and therefore the address parameter is 0x200500. 
+The result of TwinCAT reading is shown as follows: 
+ 
+4.10 Torque compensation 
+Torque compensation parameter 0x60B2, corresponding to P2.44 torque offset, can be set through PDO 
+and SDO. 
+It is used to set the compensation value that is added to the variable load of the torque command. It is 
+applicable to the vertical axis scenarios, and it is valid in all control modes except torque control mode. 
+The default xml analog output control parameters are not included in the PDO parameter list. If PDO 
+based control is requried, add the 0x60B2 torque compensation parameter to the PDO writing list. This 
+function is applicable only to SV-DA200 V2.60/XML V1.70 and later.
+
+[Página 59]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-54- 
+5 Troubleshooting 
+5.1 EtherCAT communication fault code obtaining interface 
+1. Obtain fault codes through Emergency of EtherCAT. 
+2. Access 0x4000 (16-bit) through SDO or PDO to read the current fault code informattion. The format of 
+fault codes are as follows. 
+Bits Definition 
+15–8 Main fault code * 
+7–4 Reserved 
+3–0 Sub fault code 
+*: For details about main and sub codes, refer to the following table. 
+3. Access 0x603F (402 standard protocol fault code, 16-bit) through SDO or PDO to read the present 
+fault. 
+For details about the mapping between 0x603F and servo factory code, refer to the following fault code 
+table. 
+5.2 EtherCAT communication faults and solutions 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er24-8 0x8100 
+EtherCAT 
+fault–Initialization 
+fault 
+Poor contact of 
+EtherCAT chip Replace the servo. 
+Er24-9 0x8100 EtherCATfault– 
+EEPROM fault 
+EtherCAT EEPROM has 
+no data or data reading 
+failed 
+Download xml file to 
+EtherCAT EEPROM with 
+TwinCAT or other tools. 
+Er24-a 0x8100 
+EtherCATfault–DC 
+Sync0 signal is 
+abnormal 
+Set to DC sync operation 
+mode, and DC Sync0 
+interruption signal is not 
+detected during a period 
+of time. 
+Check whether data loss 
+occurred due to 
+interference. 
+Check whether EtherCAT 
+master works normally. 
+Er24-b 0x8100 EtherCAT 
+fault–Offline fault 
+Network cable is inserted 
+improperly or EtherCAT 
+master operation is 
+abnormal after the drive 
+is enabled. 
+Check whether network 
+cable is connected properly 
+which should be top-in and 
+bottom-out. 
+Check whether there is 
+interference. 
+Check EtherCAT master 
+operates normally. 
+Er24-c 0x8100 EtherCATfault-PD
+O data loss fault 
+No PDO data is received 
+after the drive is enabled 
+for a period of time. 
+Check EtherCAT master 
+operates normally; 
+Check if data loss is caused 
+by interference.
+
+[Página 60]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-55- 
+5.3 SV-DA200 faults and solutions 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er01-0 0x2320 IGBT fault 
+The drive actual output 
+current exceeds the 
+specified value. 
+1. Drive fault (such as 
+drive circuit or IGBT 
+fault). 
+2. Motor cables U, V, and 
+W are short connected, 
+or motor cables are 
+grounded or contacted 
+improperly. 
+3. The motor breaks 
+down. 
+4. The motor cables U, V, 
+and W are connected in 
+reverse phases. 
+5. Improper parameter 
+settings cause 
+systematic divergence. 
+6. The ACC/DEC time in 
+the start or stop process 
+is too short. 
+7. Transient load is too 
+heavy. 
+1. Remove the motor cables 
+and then enable the drive. If 
+the fault persists, replace 
+the drive. 
+2. Check whether motor 
+cables and wiring are in 
+good condition. 
+3. Decrease P0.10 and 
+P0.11 to lower the max. 
+output torque. 
+4. Adjust the loop parameter 
+to stabilize the system, and 
+reduce the value of P0.12. 
+5. Prolong ACC/DEC time 
+properly. 
+6. Replace with a drive with 
+larger power. 
+7. Replace the motor. 
+Er01-1 0x7110 Braking pipe fault 
+(7.5kW and higher) Braking unit is faulty. Replace the drive. 
+Er01-2 0x2331 
+U-phase driving 
+pipe fault 
+(7.5kW and higher) 
+U-phase driving pipe is 
+faulty. Replace the drive. 
+Er01-3 0x2332 
+V-phase driving 
+pipe fault 
+(7.5kW and higher) 
+V-phase driving pipe is 
+faulty. Replace the drive. 
+Er01-4 0x2333 
+W-phase driving 
+pipe fault 
+(7.5kW and higher) 
+W-phase driving pipe is 
+faulty. Replace the drive. 
+Er01-5 0xFF00 IPM fault IPM module is faulty. Replace the drive. 
+Er02-0 0x7301 
+Encoder 
+fault–Encoder 
+disconnection 
+1. The encoder is not 
+connected. 
+2. The encoder plug 
+contact is loose. 
+3. One of encoder signal 
+1. Connect the encoder 
+according to the correct 
+wiring method. Ensure the 
+encoder plug contact is 
+proper. Replace the encoder Er02-1 0x7300 Encoder 
+fault–Encoder
+
+[Página 61]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-56- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+feedback deviation 
+too large 
+cables U, V, W, A, B, and 
+Z is disconnected. 
+4. Encoder phases A and 
+B are reverse. 
+5. Noise causes 
+communication 
+interruption or data 
+exceptions. 
+6. The encoder 
+communicates properly 
+but with data exceptions. 
+7. The FPGA that 
+communicates with the 
+encoder reports timeout. 
+8. The drive does not 
+support the encoder 
+type. 
+cable if the cable is broken. 
+2. Check whether the 
+encoder power voltage is 
+normal. 
+3. Reduce the interference 
+source of encoder cable to 
+the minimum extent. Route 
+the encoder cables and 
+motor cables separately, 
+and connect the shielded 
+wire of encoder cable to FG. 
+4. Check whether the 
+encoder type supported by 
+the drive is consistent with 
+the motor encoder type 
+according to P0.01 if an 
+encoder disconnection fault 
+is reported upon power-on. 
+Er02-2 0x7300 Encoder fault– 
+Parity error 
+Er02-3 0x7300 Encoder fault–CRC 
+error 
+Er02-4 0x7300 Encoder 
+fault–Frame error 
+Er02-5 0x7300 
+Encoder 
+fault–Short frame 
+error 
+Er02-6 0x7305 
+Encoder 
+fault–Encoder 
+timeout 
+Er02-7 0x7306 
+Encoder 
+fault–Multi-turn 
+absolute value loss 
+Er02-8 0x5114 
+Encoder 
+fault–Encoder 
+battery low-voltage 
+alarm 
+When a multi-turn 
+absolute encoder is 
+used, the external battery 
+voltage of the encoder is 
+between 3.0V–3.2V. 
+1. Ensure the encoder 
+battery cable is connected 
+properly. 
+2. Use the multimeter to 
+check whether the external 
+battery voltage is lower than 
+3.2V. If yes, replace the 
+battery. 
+3. Replace the battery when 
+the drive power is on. 
+Otherwise, encoder data will 
+be lost. 
+Er02-9 0x5115 
+Encoder 
+fault–Encoder 
+battery 
+undervoltage fault 
+When a multi-turn 
+absolute encoder is 
+used, the external battery 
+voltage of the encoder is 
+between 2.5V–3.2V. 
+1. Ensure the encoder 
+battery cable is connected 
+properly. 
+2. Use the multimeter to 
+check whether the external 
+battery voltage is lower than 
+3.0V. If yes, replace the 
+battery. 
+3. Replace the battery when 
+the drive power is on. 
+Otherwise, encoder data will 
+be lost.
+
+[Página 62]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-57- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er02-a 0x7300 
+Encoder 
+fault–Encoder 
+overheating 
+The encoder feedback 
+temperature is higher 
+than the temperature 
+threshold for protection 
+against overheating. 
+1. Ensure the temperature 
+threshold for protection 
+against overheating is 
+correct. 
+2. Stop the motor to lower 
+the encoder temperature. 
+Er02-b 0x7300 
+Encoder 
+fault–Encoder 
+EEPROM writing 
+error 
+If the motor is used with 
+a communication 
+encoder, a 
+communication 
+transmission or data 
+check error occurs when 
+the drive updates data to 
+the encoder EEPROM. 
+1. Ensure encoder cables 
+are connected properly and 
+eliminate the conditions that 
+disturb encoder 
+communication. 
+2. Make multiple writing 
+attempts. If the fault is 
+reported repeatedly, replace 
+the motor. 
+Er02-c 0x7300 
+Encoder fault–No 
+data in encoder 
+EEPROM 
+If the motor is used with 
+a communication 
+encoder, no data is found 
+in the encoder EEPROM 
+when the motor attempts 
+to read data from it 
+during power-on. 
+1. Select the present motor 
+model through P0.00, and 
+execute the write operation 
+on the encoder EEPROM 
+parameter through P4.97. 
+2. Mask this fault by setting 
+P4.98. The motor 
+parameters in the drive 
+EEPROM are used for 
+initialization. 
+Er02-d 0x7300 
+Encoder 
+fault–Encoder 
+EEPROM data 
+check error 
+If the motor is used with 
+a communication 
+encoder, a data check 
+error occurs when the 
+motor attempts to read 
+data from the encoder 
+EEPROM during 
+power-on. 
+1. Ensure encoder cables 
+are connected properly and 
+eliminate the conditions that 
+disturb encoder 
+communication. 
+2. Select the motor model 
+based on the setting of 
+P0.00 and execute the 
+operation of writing data to 
+the encoder EEPROM 
+through P4.97 so that data 
+in the encoder EEPROM is 
+updated. 
+3. Mask this fault by setting 
+P4.98. The motor 
+parameters in the drive 
+EEPROM are used for 
+initialization.
+
+[Página 63]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-58- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er03-0 0x7200 
+Current sensor 
+fault–Phase-U 
+current sensor fault 1. The current sensor or 
+detection circuit is 
+abnormal. 
+2. Power-on is made 
+when the motor shaft is 
+in non-static state. 
+Re-power on when the 
+motor shaft in static state. If 
+the fault is reported 
+repeatedly, replace the 
+drive. 
+Er03-1 0x7200 
+Current sensor 
+fault–Phase-V 
+current sensor fault 
+Er03-2 0x7200 
+Current sensor 
+fault–Phase-W 
+current sensor fault 
+Er04-0 0x6100 System 
+initialization fault 
+There are failed 
+self-check items after 
+power-on initialization is 
+complete. 
+1. Repower on. 
+2. If the fault occurs 
+repeatedly, replace the 
+drive. 
+Er05-1 0x6320 Setting fault–Motor 
+model not exist 
+P0.00 is set incorrectly. 
+1. Ensure the motor model 
+is correct. 
+2. Ensure the motor 
+parameter model matches 
+the drive power class. 
+Er05-2 0x6320 
+Setting fault–Motor 
+and drive model 
+not match 
+Er05-3 0x6320 
+Setting 
+fault–Incorrect 
+software limits 
+Software limits are set 
+incorrectly. 
+The setting of P0.35 is 
+equal to or less than that 
+of P0.36. 
+Set P0.35 and P0.36 
+correctly. 
+Er05-4 0x6320 
+Setting 
+fault–Incorrect 
+homing mode 
+P5.10 is set incorrectly. Set P5.10 correctly based 
+on the descrption. 
+Er05-5 0x6320 
+Setting 
+fault–PTP-control 
+travel overflow 
+The single increment of a 
+PTP idle travel exceeds 
+(231 - 1). 
+Single travel cannot exceed 
+(231-1) in the absolute 
+position mode. 
+Er07-0 0x7112 
+Regenerative 
+discharge overload 
+fault 
+1. The braking resistor 
+power is low. 
+2. The motor speed is too 
+high or the deceleration 
+is too quick, which 
+causes the failure to 
+absorb the regenerate 
+energy within specified 
+time. 
+3. The action limit of the 
+external braking resistor 
+is restricted to the duty 
+ratio 10%. 
+1. Change the internal brake 
+resistor to the external 
+brake resistor, and enlarge 
+the power. 
+2. Modify DEC time, and 
+lower the regenerative 
+discharge action rate. 
+3. Reduce motor speed. 
+4. Improve the capacity of 
+the motor and drive.
+
+[Página 64]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-59- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er08-0 0x7200 AI overvoltage 
+fault–AI 1 
+The voltage inputted to 
+the analog input 1 port 
+exceeds the value 
+defined with P3.22. 
+1. Set P3.22, P3.25, and 
+P3.75 properly. 
+2. Check whether the 
+terminal wiring is in good 
+condition. 
+3. Set P3.22, P3.25, and 
+P3.75 to 0 to disable 
+protection. 
+Er08-1 0x7200 AI overvoltage 
+fault–AI 2 
+The voltage inputted to 
+the analog input 2 port 
+exceeds the value 
+defined with P3.25. 
+Er08-2 0x7200 AI overvoltage 
+fault–AI 3 
+The voltage inputted to 
+the analog input 3 port 
+exceeds the value 
+defined with P3.75. 
+Er09-0 0x5520 
+EEPROM 
+fault–Read/write 
+error 
+1. Data is damaged in 
+the data storage area 
+when the drive reads 
+data from the EEPROM. 
+2. Writing data to the 
+EEPROM is disturbed. 
+1. Re-try after re-power on. 
+2. If the fault occurs 
+repeatedly, replace the 
+drive. 
+Er09-1 0x5530 
+EEPROM 
+fault–Data check 
+error 
+1. The data read from 
+EEPROM differs from 
+data being written. 
+2. The drive DSP 
+software version is 
+updated. 
+1. Reset all the parameters. 
+2. If the fault occurs 
+repeatedly, replace the 
+drive. 
+Er10-0 0x7400 Hardware 
+fault–FPGA fault 
+The FPGA on the control 
+board reports a fault. 
+1. Re-power on. 
+2. If the fault occurs 
+repeatedly, replace the 
+drive. 
+Er10-1 0x7500 
+Hardware 
+fault–Communicati
+on card fault 
+The external 
+communication card is 
+faulty. 
+1. Re-power on. 
+2. If the fault occurs 
+repeatedly, replace the 
+communication card. 
+Er10-2 0x2300 
+Hardware 
+fault–To-ground 
+short circuit fault 
+One of the motor cables 
+V and W is short 
+connected to the ground, 
+which is found in 
+to-ground short circuit 
+detection during drive 
+power-on. 
+1. Ensure motor cables are 
+connected properly. 
+2. Replace motor cables or 
+check for ageing of 
+insulation. 
+Er10-3 0x5430 
+Hardware 
+fault–External input 
+fault 
+This fault occurs when 
+the digital terminal 
+configured with the 
+external fault input 
+function acts. 
+1. Remove the external fault 
+input to clear the enabling 
+fault. 
+2. Re-power on the drive.
+
+[Página 65]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-60- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er10-4 0x5430 
+Hardware 
+fault–Emergency 
+stop fault 
+This fault occurs when 
+the digital terminal 
+configured with the 
+emergency stop function 
+acts. 
+1. Remove the emergency 
+stop input to clear the 
+enabling fault. 
+2. Re-power on the drive. 
+Er10-5 0x7500 
+Hardware 
+fault–RS485 
+communication 
+fault 
+Strong EMI of RS485 
+communication circuit 
+causes the serial 
+communication alarm of 
+the drive. 
+1. Use twisted shielded 
+pairs for RS485 
+communication. 
+2. Route communication 
+cables and motor power 
+cables separately. 
+Er11-0 0x6100 
+Software 
+fault–Motor control 
+task re-entry 
+1. The DSP CPU 
+utilization is too high. 
+2. The DSP has bugs. 
+1. Remove unnecessary 
+software functions. 
+2. Contact the customer 
+service personnel to update 
+the DSP. 
+Er11-1 0x6100 
+Software 
+fault–Periodic task 
+re-entry 
+Er11-2 0x6100 
+Software 
+fault–Illegal 
+operation 
+Er12-0 0x6320 I/O fault–Duplicate 
+DI assignment 
+Two or more digital 
+inputs are configured 
+with the same function. 
+Set P3.00–P3.09 and 
+ensure each setting is 
+unique. 
+Er12-1 0x6320 I/O fault–Duplicate 
+AI assignment 
+When the drive is a 
+standard model, the 
+function of AI3 is set to 
+speed command. 
+Set parameter P3.70 (AI3 
+function) to another value. 
+Er12-2 0x5430 
+I/O fault–Pulse 
+input frequency too 
+high 
+The pulse input 
+frequency detected by 
+the drive is higher than 
+the specified frequency. 
+1. External input pulse 
+signal frequency is too 
+high. 
+2. The internal pulse 
+frequency detection 
+circuit of the drive is 
+damaged. 
+1. Reduce the external input 
+pulse signal frequency. 
+2. If the fault persists though 
+the external input signal is 
+normal, replace the drive. 
+Er13-0 0x3110 Main circuit 
+overvoltage fault 
+The detected DC voltage 
+of the drive main circuit is 
+higher than the specified 
+voltage. 
+1. The grid voltage is too 
+high. 
+1. Check whether the grid 
+input voltage exceeds the 
+allowed value. 
+2. Check whether the 
+internal/external braking 
+resistor is loosened or
+
+[Página 66]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-61- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+2. Under the braking 
+condition, no braking 
+resistor or pipe is 
+connected, or the braking 
+resistor is damaged. 
+3. The DEC time in the 
+stop process is too short. 
+4. The internal DC 
+voltage detection circuit 
+of the drive is damaged. 
+damaged. 
+3. Prolong the DEC time. 
+4. Check R0.07 when the 
+drive is disabled. If it is 
+abnormal and does not 
+match the grid input voltage, 
+replace the drive. 
+Er13-1 0x3120 Main circuit 
+undervoltage fault 
+The detected DC voltage 
+of the drive main circuit is 
+lower than the specified 
+voltage. 
+1. The grid voltage is too 
+low. 
+2. The buffer relay is not 
+closed. 
+3. The drive output 
+power is too high. 
+4. The internal DC 
+voltage detection circuit 
+of the drive is damaged. 
+1. Check whether the grid 
+input voltage exceeds the 
+allowed value. 
+2. Re-power on, and check 
+whether there is pull-in 
+noise of the power-on buffer 
+relay. 
+3. Check R0.07 when the 
+drive is disabled. If it is 
+abnormal and does not 
+match the grid input voltage, 
+replace the drive. 
+Er14-0 0x5115 Control power 
+undervoltage fault 
+The detected control 
+power DC voltage of the 
+drive is lower than the 
+specified voltage. 
+1. The grid voltage is too 
+low. 
+2. The DC voltage 
+detection circuit of the 
+internal control power of 
+the drive is damaged. 
+1. Check whether the grid 
+input voltage is lower than 
+the allowed value. 
+2. Check R0.08 when the 
+drive is disabled. If it is 
+abnormal and does not 
+match the grid input voltage, 
+replace the drive. 
+Er17-0 0x3230 Drive overload fault Short-time load of the 
+drive is too heavy. 
+1. The load is too heavy 
+which causes the drive 
+overload. 
+2. Check whether phase 
+dislocation or phase loss 
+occurred to UVW wiring of 
+the motor, and check 
+whether the encoder is 
+correct. 
+3. Check whether the motor 
+is compatible with the drive.
+
+[Página 67]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-62- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er17-1 0xFF00 Drive overload fault 
+The drive load is too 
+heavy (during low speed 
+running). 
+1. The load is too heavy 
+which causes the drive 
+overload. 
+2. Check whether phase 
+dislocation or phase loss 
+occurred to UVW wiring of 
+the motor, and check 
+whether the encoder is 
+correct. 
+Er18-0 0x3230 Motor overload 
+fault 
+1. Long-term overload 
+running. 
+2. The load is too heavy 
+during the short time. 
+1. Replace with the drive 
+and motor of larger power. 
+Er18-1 0x FF00 
+Motor 
+overtemperature 
+fault 
+Motor temperature 
+exceeds the protection 
+value 
+1. Replace with the motor of 
+larger power. 
+2. Check whether UVW 
+phase sequence is correct. 
+Er18-2 0xFF00 Motor power cable 
+fault 
+Motor power cable is not 
+connected or loose. 
+Check the UVW wiring of 
+the motor. 
+Er18-3 0xFF00 Motor phase loss 
+fault 
+Phase loss occurred to 
+the motor. 
+Check the UVW wiring of 
+the motor for phase loss. 
+Er19-0 0x8400 
+Speed 
+fault–Overspeed 
+fault 
+The motor speed 
+absolute value exceeds 
+the setting of P4.32. 
+1. The motor stalls or 
+motor phases U, V, and 
+W are in reverse 
+sequence. 
+2. The electronic gear 
+ratio or motor speed loop 
+control parameters are 
+not set properly. 
+3. The setting of P4.32 is 
+less than that of P4.31 
+[Max. speed limit]. 
+4. The encoder feedback 
+signal is interfered. 
+1. Check whether the 
+electronic gear ratio 
+parameters are set properly. 
+2. Check the setting of 
+speed loop control 
+parameters. 
+3. Check whether the motor 
+cable phase sequence is 
+correct. 
+4. Check whether the motor 
+encoder is wired properly. 
+5. Replace the motor with a 
+new one with a higher 
+speed. 
+Er19-1 0x8400 Speed fault–FWD 
+overspeed fault 
+The speed feedback 
+exceeds the setting of 
+P4.40 by more than 
+20ms. 
+1. Ensure the encoder is 
+normal. 
+2. Set P4.40 properly. 
+Er19-2 0x8400 Speed fault–REV 
+overspeed fault 
+The speed feedback 
+exceeds the setting of 
+P4.41 by more than 
+20ms. 
+1. Ensure the encoder is 
+normal. 
+2. Set P4.41 properly.
+
+[Página 68]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-63- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er19-3 0x6320 
+Speed 
+fault–Incorrect 
+overspeed 
+parameter setting 
+The setting of P4.40 is 
+less than 0 or that of 
+P4.41 is greater than 0. 
+1. Ensure the encoder is 
+connected properly. 
+2. Set P4.40 or P4.41 
+properly. 
+Er19-4 0xFF00 Runaway fault 
+The motor phase 
+sequence is incorrect or 
+the initial angle is 
+incorrect. 
+1. Ensure the motor phases 
+are in correct sequence. 
+2. Set P4.96. 
+3. Check whether P4.44 is 
+set correctly. 
+Er20-0 0x8400 
+Speed 
+out-of-tolerance-ra
+nge fault 
+In non-torque mode, the 
+deviation between the 
+motor speed and speed 
+command exceeds the 
+setting of P4.39. 
+1. The motor phases U, 
+V, and W are in reverse 
+sequence or motor 
+cables are not 
+connected. 
+2. The motor load is too 
+heavy, which causes 
+motor stalling. 
+3. The drive force is 
+insufficient, which 
+causes motor stalling. 
+4. The speed loop control 
+parameters are not set 
+properly. 
+5. The setting of P4.39 is 
+too low. 
+1. Check motor cable phase 
+sequence and ensure the 
+wiring is correct. 
+2. Check whether the 
+transmission belt or chain is 
+too tight, or the workbench 
+reaches edges or 
+encounters obstacles. 
+3. Check whether the loop 
+control parameters are set 
+properly or the drive has 
+been damaged, or the servo 
+system model is 
+appropriate. 
+4. Increase the value of 
+P4.39. 
+5. Set P4.39 to 0 to disable 
+speed out-of-tolerance fault 
+detection. 
+Er21-0 0x8500 
+Position 
+overtravel–Forward 
+overtravel 
+In position mode or 
+fully-closed loop mode, 
+the FWD limit switch is 
+touched or the 
+accumulated feedback 
+pulse exceeds P0.35. 
+1.Check whether FWD limit 
+switch signal is correct. 
+2. Check whether P0.35 is 
+set properly. 
+Er21-1 0x8500 
+Position 
+overtravel–Revers
+e overtravel 
+In position mode or 
+fully-closed loop mode, 
+the FWD limit switch is 
+touched or the 
+accumulated feedback 
+pulse exceeds P0.36. 
+1.Check whether REV limit 
+switch signal is correct. 
+2.Check whether P0.36 is 
+set properly.
+
+[Página 69]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-64- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er22-0 0x8611 
+Out-of-tolerance 
+fault–Position out 
+of tolerance 
+1. Server response time 
+is too slow. Therefore the 
+residual pulses exceed 
+the setting of P4.33. 
+2. The motor load is too 
+heavy, which causes 
+motor stalling. 
+3. Pulse input frequency 
+is too high, exceeding 
+the max. motor speed. 
+4. The step variable in 
+the position command 
+input exceeds the setting 
+of P4.33. 
+1. Check whether the 
+transmission belt or chain is 
+too tight, or the workbench 
+reaches the edges or 
+encounters obstacles. 
+2. Increase the position loop 
+gain parameters or speed 
+feedforward gain, or pulse 
+range of position deviation 
+(P4.33). 
+3. Modify electric gear ratio. 
+4. Reduce the step variable 
+in the position command 
+input. 
+Er22-1 0x8611 
+Out-of-tolerance 
+fault–Hybrid control 
+deviation too large 
+In fully-closed loop 
+control, the feedback 
+position deviation 
+between the grating ruler 
+and encoder exceeds the 
+setting of P4.64. 
+1. Check the connection 
+between the motor and 
+load. 
+2. Check the connection 
+between the grating ruler 
+and drive. 
+3. Ensure P4.60, P4.61, and 
+P4.62 are set properly. 
+Er22-2 0x8611 Position increment 
+overflow fault 
+Position command’s 
+single variation after 
+being converted by the 
+electric gear ratio 
+exceeds 231-1. 
+1. Reduce the single 
+variable in the position 
+command. 
+2. Modify the electric gear 
+ratio to appropriate range. 
+Er23-0 0x4210 
+Drive 
+overtemperature 
+fault 
+1. The ambient 
+temperature of the drive 
+exceeds the specified 
+temperature. 
+2. The drive is 
+overloaded. 
+1. Reduce the ambient 
+temperature and improve 
+the ventilation condition. 
+2. Replace the servo system 
+with a new one with greater 
+power. 
+3. Increase the ACC/DEC 
+time and reduce the load. 
+Er24-0 0x6320 
+PROFIBUS-DP 
+communication 
+fault–PWK ID error 
+The PWK parameter ID 
+is incorrect. 
+View the manual and ensure 
+that the PWK parameter ID 
+is the same as the 
+corresponding parameter 
+ID. 
+Er24-1 0x6320 
+PROFIBUS-DP 
+communication 
+fault–PWK out of 
+range 
+The PWK parameter 
+value is out of the 
+allowed range. 
+View the manual and ensure 
+that the PWK parameter 
+value is within the allowed 
+range.
+
+[Página 70]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide Troubleshooting 
+-65- 
+Fault 
+code 0x603F Fault name Fault cause Solution 
+Er24-2 0x6320 
+PROFIBUS-DP 
+communication 
+fault–PWK 
+parameter 
+read-only 
+The PWK parameter is 
+read only 
+View the manual and ensure 
+that the PWK parameter can 
+be read and written. 
+Er24-3 0x6320 
+PROFIBUS-DP 
+communication 
+fault–PZD 
+parameter does not 
+exist 
+The PZD setting 
+parameter ID is incorrect. 
+View the manual and ensure 
+that the PZD setting 
+parameter ID is the same as 
+the corresponding 
+parameter ID. 
+Er24-4 0x6320 
+PROFIBUS- DP 
+communication 
+fault–PZD 
+parameter attribute 
+does not match 
+The PZD setting 
+parameter property is not 
+instant effective. 
+View the manual and ensure 
+that the PZD setting 
+parameter property is 
+instant effective. 
+Er25-4 0xFF00 
+Application 
+fault–encoder 
+offset angle test 
+timeout 
+Abnormity occurs during 
+the encoder offset angle 
+test. 
+Check whether the motor 
+shaft can rotate freely, and 
+execute again after 
+re-power on. 
+Er25-5 0xFF00 
+Application 
+fault–encoder 
+offset angle test 
+failed 
+The current feedback 
+wave fluctuates violently 
+during the encoder offset 
+angle test. 
+Reduce P4.53 parameter 
+setting, and execute again 
+after repower-on. 
+Er25-6 0xFF00 
+Application 
+fault–Homing 
+offside 
+The limit switch or 
+software limit is enabled 
+during homing. 
+Modify the setting of P5.10 
+and then execute homing 
+after re-power on. 
+Er25-7 0xFF00 
+Application 
+fault–Inertia 
+identifying failed 
+1. During inertia 
+identifying, the motor 
+stops rotating with 
+vibration of longer than 
+3.5s. 
+2. The actual ACC time 
+for inertia identifying is 
+too short. 
+3. The inertia identifying 
+speed is lower than 
+150r/min. 
+1. Improve the mechanical 
+rigidity properly. 
+2. Increase the setting of 
+P1.07. 
+3. Increase the setting of 
+P1.06.
+
+[Página 71]
+INVT SV-DA200&DA260 AC Servo Drive EtherCAT Technical Guide References 
+-66- 
+6 References 
+ Hardware Data Sheet ET1100 EtherCAT Slave Controller V1.8 (May 3, 2010) 
+ Design and Application of Industrial Ethernet Fieldbus EtherCAT Drive Program First edition (Xunji 
+and Liu yanqiang, Beihang University Press, March 2010) 
+ CANopen Application Layer and Communication Profile, CiA Draft Standard 301  Version 4.02  
+(February 13, 2002) 
+ CANopen Device Profile Drives and Motion Control, CiA Draft Standard Proposal 402  Version 2.0 
+(July 26, 2002)
+
+[Página 72]
+6 6 0 0 1 - 0 0 8 2 5
+202206(V1.1)

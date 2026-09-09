@@ -1,0 +1,33 @@
+SNIHOVW ONT Ie ON
+
+1 [ 2 if 3 i 4 #05 I 6 I 7 I z
+Servo drive and motor power welding
+2 diagram for X, A, B, C, U axis
+r | OY 10) Servo Driver Describe Servo Wotor | Color
+4 1 ‘5(blown) Motor U phase 4 blown
+| 3 2 6(black) Motor V phase 3 black
+(omere) ~
+T(biue) Wotor W phase 1 blue
+I Ground Motor ground 2 yellow/green
+Servo motor
+connector
+c
+Servo drive and motor power welding
+Hy diagram for Y, Z axis
+Servo Driver Describe Servo Wotor | _ Colour
+. S(blackl) Motor U phase 2(B) blackl
+LI eer Totack®) Motor ¥ phase 0) black’
+Oo Oo ground Motor ground 10) yellow/green
+E
+Toot Twn tree ieplication Servo sotor | _color
+Waxis and Z-axis sermineian Brake signal 1 Te20v) brom
+[~] servo brake joints connector Brake signal 2 2(246) blue
+Brake signal 3
+F
+i Picture Desten
+comedou Wr watinay coma Pua] eee [owe] ++ [ERR Coes GOETH, | Oe MD enter [Vor] Lt
+Check] *** [Date] *** [Project 610(DZ Total: 48 Pose: 45
+T I z z 7 z I o 7 T 3
+
+WANVW Yas
+

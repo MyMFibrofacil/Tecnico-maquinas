@@ -1,0 +1,124 @@
+{
+  "Er2-6": {
+    "titulo": "Alarma Er2-6 en eje A",
+    "que_pedir": [
+      "Foto completa de la pantalla de alarma y de la pantalla de estado de los ejes.",
+      "Confirmar si la alarma aparece al encender, al referenciar o durante el trabajo.",
+      "Indicar si el eje A se movió, perdió referencia o quedó detenido antes de la alarma."
+    ],
+    "verificaciones": [
+      "Con la máquina detenida y sin ejecutar movimientos, confirmar que la alarma continúa presente.",
+      "Verificar que el eje indicado sea A y que corresponda al SERVO 02 según el esquema de la máquina.",
+      "Revisar visualmente si hay conectores flojos, cables dañados u obstrucciones en el conjunto asociado al eje A, sin desconectar nada energizado.",
+      "Comparar la posición mostrada del eje A con una fotografía o registro anterior, si existe."
+    ],
+    "posibles_soluciones": [
+      "Si se confirma un conector o cable dañado, corregirlo únicamente con la máquina aislada y por personal calificado.",
+      "Si se confirma pérdida de referencia o límite de recorrido, seguir el procedimiento oficial de referenciado de KDT.",
+      "Si la alarma persiste sin causa visible, solicitar revisión del encoder, cableado y servo asociado por un técnico."
+    ],
+    "limite": "La documentación disponible no confirma todavía el significado oficial de Er2-6; estas acciones son una guía de diagnóstico y no una orden de intervención."
+  },
+  "2905": {
+    "titulo": "Guarda de seguridad no cerrada",
+    "que_pedir": [
+      "Foto de la pantalla de alarma.",
+      "Indicar qué puerta o protección estaba abierta y si queda algún indicador activo."
+    ],
+    "verificaciones": [
+      "Confirmar que todas las puertas y protecciones estén completamente cerradas.",
+      "Revisar visualmente que ninguna protección esté obstruida o desalineada.",
+      "No puentear sensores ni anular la protección de seguridad."
+    ],
+    "posibles_soluciones": [
+      "Corregir el cierre o la alineación de la protección si se confirma que es la causa.",
+      "Si continúa la alarma con la guarda cerrada, solicitar revisión del sensor y su circuito de seguridad."
+    ],
+    "limite": "No se debe puentear ningún circuito de seguridad."
+  },
+  "2701": {
+    "titulo": "Parada de emergencia activa",
+    "que_pedir": [
+      "Foto de la pantalla de alarma.",
+      "Indicar qué botón de emergencia fue accionado y en qué momento."
+    ],
+    "verificaciones": [
+      "Confirmar visualmente si algún botón de parada de emergencia permanece accionado.",
+      "No liberar ni rearmar la emergencia hasta conocer el motivo por el que fue activada.",
+      "Revisar que no haya una condición insegura alrededor de la máquina."
+    ],
+    "posibles_soluciones": [
+      "Una vez descartado el riesgo, rearmar según el procedimiento oficial de la máquina.",
+      "Si la alarma permanece, solicitar revisión del circuito de emergencia."
+    ],
+    "limite": "La prioridad es mantener la máquina detenida hasta descartar una condición peligrosa."
+  },
+  "2900": {
+    "titulo": "Baja presión neumática",
+    "que_pedir": [
+      "Foto de la alarma y del manómetro o unidad FRL.",
+      "Indicar si la presión baja al iniciar el trabajo o ya estaba baja al encender."
+    ],
+    "verificaciones": [
+      "Confirmar visualmente la presión disponible y si el compresor está funcionando.",
+      "Revisar si hay mangueras desconectadas, pérdidas audibles o reguladores cerrados.",
+      "No intervenir en líneas presurizadas sin personal calificado."
+    ],
+    "posibles_soluciones": [
+      "Restablecer el suministro neumático si se confirma una causa externa a la máquina.",
+      "Si la presión es correcta y la alarma continúa, solicitar revisión del presostato y circuito neumático."
+    ],
+    "limite": "El valor correcto debe confirmarse con la especificación oficial de esta máquina."
+  },
+  "37": {
+    "titulo": "Falla de comunicación",
+    "que_pedir": [
+      "Foto completa de la alarma y de la pantalla de estado o comunicación.",
+      "Indicar si la falla aparece al encender o durante el procesamiento."
+    ],
+    "verificaciones": [
+      "Confirmar si las estaciones o ejes aparecen conectados en la pantalla de estado.",
+      "Registrar qué ejes, módulos o dispositivos aparecen con estado anormal.",
+      "No desconectar ni reconectar cableado de comunicación con el equipo energizado."
+    ],
+    "posibles_soluciones": [
+      "Si se confirma un cable o conector defectuoso, corregirlo con la máquina aislada.",
+      "Si persiste, solicitar revisión del enlace EtherCAT y del controlador por un técnico."
+    ],
+    "limite": "El código general no identifica por sí solo qué enlace o dispositivo originó la falla."
+  },
+  "3000": {
+    "titulo": "Alarma de servo",
+    "que_pedir": [
+      "Foto de la pantalla indicando el eje afectado.",
+      "Indicar si el eje se detuvo, perdió referencia o emitió algún ruido antes de la alarma."
+    ],
+    "verificaciones": [
+      "Confirmar el eje y el número de servo mostrado por el software.",
+      "Revisar visualmente si existe obstrucción mecánica evidente, sin ejecutar movimientos.",
+      "No modificar parámetros del servo sin el manual específico y personal calificado."
+    ],
+    "posibles_soluciones": [
+      "La solución depende del código específico del servo y del eje afectado.",
+      "Si la alarma persiste, solicitar revisión del drive, encoder, cableado y conjunto mecánico."
+    ],
+    "limite": "El código 3000 es general; se necesita el código detallado y el eje para confirmar la causa."
+  },
+  "OC2": {
+    "titulo": "Sobrecorriente del variador durante desaceleración",
+    "que_pedir": [
+      "Foto del histórico o pantalla del variador.",
+      "Indicar si ocurre al frenar, detener o cambiar la velocidad del spindle."
+    ],
+    "verificaciones": [
+      "Confirmar si el código pertenece al variador superior o inferior.",
+      "Registrar cuándo aparece y si el spindle estaba trabajando con carga.",
+      "No cambiar parámetros de aceleración, desaceleración o protección sin técnico calificado."
+    ],
+    "posibles_soluciones": [
+      "Revisar carga, frenado, cableado y motor del spindle según el manual del variador.",
+      "Si se repite, solicitar diagnóstico eléctrico del variador y motor."
+    ],
+    "limite": "El registro observado es histórico y no demuestra que la falla esté presente actualmente."
+  }
+}
